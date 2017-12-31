@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>on demo</title>
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <script>
+        $(function(){
+            $('p').on('myEnt1 myEnt2',function(e, eName){ // 사용자 정의 이벤트, 공백으로 구분
+                $('p').text(eName);
+            });
+
+            $('button').click(function(){
+                $('p').trigger('myEnt1',$(this).text());
+            });
+            $('span').click(function(){
+                $('p').trigger('myEnt2',$(this).text());
+            });
+        });
+    </script>
+</head>
+<body>
+
+<button>korea</button>
+<button>japan</button>
+<button>china</button>
+
+<span>span1</span>
+<span>span2</span>
+<span>span3</span>
+
+<p>Has an attached custom event.</p>
+
+</body>
+</html>

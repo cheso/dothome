@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>on demo</title>
+    <style>
+        .test { padding: .5em; border: 1px solid #444; }
+        .active { color: red; font-weight: bold }
+        .inside { background-color: aqua; }
+    </style>
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <script>
+        $(function(){
+            $('.test').on({
+                click : function(){ $(this).toggleClass('active')},
+                mouseover : function(){ $(this).addClass('inside')},
+                mouseout : function(){ $(this).removeClass('inside')}
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div class="test">test div</div>
+
+</body>
+</html>

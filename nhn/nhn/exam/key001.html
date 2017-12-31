@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>keydown, keypress, on</title>
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript">
+        var cnt1 = 0;
+        var cnt2 = 0;
+        $(function(){
+            $('input').on({
+                keypress : function(){
+                    $('#span1').html(++cnt1);
+                    $(this).css('background','pink');
+                },
+                keydown : function(){
+                    $('#span2').html(++cnt2);
+                    $(this).css('background','pink');
+                },
+                keyup : function(){
+                    $(this).css('background','white');
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+
+<input type="text" title="" />
+<p>keypress : <span id="span1">0</span> 출력키만 인식, 한글인식 못함</p>
+<p>keydown : <span id="span2">0</span> 모든키를 인식</p>
+
+<!--
+http://andromedagalaxy.tistory.com/7   안드로이드에서만 한글 타이핑 시 keyboad 관련 이벤트가 발생되지 않아 keyup 메소드를 사용할 수 없다.
+-->
+
+</body>
+</html>

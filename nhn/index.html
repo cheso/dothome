@@ -1,0 +1,3045 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>cheche</title>
+    <link rel="Shortcut Icon" href="nhn/images/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="nhn/css/base.css">
+    <script>
+        window.onload = function(){
+            var btnState = true;
+            document.getElementById('hidden').onclick = function(){
+                if(btnState){
+                    document.getElementById('quick_menu').style.display = 'block';
+                }else{
+                    document.getElementById('quick_menu').style.display = 'none';
+                }
+                btnState = !btnState;
+                return false;
+            };
+        }
+    </script>
+</head>
+
+<body>
+<div id="nav">
+    <dl>
+        <dt><a href="./">Performance Optimization</a><a href="./" id="hidden" title="hidden">hidden</a></dt>
+        <dd><a href="#nth01">HTML 코드 작성 규칙</a></dd>
+        <!--<dd><a href="#nth02">웹접근성</a></dd>-->
+        <!--<dd><a href="#nth11">PHP</a></dd>-->
+        <dd><a href="#nth23">WebStorm</a> <a href="#nth23_2">#2</a></dd>
+        <dd><a href="#nth34">Shell</a></dd>
+        <dd><a href="#nth45">Javascript</a></dd>
+        <dd><a href="#nth56">jQuery</a></dd>
+        <dd><a href="#nth99">Etc</a></dd>
+    </dl>
+</div>
+<div id="quick_menu">
+    <dl>
+        <dt>Learn</dt>
+        <dd><a href="http://www.w3schools.com/" target="_blank">w3schools</a></dd>
+        <dd><a href="http://www.tutorialspoint.com/tutorialslibrary.htm" target="_blank">tutorialspoint</a></dd>
+        <dt>Css</dt>
+        <dd><a href="http://ko.learnlayout.com/" target="_blank">Layout</a></dd>
+        <dd><a href="http://docs.emmet.io/cheat-sheet/" target="_blank" title="Zen Coding">Emmet</a></dd>
+        <dd><a href="http://www.canbike.org/CSSpixels/" target="_blank">CSS Pixel Widths</a></dd>
+        <dt>Accessibility</dt>
+        <dd><a href="http://www.kwacc.or.kr/" target="_blank">kwacc</a></dd>
+        <dd><a href="http://www.wah.or.kr/" target="_blank" title="웹 접근성 연구소">wah</a></dd>
+        <dd><a href="http://www.wa.or.kr/" target="_blank">wa</a></dd>
+        <dd><a href="http://nuli.navercorp.com/" target="_blank" title="널리">nuli</a></dd>
+        <dt>Etc</dt>
+        <dd><a href="http://www.html-entities.org/" target="_blank" title="Encode &amp; decode HTML entities">Entity</a></dd>
+        <dd><a href="http://pxtoem.com/" target="_blank">pxtoem</a></dd>
+        <dd><a href="http://jamesallardice.github.io/Placeholders.js/" target="_blank">Placeholders</a></dd>
+        <dd><a href="https://docs.google.com/spreadsheets/d/1LqH7BaQ5MkuJgWamlDqH_eE2fGGVGZ5XZs4aXzV4Q_4/edit#gid=0" target="_blank">WebDeveloper</a></dd>
+        <dd><a href="http://cafe.naver.com/hacosa/134729" target="_blank">모바일, PC 구분</a></dd>
+        <dt>Pds</dt>
+        <dd><a href="http://xvtech.com/xvtech/?mid=data" target="_blank">Sense Reader</a></dd>
+        <dt>WebStorm</dt>
+        <dd><a href="http://www.youtube.com/playlist?list=PLQ176FUIyIUb0zTe7k4ZKkhMsR-slKu3w" target="_blank">Video Tutorials</a></dd>
+        <dd><a href="nhn/ReferenceCard.pdf" target="_blank">Default Keymap</a></dd>
+        <dd><a href="http://springsource.tistory.com/40" target="_blank" title="Node.js + Express + WebStorm 튜토리얼">Node.js + Express ...</a></dd>
+    </dl>
+</div>
+<div id="wrap">
+    <section id="nth01" class="nth00">
+        <h1>HTML 코드 작성 규칙</h1>
+        <div class="h2">
+            <h2>기본 규칙</h2>
+            <p>HTML 코드를 작성할 때 다음과 같은 기본 규칙을 준수한다. </p>
+            <div class="h3">
+                <h3>W3C Validation</h3>
+                <p>
+                    HTML은 해당 DTD의 명세에 맞게 작성하며, W3C Validation을 통과해야 한다.<br/>
+                    단, HTML5 DTD 선언 시 다음 오류 내용은 허용한다.
+                </p>
+                <ul>
+                    <li>&lt;iframe&gt;의 frameborder 속성</li>
+                </ul>
+                <h3>영문 소문자 사용</h3>
+                <p>
+                    DTD를 제외한 모든 요소와 속성은 소문자로 작성한다.
+                </p>
+                <table class="tblType1 v1">
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">잘못된 예</th>
+                        <td>&lt;SPAN Class=&quot;desc&quot;&gt;간단한 설명&lt;/SPAN&gt;</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">올바른 예</th>
+                        <td>&lt;span class=&quot;desc&quot;&gt;간단한 설명&lt;/span&gt;</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>속성값 표기</h3>
+                <p>
+                    속성값은 큰따옴표(&quot; &quot;)로 묶는다.
+                </p>
+                <table class="tblType1 v1">
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">잘못된 예</th>
+                        <td>&lt;img src=&#39;desc&#39; width=&#39;100&#39; height=&#39;100&#39; alt=&#39;테스트&#39;&gt;</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">올바른 예</th>
+                        <td>&lt;img src=&quot;desc&quot; width=&quot;100&quot; height=&quot;100&quot; alt=&quot;테스트&quot;&gt;</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>엔티티 코드 사용</h3>
+                <p>
+                    특수 기호는 엔티티 이름(entity name)을 사용해서 엔티티 코드(entity code)로 변환한다.<br/>
+                    엔티티 번호(entity number)는 사용하지 않는다.<br/>
+                    단, 아포스트로피(')는 엔티티 번호인 &amp;#39;로 선언한다.<br/>
+                </p>
+                <table class="tblType2">
+                    <caption class="bottom">Reserved HTML Characters</caption>
+                    <colgroup>
+                        <col>
+                        <col span="3">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col">Description</th>
+                        <th scope="col">Character</th>
+                        <th scope="col">Entity Name</th>
+                        <th scope="col">Entity Number</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>quotation mark</td>
+                        <td>"</td>
+                        <td>&amp;quot;</td>
+                        <td>&amp;#34;</td>
+                    </tr>
+                    <tr>
+                        <td>ampersand</td>
+                        <td>&amp;</td>
+                        <td>&amp;amp;</td>
+                        <td>&amp;#38;</td>
+                    </tr>
+                    <tr>
+                        <td>apostrophe</td>
+                        <td>'</td>
+                        <td>&amp;apos;</td>
+                        <td class="bg1">&amp;#39;</td>
+                    </tr>
+                    <tr>
+                        <td>less-than</td>
+                        <td>&lt;</td>
+                        <td>&amp;lt;</td>
+                        <td>&amp;#60;</td>
+                    </tr>
+                    <tr>
+                        <td>greater-than</td>
+                        <td>&gt;</td>
+                        <td>&amp;gt;</td>
+                        <td>&amp;#62;</td>
+                    </tr>
+                    <tr>
+                        <td>Big List Dot</td>
+                        <td>&bull;</td>
+                        <td>&amp;bull;</td>
+                        <td>&amp;#149;</td>
+                    </tr>
+                    <!--<tr>
+                        <td>copyright</td>
+                        <td>&copy;</td>
+                        <td>&amp;copy;</td>
+                        <td>&amp;#169;</td>
+                    </tr>
+                    <tr>
+                        <td>registered trademark</td>
+                        <td>&reg;</td>
+                        <td>&amp;reg;</td>
+                        <td>&amp;#174;</td>
+                    </tr>-->
+                    <tr>
+                        <td>Medium List Dot</td>
+                        <td>&middot;</td>
+                        <td>&amp;middot;</td>
+                        <td>&amp;#183;</td>
+                    </tr>
+                    <tr>
+                        <td>right arrow</td>
+                        <td>→</td>
+                        <td>&amp;rarr;</td>
+                        <td>&amp;#8594;</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>들여쓰기 규칙</h3>
+                <p>
+                    들여쓰기를 하면 코드의 가독성이 높아지고 전체 HTML 구조를 쉽게 파악할 수 있다.<br/>
+                    마크업의 중첩이 깊어질 때마다 자식요소는 공백 4칸을 들여 쓴다.<br/>
+                    <!--단, 다음의 경우에는 들여 쓰지 않는다.-->
+                </p>
+                <!--<ul>
+                    <li>&lt;html&gt;의 자식 요소</li>
+                    <li>&lt;head&gt;의 자식 요소</li>
+                    <li>&lt;body&gt;의 자식 요소</li>
+                    <li>&lt;table&gt;의 자식 요소</li>
+                    <li>&lt;ul&gt;, &lt;ol&gt;, &lt;dl&gt;의 자식 요소</li>
+                </ul>-->
+                <h3>빈 줄</h3>
+                <p>
+                    의미 있는 객체를 구분하기 위해 코드 그룹 사이에 1줄씩 빈 줄을 만드는 것은 허용한다.<br/>
+                    빈 줄의 간격은 1줄을 넘지 않는다. 빈 줄을 사용하는 것은 선택 사항이다.
+                </p>
+            </div>
+        </div>
+        <div class="h2">
+            <h2>DTD</h2>
+            <p>HTML 문서는 반드시 DTD를 선언한다. </p>
+            <div class="h3">
+                <h3>기본 DTD</h3>
+                <p>
+                    신규 HTML 문서를 작성할 때는 HTML5를 사용한다.<br/>
+                    작성 예는 다음과 같다.
+                </p>
+                <ul>
+                    <li>&lt;!DOCTYPE html&gt;</li>
+                </ul>
+                <h3>기타 DTD</h3>
+                <p>
+                    사용 중인 서비스를 부분 개편하거나 완전히 개편하더라도<br/>기존의 HTML/CSS 데이터 의존도가 높다면,
+                    기존과 동일한 DTD를 사용할 수 있다.<br/>
+                    작성 예는 다음과 같다.
+                </p>
+                <ul>
+                    <li>XHTML 1.0 Transitional
+                        <ul>
+                            <li>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</li>
+                            <li>표현 규칙에 맞는(well-formed) 언어다.</li>
+                            <li>XHTML은 HTML보다 안정적이고 처리 속도도 빠르며 데이터 재사용성이 높다.</li>
+                            <li>HTML에 XML을 접목시켜 더 구조적이고 다른 플랫폼과 연동하기 좋다.</li>
+                            <li>기술 복잡도가 낮아 소형 장치에서 처리하기에 적합하다.</li>
+                        </ul>
+                    </li>
+                    <li>HTML 4.01 Transitional
+                        <ul>
+                            <li>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</li>
+                            <li>표현 규칙에 맞는(well-formed) 언어다.</li>
+                            <li>XHTML을 사용하면 HTML 기준으로 작성된 PC 환경의 자바스크립트 라이브러리와 호환되지 않는다.</li>
+                            <li>XHTML에서 VML(Vector Markup Language)이 바르게 표현되지 않는다.</li>
+                        </ul>
+                    </li>
+                    <li>Quirks Mode<br/>
+                        <ul>
+                            <li>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>
+                    아래와 같은 경우 DTD 설정별 표준 문법으로 마크업 하더라도<br/>
+                    브라우저에서 Quirks Mode로 인식하여 바르게 해석되지 않으므로 주의한다.
+                </p>
+                <ul>
+                    <li>DTD가 선언되지 않은 경우(html 태그로 문서 시작)
+                        <ul>
+                            <li>&lt;html&gt;</li>
+                        </ul>
+                    </li>
+                    <li>선언한 DTD 앞에 다른 문자가 오는 경우
+                        <ul>
+                        <li>
+                            &lt;!-- //html 문서 시작 --&gt;<br/>
+                            &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="h2">
+            <h2>인코딩</h2>
+            <p>
+                HTML 문서는 반드시 인코딩 정보를 선언한다.<br/>
+                인코딩 설정은 DB의 인코딩 방식과도 관련이 있으므로 반드시 담당 개발자와 협의하여 정해야 한다.
+            </p>
+            <div class="h3">
+                <h3>기본 인코딩</h3>
+                <p>
+                    신규 HTML문서를 작성할 때 기본 인코딩으로 utf-8을 사용한다.<br/>
+                    utf-8은 다국어 지원이 가능하며, euc-kr보다 표현 가능한 한글(고어, 음절 등)이 더 많다.<br/>
+                    다음은 인코딩 방식으로 utf-8을 선언한 예다.
+                </p>
+                <ul>
+                    <li>&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot; /&gt;</li>
+                    <li>&lt;meta charset=&quot;utf-8&quot;&gt;</li>
+                </ul>
+                <h3>utf-8 특징</h3>
+                <ul>
+                    <li>한글은 utf-8에서 3바이트, euc-kr에서 2바이트를 차지하기 때문에,<br/>utf-8이 euc-kr에 비하여 DB 저장 용량이나 트래픽이 커진다.</li>
+                    <li>Internet Explorer7 이상의 버전에서 아래와 같이 링크의 밑줄이 글자와 붙어 보이는 현상이 있다.<br/>
+                        <a href="#">무궁화꽃이피었습니다</a>
+                    </li>
+                </ul>
+                <h3>기타 인코딩</h3>
+                <p>
+                    utf-8 인코딩을 사용할 수 없으면 euc-kr을 사용한다.<br/>다음은 인코딩 방식으로 euc-kr을 선언한 예이다.
+                </p>
+                <ul>
+                    <li>&lt;meta&nbsp;http-equiv=&quot;Content-Type&quot;&nbsp;content=&quot;text/html;charset=euc-kr&quot;&nbsp;/&gt;</li>
+                </ul>
+                <p>HTML, CSS 파일을 저장할 때 반드시 설정한 인코딩을 선택하여 저장한다.</p>
+            </div>
+        </div>
+        <div class="h2 dnone">
+            <h2>뷰포트</h2>
+            <p>
+                뷰포트란 전체 웹 페이지 가운데 브라우저 창에 보이는 부분을 말한다.<br/>
+                창 크기를 조절해서 뷰포트를 크거나 작게 만들 수 있다.
+            </p>
+            <div class="h3">
+                <h3>Usage</h3>
+                <p>
+                    모바일 브라우저에 대응하는 HTML 문서의 &lt;head&gt; 안에 반드시 뷰포트(viewport)를 설정한다.<br/>
+                    뷰포트는 브라우저와 해상도에 따라 다르게 설정한다.<br/>
+                    <!--아래는 브라우저에 따른 뷰포트 설정 예이다-->
+                </p>
+                <ul>
+                    <li>사파리
+                        <span>&lt;meta&nbsp;name=&quot;viewport&quot;&nbsp;content=&quot;width=device-width,&nbsp;initialscale=1.0,&nbsp;maximum-scale=1.0,&nbsp;minimum-scale=1.0,&nbsp;user-scalable=no&quot;&nbsp;/&gt;</span>
+                    </li>
+                    <li>안드로이드 &amp; 돌핀
+                        <span>&lt;meta&nbsp;name=&quot;viewport&quot;&nbsp;content=&quot;width=device-width,&nbsp;initialscale=1.0,&nbsp;maximum-scale=1.0,&nbsp;minimum-scale=1.0,&nbsp;user-scalable=no,&nbsp;target-densitydpi=medium-dpi&quot;&nbsp;/&gt;</span>
+                    </li>
+                    <li>오페라 모바일 9.5
+                        <span>&lt;meta&nbsp;name=&quot;viewport&quot;&nbsp;content=&quot;initial-scale=0.75,&nbsp;maximumscale=0.75,&nbsp;minimum-scale=0.75,&nbsp;user-scalable=no&quot;&nbsp;/&gt; </span>
+                    </li>
+                    <li>기타(default), 폴라리스, LGT 웹뷰어
+                        <span>&lt;meta&nbsp;name=&quot;viewport&quot;&nbsp;content=&quot;width=device-width,&nbsp;initialscale=1.0,&nbsp;maximum-scale=1.0,&nbsp;minimum-scale=1.0,&nbsp;user-scalable=no,&nbsp;target-densitydpi=medium-dpi&quot;&nbsp;/&gt;</span>
+                    </li>
+                </ul>
+                <h3>참고</h3>
+                <p>
+                    <!--웹 페이지 전체 중 브라우저 창에 보이는 부분을 말하며, 창 크기를 조절하여 뷰포트를 크게 또는 작게 만들 수 있다.-->
+                    대부분의 모바일 브라우저는 창 크기 조절 기능이 없고, 기기마다 해상도도 다르기 때문에<br/>
+                    뷰포트 속성을 사용하여 웹 페이지 전체 크기와 창에 보이는 부분을 설정할 수 있다.<br/>
+                    폴라리스6, 오페라 모바일 8.65 등 뷰포트 속성을 지원하지 않는 브라우저도 있다.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="nth02" class="nth00 dnone">
+        <h1>웹접근성</h1>
+        <div class="h2">
+            <h2>정의</h2>
+            <p>장애를 가지고 있어도 인터넷을 이용할 수 있는 것</p>
+            <h2>의미에 맞는 마크업</h2>
+            <p>
+                웹표준 기반의 마크업을 진행할 때 숙지해야 하는 내용<br/>
+                웹 접근성을 보장하는 가장 기본적이고 중요한 방법<br/>
+                HTML 요소 작성 규칙에 따라 각 요소를 쓰임에 맞게 사용해야 한다.
+            </p>
+            <div class="h3">
+                <h3>적절한 헤딩 요소 사용</h3>
+                <p>
+                    문서 구조 파악이 용이하도록 h1~h6 의 헤딩 요소를 순차적으로, 적절한 위치에 사용한다.<br/>
+                    적절하게 사용된 헤딩 요소를 통해 문서의 목차를 자동으로 생성할 수도 있으며,<br/>
+                    스크린 리더에서 지원하는 헤딩 간 이동을 통해 사용자가 도달하고자 하는 정보에 더 빠르게 접근할 수 있다.
+                </p>
+                <h3>적절한 목록 요소 사용</h3>
+                <p>
+                    순차/비순차/정의 목록을 쓰임새에 맞게 사용하면 CSS가 적용되지 않은 화면에서도 각 목록의 의미를 확실히 전달할 수 있으며,<br/>스크린 리더에서는 전체 목록의 개수, 시작과 끝을 파악할 수 있다.
+                </p>
+            </div>
+            <h2>Firefox Developer Edition 37.0a2 (2015-01-23)</h2>
+            <div class="h3">
+                <h3>Web Developer</h3>
+                <p>The Web Developer extension adds various web developer tools to the browser.</p>
+                <div class="h3">
+                    <h4>Shortcuts</h4>
+                    <figure>
+                        <img src="nhn/images/key.png" alt="keyboard" style="width:80%" />
+                    </figure>
+                    <table class="tblType1 v3">
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="rowgroup" rowspan="7">Base</th>
+                            <th scope="row">Shift + Alt + D</th>
+                            <td>Edit CSS</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Shift + Alt + C</th>
+                            <td>View CSS</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Shift + Alt + A</th>
+                            <td>Disable All Styles</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Shift + Alt + Y</th>
+                            <td>Display Style Information</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Shift + Alt + U</th>
+                            <td>View Source</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Shift + Alt + J</th>
+                            <td>View JavaScript</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Shift + Alt + L</th>
+                            <td>Validate Local HTML</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table class="tblType1 v3">
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="rowgroup" rowspan="4">Image</th>
+                            <th scope="row">Shift + Alt + Q</th>
+                            <td>Outline Background Images</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Shift + Alt + X</th>
+                            <td>Outline All Images</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Shift + Alt + Z</th>
+                            <td>Display Alt Attributes</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Shift + Alt + W</th>
+                            <td>Display Image File Sizes</td>
+                        </tr>
+                        <tr>
+                            <th scope="rowgroup" rowspan="4">Table</th>
+                            <th scope="row">Shift + Alt + O</th>
+                            <td>Display Table Depth</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Shift + Alt + P</th>
+                            <td>Outline Tables</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Shift + Alt + {</th>
+                            <td>Outline Table Cells</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Shift + Alt + }</th>
+                            <td>Display Table Information</td>
+                        </tr>
+                        <tr>
+                            <th scope="rowgroup" rowspan="2">Label</th>
+                            <th scope="row">Shift + Alt + :</th>
+                            <td>Outline Custom Elements</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Shift + Alt + &quot;</th>
+                            <td>Display Title Attributes</td>
+                        </tr>
+                        <tr>
+                            <th scope="rowgroup">Outline</th>
+                            <th scope="row">Shift + Alt + ?</th>
+                            <td>Outline Headings</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="nth11" class="nth00 dnone">
+        <h1>PHP</h1>
+        <div class="h2">
+            <h2>PHP Tutorial</h2>
+            <div class="h3">
+                <h3>PHP 5 Syntax</h3>
+                <div class="h4">
+                    <h4>PHP Case Sensitivity</h4>
+                    <pre>
+                        대소문자를 구분하지 않는다.
+                        &lt;?
+                            ECHO "Hello World!&lt;br&gt;";
+                            echo "Hello World!&lt;br&gt;";
+                            EcHo "Hello World!&lt;br&gt;";
+                        ?&gt;
+                    </pre>
+                    <pre>
+                        그러나, 변수이름은 대소문자를 구분한다.
+                        &lt;?
+                            $color = "red";
+                            echo "My car is " . $color . "&lt;br&gt;";
+                            echo "My house is " . $COLOR . "&lt;br&gt;";
+                            echo "My boat is " . $coLOR . "&lt;br&gt;";
+                        ?&gt;
+                    </pre>
+                </div>
+            </div>
+            <h2>PHP Forms</h2>
+            <p>aaaaaaaaaa</p>
+            <h2>PHP Advanced</h2>
+            <p>aaaaaaaaaa</p>
+            <h2>MySQL Database</h2>
+            <p>aaaaaaaaaa</p>
+            <h2>PHP - XML</h2>
+            <p>aaaaaaaaaa</p>
+            <h2>PHP - AJAX</h2>
+            <p>aaaaaaaaaa</p>
+            <h2>PHP Examples</h2>
+            <p>aaaaaaaaaa</p>
+            <h2>PHP Reference</h2>
+            <p>aaaaaaaaaa</p>
+        </div>
+    </section>
+    <section id="nth23" class="nth00">
+        <h1>WebStorm</h1>
+        <div class="h2">
+            <h2>코드 품질 관리</h2>
+            <div class="h3">
+                <h3>JSLint</h3>
+                <figure>
+                    <figcaption>
+                        private형태의 메서드나 변수는 _을 접두어로 사용하므로 dangling_in identifiers를 검증에서 제외 <br/>
+                        use strict도 이 코드에서는 사용하지 않으므로 제외 <br/>
+                        더글라스 크락포드의 스타일을 강조하는공백에 대한 검증인 messy white space 역시 제외 <br/>
+                        브라우저에서 동작하는 자바스크립트 이므로 a browser 를 선택 <br/>
+                        전역에 걸쳐 글로벌로 사용되는 변수는 Predefined에 등록
+                    </figcaption>
+                    <img src="nhn/images/ws10.png" alt="ws10"/>
+                </figure>
+                <figure>
+                    <figcaption>사전에 등록돼 있지 않은 단어 등록</figcaption>
+                    <img src="nhn/images/ws11.png" alt="ws11"/>
+                </figure>
+            </div>
+            <h2>Shortcuts</h2>
+            <div class="h3">
+                <h3>Javascript</h3>
+                <ul>
+                    <li>doc - document</li>
+                    <li>gi - getElementById (id=)</li>
+                    <li>gc - getElementsByClassName (class=)</li>
+                    <li>gt - getElementsByTagName</li>
+                    <li>gna - getElementsByName (name=)</li>
+                </ul>
+                <pre>
+                    var theTarget = document.getElementById('target');
+                    console.log(theTarget.tagName) → 요소 대문자 출력
+                </pre>
+            </div>
+            <h2>Plugins</h2>
+            <ul>
+                <li>BashSupport</li>
+                <li>IdeaVim - Ctrl + Alt + V</li>
+                <li>LiveEdit</li>
+                <li>CSS-X-Fire</li>
+                <li>Shifter (숫자 증감)</li>
+                <li>RegexpTester</li>
+                <li>CodeGlance - 미니 코드맵</li>
+                <li>String Manipulation - 문자열 조작 ( alt+m )</li>
+                <li>======================================</li>
+                <li>Shifter - entity code 변환 ( ctrl+alt+shift+,.jk )</li>
+                <li>Scratch - alt+c 간단한 메모기능???</li>
+                <li>ignore - 이거 어디다 쓰는 거임?</li>
+                <li>Markdown - 이거 어떻게 하는 거임?</li>
+            </ul>
+            <h2>Install</h2>
+            <p>
+                Node.js install → ( Npm reinstall ) → Express install → WebStorm install &amp; setting
+            </p>
+            <div class="h3">
+                <h3>Node.js Install</h3>
+                <p>
+                    Node.js는 라이언 달이 자바스크립트 V8엔진을 이용해 만든 서버 사이드 자바스크립트다.<br/>
+                    Less, Grunt 같은 프런트엔드 개발에 필요한 많은 도구가 Node.js를 기반으로 개발되기 때문에 도구를 사용하려면 반드시 설치해야 한다.<br/>
+                    여기서는 전체적으로 프런트엔드 개발에 필요한 도구와 함께 웹스톰을 기반으로 설명하므로 Node.js를 먼저 설치해야 한다.
+                </p>
+                <ul>
+                    <li><a href="http://nodejs.org/download/" target="_blank">http://nodejs.org/download/</a> &larr; Windows Installer (.msi), 추후 최신을 다운받아 실행하면 업데이트 가능</li>
+                    <li><a href="http://expressjs.com/" target="_blank">http://expressjs.com</a></li>
+                    <li><a href="https://www.npmjs.com/" target="_blank">https://www.npmjs.com</a></li>
+                </ul>
+                <h3>Npm & Express Install</h3>
+                <p>
+                    npm으로 설치한 파일들은 %appdata%에서 확인할 수 있다.
+                </p>
+                <figure>
+                    <figcaption>
+                        node -v : nodejs version <br/>
+                        npm -v  : npm version <br/>
+                        nodejs를 설치하면 npm도 같이 설치되는데, npm 버전이 최신이 아니라서 아래와 같이 다시 설치한다. →
+                        <a href="http://blog.naver.com/dunlod/220241621155" target="_blank">참조링크</a> <br/>
+                    </figcaption>
+                    <img src="nhn/images/ws0_1.png" alt="ws0_1"/>
+                </figure>
+                <figure>
+                    <figcaption>
+                        express 4.0부터 설치 명령어가 바뀌었다 한다.<br/>아래 처럼 설치 →
+                        <a href="http://blog.naver.com/sensoong/220089508838" target="_blank">참조링크</a>
+                    </figcaption>
+                    <img src="nhn/images/ws0_2.png" alt="ws0_2"/>
+                </figure>
+                <p class="info">
+                    <strong>npm (node package manager) : 노드 모듈을 관리하기 쉽게 도와주는 매니저</strong><br/>
+                    Node.js 애플리케이션을 개발한다면 여러가지 Node.js 모듈을 사용할 것이다.<br/>
+                    개발한 애플리케이션을 배포할 때 의존하는 모듈까지 함께 배포한다면 불필요하게 용량이 커지고 사용한 모듈의 버전 관리에 문제가 발생한다.<br/>
+                    의존하는 모듈은 명시만 하고 엽업하는 개발자가 명시한 모듈을 자동으로 설치하거나 버전 관리를 할 수 있게 도와주는 도구가 npm이다.<br/>
+                    의존하는 모듈은 package.json이라는 파일에 명시한다.<br/>
+                    근래에는 Node.js 애플리케이션뿐만 아니라 프런트엔드 개발을 할 때도 Node.js 모듈을 많이 사용한다. 이런 모듈로는 Less, Grunt, 카르마 등이 있다.<br/>
+                    애플리케이션에서 의존하는 모듈은 package.json의 dependencies 속성에 작성하고 개발 환경에서 의존하는 모듈은 devDependencies 속성에 작성한다.
+                </p>
+                <h3>WebStorm Install &amp; Setting</h3>
+                <figure>
+                    <figcaption>
+                        <ol>
+                            <li>Settings → Languages &amp; Frameworks → Node.js and NPM</li>
+                            <li>Node Interpreter 경로 확인</li>
+                            <li>Node.js Core Modules 미설치</li>
+                            <li>Node.js Core Modules 설치 (Node.js 프로그래밍 시 타입 힌팅<sup>1)</sup>, Node.js의 디버깅에 사용)<br/>
+                                <span class="db2">1) 객체가 프로퍼티로 무엇을 가지고 있는지 실시간으로 알려주는 기능</span></li>
+                        </ol>
+                    </figcaption>
+                    <img src="nhn/images/ws1.png" alt="ws1"/>
+                </figure>
+                <figure>
+                    <figcaption>New Project → Project type에서 Node.js Express App를 선택한다.</figcaption>
+                    <img src="nhn/images/ws2.png" alt="ws2"/>
+                </figure>
+                <figure>
+                    <figcaption>
+                        Express를 설치하지 않으면 아래와 같은 메시지가 나온다.
+                    </figcaption>
+                    <img src="nhn/images/ws3.png" alt="ws3"/>
+                </figure>
+                <pre class="blind">
+                    C:\Users\Administrator\WebstormProjects\nhn>npm install -g express
+                    express@4.11.1 C:\Users\Administrator\AppData\Roaming\npm\node_modules\express
+                    ├── merge-descriptors@0.0.2
+                    ├── utils-merge@1.0.0
+                    ├── methods@1.1.1
+                    ├── fresh@0.2.4
+                    ├── escape-html@1.0.1
+                    ├── cookie@0.1.2
+                    ├── range-parser@1.0.2
+                    ├── cookie-signature@1.0.5
+                    ├── vary@1.0.0
+                    ├── finalhandler@0.3.3
+                    ├── media-typer@0.3.0
+                    ├── parseurl@1.3.0
+                    ├── serve-static@1.8.1
+                    ├── content-disposition@0.5.0
+                    ├── path-to-regexp@0.1.3
+                    ├── depd@1.0.0
+                    ├── qs@2.3.3
+                    ├── on-finished@2.2.0 (ee-first@1.1.0)
+                    ├── debug@2.1.1 (ms@0.6.2)
+                    ├── etag@1.5.1 (crc@3.2.1)
+                    ├── proxy-addr@1.0.5 (forwarded@0.1.0, ipaddr.js@0.1.6)
+                    ├── send@0.11.1 (destroy@1.0.3, ms@0.7.0, mime@1.2.11)
+                    ├── type-is@1.5.5 (mime-types@2.0.7)
+                    └── accepts@1.2.2 (negotiator@0.5.0, mime-types@2.0.7)
+                </pre>
+                <figure>
+                    <figcaption>Express를 설치하였다면 아래와 같은 메시지가 나온다.</figcaption>
+                    <img src="nhn/images/ws4.png" alt="ws4"/>
+                </figure>
+                <figure>
+                    <figcaption>
+                        Template engine : Jade, EJS, Hogan.js<br/>
+                        CSS engine : Plain CSS, Stylus, LESS, Compass<br/>
+                        엔진 선택에 따라 아래와 같이 파일 생성이 달라진다.
+                    </figcaption>
+                    <img src="nhn/images/ws5.png" alt="ws5"/>
+                </figure>
+                <figure>
+                    <figcaption>프로젝트를 자동으로 구성한 다음 메인 창이 열리면 오른쪽 위의 Run을 클릭해 로컬 서버를 실행한다.</figcaption>
+                    <img src="nhn/images/ws6.png" alt="ws6"/>
+                </figure>
+                <figure>
+                    <figcaption>
+                        이제 웹 브라우저를 열고 &#39;localhost:3000&#39;으로 접속해보자.<br/>
+                        성공적으로 접속된다면 Node.js와 웹스톰 설치가 완료된 것이다.
+                    </figcaption>
+                    <img src="nhn/images/ws7.png" alt="ws7"/>
+                </figure>
+                <h3>외부 접속 허용</h3>
+                <p> http://192.168.0.74:8888/nhn/index.html 외부 접속이 가능해진다. </p>
+                <figure>
+                    <figcaption>포트는 63342가 아니어야 한다.</figcaption>
+                    <img src="nhn/images/ws8.png" alt="ws8"/>
+                </figure>
+                <figure>
+                    <figcaption>굳이 세팅을 안해도 되는 듯?</figcaption>
+                    <img src="nhn/images/ws9.png" alt="ws9"/>
+                </figure>
+            </div>
+            <h2>Version Control</h2>
+            <div class="h3">
+                <h3>중앙 집중형 버전 관리 시스템</h3>
+                <h3>분산형 버전 관리 시스템</h3>
+            </div>
+            <h2 id="nth23_2">Default Keymap Reference</h2>
+            <p>Keymap → Eclipse</p>
+            <div class="h3">
+                <h3>No files are open</h3>
+                <ul>
+                    <li>Search Everywhere width <span class="fc1">Double Shift</span></li>
+                    <li>Open a file by name with <span class="fc1">Ctrl + Shift + R</span></li>
+                    <li>Open Recent Files with <span class="fc1">Ctrl + E ... Double Shift</span></li>
+                    <li>Open Navigation Bar with <span class="fc1">Alt + Home</span></li>
+                    <li>Drag and Drop file(s) here from Explorer</li>
+                </ul>
+                <h3>Customization</h3>
+                <table class="tblType1 v2">
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col">Shortcuts</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Ctrl + NumPad-0</th>
+                        <td>Reset Font Size</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Shift + Q</th>
+                        <td>Surround with Emmet</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Shift + Z</th>
+                        <td>Emmet Preview</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Alt + Shift + D</th>
+                        <td>Download from Default Server</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Alt + Shift + |</th>
+                        <td>Unsplit All</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Alt + |</th>
+                        <td>Unsplit</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + |</th>
+                        <td>Split Vertically</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + |</th>
+                        <td>Split Horizontally</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + D</th>
+                        <td>Sync with Deployed to ...<br/>Compare Local File with Deployed Version</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + E</th>
+                        <td>Show in Explorer</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + F</th>
+                        <td>Toggle Full Screen mode</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + J</th>
+                        <td>Join Lines</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + U</th>
+                        <td>Open URL...</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + V<br/>(Ctrl + Shift + F10)</th>
+                        <td>Run context configuration</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + Z</th>
+                        <td>Show History</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + G</th>
+                        <td>Search with Google</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + N</th>
+                        <td>Show line numbers</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + X</th>
+                        <td>PHP File</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + '</th>
+                        <td>JavaScript File</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + B</th>
+                        <td>Use Soft Wraps</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>Base</h3>
+                <table class="tblType1 v2">
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row" class="chk">Ctrl + Alt + J</th>
+                        <td title="CDATA" class="star">Surround with Live Template...</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">Ctrl + Alt + S</th>
+                        <td>Settings...</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">Ctrl + Shift + A</th>
+                        <td>Find Action...</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">Alt + R</th>
+                        <td title="태그 제거" class="star">Unwrap/Remove...</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">Ctrl + Period</th>
+                        <td>Fold Selection / Remove region</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">Ctrl + F3 / O</th>
+                        <td>File Structure</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">Alt + 1</th>
+                        <td>Project</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">Alt + F12</th>
+                        <td>Terminal</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">Ctrl + Tab</th>
+                        <td>Switcher</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">F3 / Ctrl + Button1</th>
+                        <td title="class 찾을 때, 이미지 보기" class="star">Declaration</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">Shift</th>
+                        <td>Image Preview, Color Preview</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">Ctrl + Shift + W</th>
+                        <td>Close All</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">Alt + Shift + Insert</th>
+                        <td title=" 칸 단위 선택" class="star">Column Selection Mode</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">Ctrl + Alt + Shift + X</th>
+                        <td>Upload to...</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">Ctrl + Alt + Insert</th>
+                        <td title="파일, 디렉토리 생성" class="star">Create new class, interface, file or directory</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">Ctrl + L</th>
+                        <td>Go To Line</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>Editing</h3>
+                <table class="tblType1 v2">
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row" class="chk">Ctrl + Space</th>
+                        <td title="이미지 경로 찾을 때" class="star">Basic code completion (the name of any class, method or variable)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Shift + Enter</th>
+                        <td>Complete statement</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + P</th>
+                        <td>Parameter info (within method call arguments)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Q</th>
+                        <td>Quick documentation lookup</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + mouse over code</th>
+                        <td>Brief Info</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + F1</th>
+                        <td>Show descriptions of error or warning at caret</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + Insert</th>
+                        <td>Generate code...</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Alt + T</th>
+                        <td>Surround with... (if..else, try..catch, for, etc.)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + /</th>
+                        <td>Comment/uncomment with line comment</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Shift + /</th>
+                        <td>Comment/uncomment with block comment</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + W</th>
+                        <td>Select successively increasing code blocks</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Shift + W</th>
+                        <td>Decrease current selection to previous state</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + Q</th>
+                        <td>Context info</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + Enter</th>
+                        <td>Show intention actions and quick-fixes</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">Ctrl + Alt + L</th>
+                        <td title="Editor → Code Style : 코드 스타일대로 리포맷" class="star">Reformat code</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Alt + I</th>
+                        <td>Auto-indent line(s)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Tab / Shift + Tab</th>
+                        <td>Indent/unindent selected lines</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + X , Shift + Delete</th>
+                        <td>Cut current line or selected block to clipboard</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + C , Ctrl + Insert</th>
+                        <td>Copy current line or selected block to clipboard</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + V , Shift + Insert</th>
+                        <td>Paste from clipboard</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Shift + V</th>
+                        <td>Paste from recent buffers...</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + D</th>
+                        <td>Duplicate current line or selected block</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Y</th>
+                        <td>Delete line at caret</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Shift + J</th>
+                        <td>Join lines</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Enter</th>
+                        <td>Split lines</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Shift + Enter</th>
+                        <td>Start new line</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">Ctrl + Shift + U</th>
+                        <td title="대소문자 변경" class="star">Toggle case for word at caret or selected block</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Shift + ] / [</th>
+                        <td>Select till code block end/start</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Delete</th>
+                        <td>Delete to word end</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Backspace</th>
+                        <td>Delete to word start</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + NumPad+/-</th>
+                        <td>Expand/collapse code block</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Shift + NumPad+</th>
+                        <td>Expand all</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Shift + NumPad-</th>
+                        <td>Collapse all</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + F4</th>
+                        <td>Close active editor tab <span class="cm">Alt + W</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>Multiple carets and selections</h3>
+                <table class="tblType1 v2">
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Alt + Click</th>
+                        <td>Add or remove caret</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Shift + Ctrl + Alt + J</th>
+                        <td>Select all occurrences</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + J</th>
+                        <td>Select next occurrence</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + Shift + J</th>
+                        <td>Unselect occurrence</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Esc</th>
+                        <td>Unselect all occurrences or carets</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>Running</h3>
+                <table class="tblType1 v2">
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Alt + Shift + F10/F9</th>
+                        <td>Select configuration and run/debug</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Shift + F10/F9</th>
+                        <td>Run/Debug</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Shift + F10/F9</th>
+                        <td>Run/Debug context configuration from editor</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + Shift + R</th>
+                        <td>Rerun tests</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>Debugging</h3>
+                <table class="tblType1 v2">
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">F8</th>
+                        <td>Step over</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">F7</th>
+                        <td>Step into</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Shift + F7</th>
+                        <td>Smart step into</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Shift + F8</th>
+                        <td>Step out</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + F9</th>
+                        <td>Run to cursor</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + F8</th>
+                        <td>Evaluate expression</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">F9</th>
+                        <td>Resume</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + F8</th>
+                        <td>Toggle breakpoint</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl+Shift+F8</th>
+                        <td>View breakpoints</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>Navigation
+                </h3>
+                <table class="tblType1 v2">
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Ctrl + N</th>
+                        <td>Go to class</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Shift + N</th>
+                        <td>Go to file</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Alt + Shift + N</th>
+                        <td>Go to symbol</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + Right</th>
+                        <td>Go to next editor tab</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + Left</th>
+                        <td>Go to previous editor tab</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">F12</th>
+                        <td>Go back to previous tool window</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Esc</th>
+                        <td>Go to editor (from tool window)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Shift + Esc</th>
+                        <td>Hide active or last active window</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Shift + F4</th>
+                        <td>Close active run/messages/find/... tab</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + G</th>
+                        <td>Go to line</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + E</th>
+                        <td>Recent files popup</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Alt + Left/Right</th>
+                        <td>Navigate back/forward</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Shift + Backspace</th>
+                        <td>Navigate to last edit location</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + F1</th>
+                        <td>Select current file or symbol in any view</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + B , Ctrl + Click</th>
+                        <td>Go to declaration</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Alt + B</th>
+                        <td>Go to implementation(s)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Shift + I</th>
+                        <td>Open quick definition lookup</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Shift + B</th>
+                        <td>Go to type declaration</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + U</th>
+                        <td>Go to super-method/super-class</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + Up/Down</th>
+                        <td>Go to previous/next method</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + ] / [</th>
+                        <td>Move to code block end/start</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + F12</th>
+                        <td>File structure popup</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + H</th>
+                        <td>Type hierarchy</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Alt + H</th>
+                        <td>Call hierarchy</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">F2 / Shift + F2</th>
+                        <td>Next/previous highlighted error</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">F4, Ctrl + Enter</th>
+                        <td>Jump to source</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + Home</th>
+                        <td>Jump to navigation bar</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">F11</th>
+                        <td>Toggle bookmark</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + F11</th>
+                        <td>Toggle bookmark with mnemonic</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + #[0-9]</th>
+                        <td>Go to numbered bookmark</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Shift + F11</th>
+                        <td>Show bookmarks</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>VCS/Local History</h3>
+                <table class="tblType1 v2">
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Alt + BackQuote (`)</th>
+                        <td>‘VCS’ quick popup</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + K</th>
+                        <td>Commit project to VCS</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + T</th>
+                        <td>Update project from VCS</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + Shift + C</th>
+                        <td>View recent changes</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>Search/Replace</h3>
+                <table class="tblType1 v2">
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Ctrl + F</th>
+                        <td>Find <span class="cm">Alt + S</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">F3</th>
+                        <td>Find next <span class="ec">Ctrl + K</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Shift + F3</th>
+                        <td>Find previous <span class="ec">Ctrl + Shift + K</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + R</th>
+                        <td>Replace <span class="ec">Ctrl + F</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Shift + F</th>
+                        <td>Find in path <span class="ec">Ctrl + H</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Shift + R</th>
+                        <td>Replace in path <span class="cm">Alt + A</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>Usage Search</h3>
+                <table class="tblType1 v2">
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Alt + F7 / Ctrl + F7</th>
+                        <td>Find usages / Find usages in file</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Shift + F7</th>
+                        <td>Highlight usages in file</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Alt + F7</th>
+                        <td>Show usages</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>Refactoring</h3>
+                <table class="tblType1 v2">
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">F5</th>
+                        <td>Copy</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">F6</th>
+                        <td>Move</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + Delete</th>
+                        <td>Safe delete</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Shift + F6</th>
+                        <td>Rename</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Alt + N</th>
+                        <td>Inline variable</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Alt + M</th>
+                        <td>Extract method</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Alt + V</th>
+                        <td>Introduce variable</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Alt + C</th>
+                        <td>Introduce constant</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Alt + P</th>
+                        <td>Introduce parameter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + F6</th>
+                        <td>Change function signature</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>General</h3>
+                <table class="tblType1 v2">
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Ctrl + Shift + A</th>
+                        <td>Find action</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Double Shift</th>
+                        <td>Search everywhere</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + #[0-9]</th>
+                        <td>Open corresponding tool window</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Shift + F12</th>
+                        <td>Toggle maximizing editor</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + Shift + F</th>
+                        <td>Add to favorites</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + Shift + I</th>
+                        <td>Inspect current file with current profile</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + BackQuote (`)</th>
+                        <td>Quick switch current scheme</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Alt + S</th>
+                        <td>Open settings dialog</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ctrl + Tab</th>
+                        <td>Switch between tabs and tool window</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section id="nth34" class="nth00">
+        <h1>Shell</h1>
+        <div class="h2">
+            <h2>Cygwin</h2>
+            <div class="h3">
+                <h3>Beginning</h3>
+                <p>
+                    Copying skeleton files.<br/>
+                    These files are for the users to personalise their cygwin experience.<br/><br/>
+
+                    They will never be overwritten nor automatically updated.<br/>
+
+                    './.bashrc' -> '/home/Administrator//.bashrc'<br/>
+                    './.bash_profile' -> '/home/Administrator//.bash_profile'<br/>
+                    './.inputrc' -> '/home/Administrator//.inputrc'<br/>
+                    './.profile' -> '/home/Administrator//.profile'<br/>
+                </p>
+                <h3>환경 변수</h3>
+                <p>Windows Key → 프로그램 및 파일 검색 → variables → 계정의 환경 변수 편집</p>
+                <figure>
+                    <img src="nhn/images/sh0.png" alt="sh0"/>
+                    <figcaption>cmd에서 cygwin find를 사용하려면, <br/>cp -a /usr/bin/find /usr/bin/finc 로 복제하여 사용한다.</figcaption>
+                </figure>
+                <h3>
+                    <a href="https://www.fir3net.com/UNIX/Linux/cygwin-package-installation.html" target="_blank">How do I install a Package Manager within Cygwin ?</a>
+                </h3>
+                <pre>
+                    최초에 아래와 같이 한다.
+                    D:\Downloads&gt; setup.exe -q -P  wget,subversion
+
+                    # svn --force export http://apt-cyg.googlecode.com/svn/trunk/ /bin/
+                    # chmod +x /bin/apt-cyg
+                    # apt-cyg install colordiff chere dos2unix openssh tree vim
+
+                    subversion, apt-cyg 만 설치되어 있으면,
+                    apt-cyg install pkgname 시 다음과 같은 에러 발생
+                    You must install wget, tar, gawk, xz and bzip2 to use apt-cyg. &larr; apt-cyg 필수 프로그램
+
+                    주의 : 패키지 설치시 cygwin 은 종료해 둔다.
+                </pre>
+                <h3>Installing and Configuring Apache, PHP & MySQL on Cygwin</h3>
+                <p>
+                    <a href="http://umusebo.com/installing-and-configuring-apache-php-mysql-on-cygwin/#.VPb-p_msXWN" target="_blank">link</a>
+                </p>
+                <h3>Package</h3>
+                <p>
+                    colordiff, patch, patchutiles, dos2unix, vim, wget, openssh, gcc-g++, make(Devel), ncurses(Utiles),
+                    <br/>tree : tree -Ca, chere : chere -i -t mintty
+                </p>
+                <h3>Tip</h3>
+                <ul>
+                    <li>cygcheck -f /usr/bin/ls</li>
+                    <li>variables : HOME C:\Users\Administrator\Downloads → cygwin HOME 디렉토리 지정</li>
+                    <li>alias gow='cd /cygdrive/c/Users/Administrator/WebstormProjects'</li>
+                    <li>alias ep='/cygdrive/c/Program\ Files/EditPlus\ 3/editplus.exe'</li>
+                    <li>alias ws='/cygdrive/c/Program\ Files\ \(x86\)/JetBrains/WebStorm\ 9.0.3/bin/WebStorm.exe'</li>
+                </ul>
+            </div>
+            <h2>쉘 프로그래밍</h2>
+            <div class="h3">
+                <h3>환경 변수 및 파라미터 변수</h3>
+                <figure>
+                    <img src="nhn/images/sh1.png" alt="sh1"/>
+                </figure>
+            </div>
+            <h2>기본 명령어</h2>
+            <div class="h3">
+                <h3>dpkg</h3>
+                <pre>
+                    <span class="preTtl_2">설치된 패키지 리스트</span>
+                    $ dpkg -l
+
+                    <span class="preTtl_2">설치된 패키지에 포함된 파일 리스트</span>
+                    $ dpkg -L wget
+
+                    <span class="preTtl_2">파일 포함 패키지 알아내기</span>
+                    $ dpkg -S /usr/bin/svn
+                    subversion: /usr/bin/svn
+                </pre>
+                <h3>find</h3>
+                <pre>
+                    $ find . -type f -iname "<span class="fc2">qqq*</span>" -print
+                    ./new/QQQ-001/<span class="fc2">QQQ-001.jpg</span>
+
+                    $ find . -type f -iname "<span class="fc2">*qqq*</span>" -print
+                    ./new/QQQ-001/<span class="fc2">QQQ-001.jpg</span>
+                    ./new/QQQ-001/<span class="fc2">【Thz.la】55qqq00001hhb.mkv</span>
+
+                    <span class="fc4">-iname : 대소문자 무시</span>
+                    <span class="fc4">아스테리스크(*) 사용법 유의</span>
+                </pre>
+                <h3>grep</h3>
+                <pre>
+                    <span class="preTtl_2">scope 중복 찾기</span>
+                    $ grep "<span class="fc2">scope.*scope</span>" filename.html
+                    &lt;th&nbsp;<span class="fc2">scope=&quot;row&quot;&nbsp;scope</span>=&quot;col&quot;&gt;AAA&lt;/td&gt;
+
+                    <span class="preTtl_2">th ~ td 찾기</span>
+                    $ grep "<span class="fc2">&lt;th.*td&gt;</span>" filename.html
+                    <span class="fc2">&lt;th&nbsp;scope=&quot;row&quot;&nbsp;scope=&quot;col&quot;&gt;AAA&lt;/td&gt;</span>
+
+                    <span class="fc4">.* 은 정규식 옵션을 사용하지 않아도 사용 가능</span>
+                </pre>
+                <h3>perl</h3>
+                <pre>
+                    <span class="preTtl_2">기본 치환</span>
+                    perl -pi -e 's:korea:KOREA:g' filename
+                    perl -pi -e 's/korea/KOREA/g' filename
+
+                    <span class="preTtl_2">summary삭제</span>
+                    perl -pi -e 's{summary=".*?"}{}g' filename → summary="내용" 전체를 삭제할 때
+                    perl -pi -e "s{summary='.*?'}{}g" filename → summary='내용' 전체를 삭제할 때
+
+                    <span class="preTtl_2">summary내용 변경 - 2가지 방법</span>
+                    perl -pi -e 's{summary=".*?"}{summary="변경내용"}g' filename → 큰따옴표(" ") 내용을 변경할 때
+                    perl -pi -e "s{summary='.*?'}{summary='변경내용'}g" filename → 작은따옴표(' ') 내용을 변경할 때
+
+                    perl -pi -e 's{(?<=summary=").*?(?=")}{변경내용}g' filename → 큰따옴표(" ") 내용을 변경할 때
+                    perl -pi -e "s{(?<=summary=').*?(?=')}{변경내용}g" filename → 작은따옴표(' ') 내용을 변경할 때
+
+                    <span class="preTtl_2">.asp 들어간 주소를 #none으로 처리</span>
+                    perl -pi -e 's{href=".*?\.asp.*?"}{href="#none"}g' filename → 큰따옴표(" .asp ") 내용을 #none으로 변경
+                    perl -pi -e "s{href='.*?\.asp.*?'}{href='#none'}g" filename → 작은따옴표(' .asp ') 내용을 #none으로 변경
+                </pre>
+                <h3>apt</h3>
+                <pre>
+                    apt-get update
+                    apt-get install pkgname
+                    apt-get remove pkgname
+                    apt-get purge pkgname
+                    apt-cache show pkgname
+                    apt-cache search pattern
+                    apt-cache pkgnames pattern
+                </pre>
+                <h3>기타</h3>
+                <pre>
+                    <span class="preTtl_2">공백을 탭으로</span>
+                    cat list.txt | unexpand -t 1
+
+                    <span class="preTtl_2">list block devices</span>
+                    lsblk
+                </pre>
+            </div>
+            <h2>VirtualBox</h2>
+            <div class="h3">
+                <h3>설정</h3>
+                <figure>
+                    <figcaption>iso</figcaption>
+                    <img src="nhn/images/vb1.png" alt="vb1"/>
+                </figure>
+                <figure>
+                    <figcaption>네트워크</figcaption>
+                    <img src="nhn/images/vb2.png" alt="vb2"/>
+                </figure>
+                <h3>root</h3>
+                <figure>
+                    <img src="nhn/images/vb3.png" alt="vb3"/>
+                </figure>
+                <h3>ssh</h3>
+                <p>Install</p>
+                <figure>
+                    <img src="nhn/images/vb4.png" alt="vb4"/>
+                </figure>
+                <p>ssh 접속</p>
+                <pre>
+                    $ ssh cheche@172.30.1.60
+                </pre>
+                <h3>telnet</h3>
+                <p>Install</p>
+                <ul>
+                    <li>telnet - telnet client</li>
+                    <li>telnetd - The telnet server</li>
+                    <li>telnet-ssl - telnet client with SSL encryption support</li>
+                    <li>telnetd-ssl - telnet server with SSL encryption support</li>
+                    <li>openbsd-inetd - OpenBSD Internet Superserver</li>
+                </ul>
+                <pre>
+                    $ apt-get install openbsd-inetd [기본적으로 inetd 대신 openbsd-inetd가 설치되어 있음]
+                    $ grep telnet /etc/inetd.conf
+                       telnet          stream  tcp     nowait  telnetd-ssl     /usr/sbin/tcpd  /usr/sbin/in.telnetd
+
+                    $ /etc/init.d/openbsd-inetd restart
+                    * Restarting internet superserver inetd                       [ OK ]
+                </pre>
+                <p>telnet 접속</p>
+                <pre>
+                    $ telnet 172.30.1.60
+                </pre>
+                <p>Port</p>
+                <pre>
+                    $ vi /etc/services
+                </pre>
+                <h3>Samba</h3>
+                <div class="h4">
+                    <h4>참조</h4>
+                    <p>
+                        <a href="http://www.5ing.co.kr/1632555" target="_blank">link1</a>
+                        <a href="http://funnylog.kr/434" target="_blank">link2</a>
+                        <a href="http://cafe.naver.com/aiwing/35" target="_blank">link3</a>
+                    </p>
+                    <h4>server &amp; client Install</h4>
+                    <figure>
+                        <figcaption>
+                            samba - SMB/CIFS file, print, and login server for Unix <br/>
+                            smbclient- command-line SMB/CIFS clients for Unix
+                        </figcaption>
+                        <img src="nhn/images/sh6.png" alt="sh6"/>
+                    </figure>
+                    <h4>Windows → Ubuntu</h4>
+                    <figure>
+                        <figcaption>
+                            samba 접속 가능 사용자 등록 및 패스워드 설정 <br/>
+                            ( 사용자 삭제 → deluser --remove-home smb-user1 )
+                        </figcaption>
+                        <img src="nhn/images/sh7.png" alt="sh7"/>
+                    </figure>
+                    <figure>
+                        <figcaption>
+                            smbclient Option
+                        </figcaption>
+                        <img src="nhn/images/sh8.png" alt="sh8"/>
+                    </figure>
+                    <pre class="dnone">
+                    [user1_home]
+                            comment= My  Folder
+                            path = /home/user1
+                            read only = no
+                            browseabale = yes
+                            guest ok = no
+                            create mask = 0666
+                            valid users = user1
+
+                    [pub]
+                            comment=public                           # 폴더설명
+                            path = /sharefolder/pub                # 공유 대상 경로
+                            read only = no                              # 읽기 전용 여부
+                            browseable = yes                         # 해당 폴더가 보일지 여부
+                            guest ok = no                               # 누구나 접근 가능여부
+                            create mask = 0666                  # 1. 파일 생성시 권한 비트
+                            force create mode = 0                   # 2. OR masking
+                            security mask = 0777                     # 3. AND masking
+                            force security mode = 0                 # 4. OR masking with security mask
+                            directory mask = 0777                    # 5. 디렉토리 생성시 권한 비트
+                            force directory mode = 0                # 6. OR masking
+                            directory security mask = 0777        # 7. AND masking
+                            force directory security mode = 0    # 8. OR masking with directory security mask
+                    </pre>
+                    <figure>
+                        <figcaption>
+                            /etc/samba/smb.conf 수정
+                        </figcaption>
+                        <img src="nhn/images/sh9.png" alt="sh9"/>
+                    </figure>
+                    <figure>
+                        <figcaption>
+                            Windows에서 Ubuntu 공유 폴더 접근
+                        </figcaption>
+                        <img src="nhn/images/sh10.png" alt="sh10"/>
+                    </figure>
+                    <h4>Ubuntu → Windows</h4>
+                    <figure>
+                        <figcaption>
+                            Windows에서 root 계정을 생성한다.
+                        </figcaption>
+                        <img src="nhn/images/sh11.png" alt="sh11"/>
+                    </figure>
+                    <figure>
+                        <figcaption>
+                            Windows에서 공유폴더를 설정한다. D:\smbShare
+                        </figcaption>
+                        <img src="nhn/images/sh12.png" alt="sh12"/>
+                    </figure>
+                    <pre class="dnone">
+                    윈도우 공유폴더를 리눅스에서 접근하고 싶을 때가 있다.
+                    보통 smbclient를 이용하여 cifs로 접근하는데,
+                    가끔 다음과 같은 에러를 발생하면서 잘되지 않기도 한다.
+                    15357: tree connect failed: ERRDOS - ERRnomem (Insufficient server memory to perform the requested function.)
+                    SMB connection failed
+                    대부분 공유를 받는 쪽에 문제가 있을거라 생각하기 쉽지만 에러 메시지를 읽어만 봤어도(서버 메모리 부족) 그런 오해는 하지 않을 것이다.
+                    해결 방법은 간단하다. 파일공유를 담당하는 윈도우 서비스를 제시작 하면 된다.
+                    명령 프롬프트에서 다음 명령을 실행한다.
+                    net stop LanmanServer /Y
+                    방금 말했듯이 LanmanServer 서비스는 파일 공유를 담당하 서버이기 때문에 Browser, HomeGroupListener 서비스에 종속적이다.
+                    즉, LanmanServer를 내리면 두개의 서비스가 자동적으로 종료된다는 것을 말하고 싶었다.
+                    이제 서비스를 다시 시작하면 모든 것이 해결된다.
+                    명령 프롬프트에서 다음 명령을 실행한다.
+                    net start LanmanServer
+                    net start Browser
+                    net start HomeGroupListener
+                    이제 리눅스로 돌아가 확인해 보면 아마 잘 될 것이다.
+                    </pre>
+                    <figure>
+                        <figcaption>
+                            윈도우에서 공유한 폴더가 보이는지 확인 <br/>
+                            아래와 같은 Failure 메시지가 보이면, cmd에서 에러를 처리한다.
+                        </figcaption>
+                        <img src="nhn/images/sh13.png" alt="sh13"/>
+                    </figure>
+                    <figure>
+                        <figcaption>에러 처리</figcaption>
+                        <img src="nhn/images/sh14.png" alt="sh14"/>
+                    </figure>
+                    <figure>
+                        <figcaption>
+                            아래와 같은 Failure 메시지가 보이면, cmd에서 root계정 생성
+                        </figcaption>
+                        <img src="nhn/images/sh15.png" alt="sh15"/>
+                    </figure>
+                    <figure>
+                        <figcaption>
+                            Ubuntu에서 Windows의 smbShare 폴더 마운트 <br/>
+                            마운트 전에 cifs-utils 패키지 설치 확인
+                        </figcaption>
+                        <img src="nhn/images/sh16.png" alt="sh16"/>
+                    </figure>
+                    <figure>
+                        <figcaption>
+                            smbclient로 윈도우 공유폴더 마운트하지 않고 접근하는 방법
+                        </figcaption>
+                        <img src="nhn/images/sh17.png" alt="sh17"/>
+                    </figure>
+                </div>
+                <h3>웹서버 구축</h3>
+                <table class="tblType1 v2">
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">패키지 업데이트</th>
+                        <td>apt-get update</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">아파치 설치</th>
+                        <td>apt-get install apache2</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="exc">
+                            apache2 - Apache HTTP Server <br/>
+                            apache2-bin - Apache HTTP Server (binary files and modules) <br/>
+                            apache2-data - Apache HTTP Server (common files) <br/>
+                            libapr1 - Apache Portable Runtime Library <br/>
+                            libaprutil1 - Apache Portable Runtime Utility Library <br/>
+                            libaprutil1-dbd-sqlite3 - Apache Portable Runtime Utility Library - SQLite3 Driver <br/>
+                            libaprutil1-ldap - Apache Portable Runtime Utility Library - LDAP Driver <br/>
+                            ssl-cert - simple debconf wrapper for OpenSSL
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">MySQL 인증 모듈 설치</th>
+                        <td>apt-get install libapache2-mod-auth-mysql</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="exc">
+                            libapache2-mod-auth-mysql - Apache 2 module for MySQL authentication <br/>
+                            libmysqlclient18 - MySQL database client library <br/>
+                            mysql-common - MySQL database common files, e.g. /etc/mysql/my.cnf
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">MySQL 설치</th>
+                        <td>apt-get install mysql-server mysql-client</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="exc">
+                            libaio1 - Linux kernel AIO access library - shared library <br/>
+                            <b>libdbd-mysql-perl</b> - Perl5 database interface to the MySQL database <br/>
+                            <b>libdbi-perl</b> - Perl Database Interface (DBI) <br/>
+                            libhtml-template-perl - module for using HTML templates with Perl <br/>
+                            <b>libterm-readkey-perl</b> - perl module for simple terminal control <br/>
+                            libwrap0 - Wietse Venema's TCP wrappers library <br/>
+                            mysql-client - MySQL database client (metapackage depending on the latest version) <br/>
+                            <b>mysql-client-5.5</b> - MySQL database client binaries <br/>
+                            <b>mysql-client-core-5.5</b> - MySQL database core client binaries <br/>
+                            mysql-server - MySQL database server (metapackage depending on the latest version) <br/>
+                            mysql-server-5.5 - MySQL database server binaries and system database setup <br/>
+                            mysql-server-core-5.5 - MySQL database server binaries <br/>
+                            tcpd - Wietse Venema's TCP wrapper utilities <br/><br/>
+
+                            mysql-server : 12개 , mysql-client : 6개 , 공통 : 5개 , Total : 13개 설치
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">PHP 설치</th>
+                        <td>apt-get install php5</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="exc">
+                            php5 - server-side, HTML-embedded scripting language (metapackage) <br/>
+                            php5-cli - command-line interpreter for the php5 scripting language <br/>
+                            php5-common - Common files for packages built from the php5 source <br/>
+                            php5-json - JSON module for php5 <br/>
+                            php5-readline - Readline module for php5 <br/>
+                            libapache2-mod-php5 - server-side, HTML-embedded scripting language (Apache 2 module)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">PHP와 MySQl을 <br/>연동하기 위한 모듈 설치</th>
+                        <td>apt-get install php5-mysql</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="exc">
+                            php5-mysql - MySQL module for php5
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">아파치 오류 제거</th>
+                        <td>echo "ServerName localhost" &gt; /etc/apache2/conf-available/fqdn.conf <br/>a2enconf fqdn</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">아파치 한글 설정</th>
+                        <td>echo "AddDefaultCharset utf-8" &gt;&gt; /etc/apache2/apache2.conf</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">아파치 재시작</th>
+                        <td>
+                            /etc/init.d/apache2 restart
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">MySQL 재시작</th>
+                        <td>/etc/init.d/mysql restart</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="exc">
+                            Checking for tables which need an upgrade, are corrupt or were not closed cleanly.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">http://localhost/info.php</th>
+                        <td>echo "&lt;?php phpinfo(); ?&gt;" &gt; /var/www/html/info.php</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">MySQL 접속</th>
+                        <td>
+                            mysql -uroot -p
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">기타</th>
+                        <td>
+                            libapache2-mod-auth-mysql , mysql-client , php5 <br/>
+                            → 기본 설치시 이거는 안한다. 필수는 아닌 듯? <br/>
+                            metapackage는 필수가 아닌듯 하다? <br/>
+                            apache2-mpm-prefork : 기본 설치시 이거는 설치된다. 필수인듯?
+                            <a href="http://blog.naver.com/yosi3world/50082176646" target="_blank">link1</a> <a href="http://mcpaint.tistory.com/151" target="_blank">link2</a>
+                            <br/>
+                            /etc/php5/apache2/php.ini → short_open_tag = On → &lt;? 사용가능 ?&gt;
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="h4">
+                    <h4>~(tilde)로 사용자별 홈페이지 접속하기</h4>
+                    <figure>
+                        <figcaption>
+                            사용자는 자신의 홈디렉토리에 public_html을 생성하고, 웹페이지를 만든다.
+                        </figcaption>
+                        <img src="nhn/images/sh4.png" alt="sh4"/>
+                    </figure>
+                    <figure>
+                        <figcaption>
+                            root는 사용자가 웹서비스가 가능하도록 아래와 같이 작업을 진행한다. <br/>
+                            http://172.30.1.60/~cheche3/index.php 접속 확인
+                        </figcaption>
+                        <img src="nhn/images/sh5.png" alt="sh5"/>
+                    </figure>
+                </div>
+            </div>
+            <h2>Subversion 서버 설정</h2>
+            <div class="h3">
+                <h3>Subversion install</h3>
+                <figure>
+                    <img src="nhn/images/vb6.png" alt="vb6"/>
+                </figure>
+                <h3>저장소 생성 및 초기화</h3>
+                <figure>
+                    <img src="nhn/images/vb7.png" alt="vb7"/>
+                </figure>
+                <h3>저장소 접근 방식</h3>
+                <div class="h4">
+                    <h4>서버에서 직접 작업하는 경우</h4>
+                    <p>
+                        Subversion 서버에 시스템 계정이 있어야 하고 시스템 계정으로 로그인해서 작업하는 경우에 사용하는 방식이다.<br/>
+                        저장소는 로컬 머신의 파일 시스템에 있다. 때문에 다음과 같은 URL로 접근한다.
+                    </p>
+                    <pre>
+                        $ svn [svn 명령] file:///home/svnroot/myproject
+                    </pre>
+                    <p>
+                        이 방식은 중요하게 다뤄야 할 Subversiton 서버에 보안상 문제가 많이 있고 안정성 면에서도 문제점을 내포하고 있다.<br/>
+                        때문에 개인적으로 자신의 파일들을 관리하는 데는 사용하지만 공동 프로젝트에서는 잘 사용하지 않는 방식이다.
+                    </p>
+                    <h4>ssh를 이용해 원격으로 작업하는 경우</h4>
+                    <p>
+                        Subversion 서버에 시스템 계정이 있을 때 사용하는 방식이다.<br/>
+                        ssh 프로토콜을 사용해 서버에 있는 프로젝트 파일을 자신의 PC로 가져와 작업하고 다음과 같은 형식의 URL로 접근한다.
+                    </p>
+                    <pre>
+                        $ svn [svn 명령] svn+ssh://[ID]@[주소]/home/svnroot/myproject
+                    </pre>
+                    <p>
+                        보안성이 좋고 별도의 서버 설정이 필요 없어 많이 사용되는 방식 중 하나다.
+                    </p>
+                    <h4>http를 이용해 원격으로 작업하는 경우</h4>
+                    <p>
+                        Subversion 서버에 Subversion 계정이 있어야 한다.<br/>
+                        Subversion 계정은 일반적인 시스템 계정과 다르게 Subversion에서만 사용하는 계정이다.<br/>
+                        설정에 따라 http 또는 https 프로토콜을 사용해 서버에 있는 프로젝트 파일을 자신의 PC로 가져와 작업하고 다음과 같은 형식의 URL로 접근한다.
+                    </p>
+                    <pre>
+                        $ svn [svn 명령] svn+http://[주소]/svn/myproject
+                        $ svn [svn 명령] svn+https://[주소]/svn/myproject
+                    </pre>
+                    <p>속도가 비교적 빠르고 접근성이 높아 가장 많이 사용하는 방식 중 하나다.</p>
+                    <div class="h5">
+                        <h5>http를 이용한 서버 설정</h5>
+                        <p>아파치 웹서버 &amp; 웹서버 svn 모듈 설치</p>
+                        <p>
+                            아파치를 설치하는 이유는 SVN과 아파치를 연동해서 SVN 클라이언트에서 svn 서버로 접속할 때.. <br/>
+                            http 형식으로 접속하기 위해서입니다. <br/>
+                            http 방식으로 접속하면 외부에서 접근할 때.. 따로 svn 포트를 오픈하지 않아도 됩니다. <br/>
+                            그냥 svn 전송 포트로 접속하려면 아파치와 연동은 필요 없습니다.
+                        </p>
+                        <figure>
+                            <img src="nhn/images/vb8.png" alt="vb8"/>
+                        </figure>
+                        <p>
+                            웹서버가 저장소 디렉토리를 읽고 쓸 수 있게 권한을 설정
+                        </p>
+                        <pre>
+                            $ chown www-data /home/svnroont/myproject -R
+                            $ chmod u+w /home/svnroot/myproject -R → 쓰기 권한이 없다면...
+                        </pre>
+                        <figure>
+                            <img src="nhn/images/vb9.png" alt="vb9"/>
+                        </figure>
+                        <p>
+                            웹서버 설정 파일에 Subversion 저장소 관련 설정을 해야 한다.
+                        </p>
+                        <div class="h6">
+                            <h6>svn 모듈 로드 설정</h6>
+                            <pre>
+                                $ cat /etc/apache2/mods-enabled/dav_svn.load
+                            </pre>
+                            <figure>
+                                <img src="nhn/images/vb10.png" alt="vb10"/>
+                            </figure>
+                        </div>
+                        <div class="h6">
+                            <h6>location /svn의 설정</h6>
+                            <p>
+                                이후 http://[서버 IP]/svn/[저장소명] URL로 접속하면 /home/svnroot/[저장소명]으로 접속하게 됨
+                            </p>
+                            <pre>
+                                $ vi /etc/apache2/mods-enabled/dav_svn.conf
+                            </pre>
+                            <figure>
+                                <img src="nhn/images/vb11.png" alt="vb11"/>
+                            </figure>
+                        </div>
+                        <div class="h6">
+                            <h6>/etc/svn-passwd 생성</h6>
+                            <p>
+                                /etc/svn-passwd → Subversion 사용자 계정들이 정의되어 있는 파일<br/>
+                                Subversion 사용자 계정은 시스템 계정과 다르게 Subversion에서만 사용하는 계정
+                            </p>
+                            <pre>
+                                $ htpasswd -nd [Subversion ID]
+                                → [Subversion ID]:[암호화된 암호]
+                            </pre>
+                            <figure>
+                                <img src="nhn/images/vb12.png" alt="vb12, password → 1234"/>
+                            </figure>
+                            <figure>
+                                <figcaption>웹서버 재시작 → 에러발생</figcaption>
+                                <img src="nhn/images/vb13.png" alt="vb13"/>
+                            </figure>
+                            <p>아래와 같이 설정</p>
+                            <pre>
+                                $ echo "ServerName localhost" > fqdn.conf
+                                $ a2enconf fqdn
+                            </pre>
+                            <figure>
+                                <img src="nhn/images/vb14.png" alt="vb14"/>
+                                <!--<a href="http://askubuntu.com/questions/256013/could-not-reliably-determine-the-servers-fully-qualified-domain-name" target="_blank">참조사이트</a>-->
+                            </figure>
+                            <figure>
+                                <figcaption>웹서버 재시작 → 정상가동</figcaption>
+                                <img src="nhn/images/vb15.png" alt="vb15"/>
+                            </figure>
+                            <p>http 방식으로 프로젝트 저장소에 제대로 접근하는지 확인</p>
+                            <pre>
+                                $ svn info http://localhost/svn/myproject
+                            </pre>
+                            <figure>
+                                <img src="nhn/images/vb16.png" alt="vb16"/>
+                            </figure>
+                        </div>
+                    </div>
+                    <h4>svnserve를 이용해 원격으로 작업하는 경우</h4>
+                    <p>
+                        Subversion 패키지에 포함된 svnserve라는 서버 프로그램을 사용해 접근하는 방식이다.<br/>
+                        Subversion 서버에 Subversion 계정이 있어야 하고 SVN 프로토콜을 사용해 서버에 있는 프로젝트 파일을 자신의 PC로 가져와 작업한다.<br/>
+                        무거운 웹서버를 띄우지 않아도 되므로 비교적 가볍고 다음과 같은 형식의 URL로 접근할 수 있다.
+                    </p>
+                    <pre>
+                        $ svn [svn 명령] svn://[주소]/myproject
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="nth45" class="nth00">
+        <h1>Javascript</h1>
+        <div class="h2">
+            <h2>자바스크립트 데이터 타입과 연산자</h2>
+            <p>모든 언어의 기본은 데이터 타입을 파악하는 것에서부터 시작</p>
+            <ul>
+                <li>
+                    <strong>기본타입</strong>
+                    <ul>
+                        <li>숫자 (number)</li>
+                        <li>문자열 (string)</li>
+                        <li>불린값 (boolean)</li>
+                        <li>null (object)</li>
+                        <li>undefined (undefined)</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>참조타입(객체, Object)</strong>
+                    <ul>
+                        <li>배열(Array)</li>
+                        <li>함수(Function)</li>
+                        <li>정규표현식</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="h3">
+                <h3>자바스크립트 기본 타입</h3>
+                <p>
+                    숫자, 문자열, 불린값, null, undefined →
+                    그 자체가 하나의 값을 나타낸다.<br/>
+                    느슨한 타입 체크 언어 → var 변수 = 아무거나<br/>
+                    ( typeof 연산자는 피연산자의 타입을 리턴한다. )
+                </p>
+                <div class="h4">
+                    <h4>숫자 (number)</h4>
+                    <p>
+                        하나의 숫자형 → 정수나 실수 구분이 없다.<br/>
+                        모든 숫자를 실수로 처리한다.
+                        <!--5/2 ... C언어에서는 2가 출력된다.-->
+                    </p>
+                    <pre>
+                        console.log( 5/2 )
+                        console.log( Math.floor(5/2) )
+                        console.log( Math.round(5/2) )
+                    </pre>
+                    <h4>문자열 (string)</h4>
+                    <p>
+                        var 변수 = &#39;문자열&#39;;<br/>
+                        var 변수 = &quot;문자열&quot;;
+                    </p>
+                    <pre>
+                        // str 문자열 생성
+                        var str = 'test';
+                        console.log(str[0], str[1], str[2], str[3]);
+
+                        // 문자열의 첫 글자를 대문자로 변경?
+                        str[0] = 'T';
+                        console.log(str); → test, <span class="u">한 번 정의된 문자열은 변하지 않는다.</span>
+                    </pre>
+                    <h4>불린값 (boolean)</h4>
+                    <p>true &amp; false</p>
+                    <h4>null (object)</h4>
+                    <p>
+                        값이 비어있음 - 개발자가 명시적으로 값이 비어있음을 나타내는 데 사용<br/>
+                        null 타입 변수인지를 확인할 때 typeof연산자를 사용하면 안되고,<br/>
+                        일치 연산자를(===)를 사용해서 변수의 값을 직접 확인해야 한다.
+                    </p>
+                    <pre>
+                        // null 타입 변수 생성
+                        var nullVar = null;
+                        console.log(typeof nullVar === "null"); → false, <span class="u">typeof가 null이 아님을 주의</span>
+                        console.log(nullVar === null); → true
+                        → <span class="u">1가지 방법으로 null 타입 변수인지 확인 가능</span>
+                    </pre>
+                    <h4>undefined (undefined)</h4>
+                    <p>
+                        값이 비어있음 - 기본적으로 값이 할당되지 않은 변수<br/>
+                        undefined는 타입이자, 값을 나타낸다.<br/>
+                    </p>
+                    <pre>
+                        // undefined 타입 변수 생성
+                        var emptyVar;
+                        console.log(typeof emptyVar === "undefined"); → true
+                        console.log(emptyVar === undefined);
+                        → <span class="u">2가지 방법으로 undefined 타입 변수인지 확인 가능</span>
+                    </pre>
+                </div>
+            </div>
+            <div class="h3">
+                <h3>자바스크립트 참조 타입(객체 타입)</h3>
+                <p>
+                    단순히 '이름(key):값(value)'형태의 프로퍼티들을 저장하는 컨테이너<br/>
+                    자바스크립트에서는 기본 타입을 제외한 모든 값은 객체다.<br/>
+                    따라서 배열, 함수, 정규표현식 등도 모두 결국 자바스크립트 객체로 표현된다.<br/>
+                    <!--<span class="u">null 타입은 "object"인데 이건 뭐지???</span><br/>-->
+                    기본 타입은 하나의 값만을 가지는 데 비해, 참조타입인 객체는 여러개의 프로퍼티들을 포함할 수 있다.<br/>
+                    이러한 객체의 프로퍼티는 기본 타입의 값을 포함하거나, 다른 객체를 가리길 수도 있다.<br/>
+                    이러한 성질에 따라 객체의 프로퍼티는 함수로 포함될 수 있으며,<br/>
+                    자바스크립트에서는 이러한 프로퍼티를 메서드라고 부른다.
+                </p>
+                <div class="h4">
+                    <h4>객체 생성</h4>
+                    <p>
+                        자바스크립트의 객체 개념은 기존 객체지향 언어에서의 객체 개념과는 약간 다르다.<br/>
+                        자바에서는 클래스를 정의하고, 클래스의 인스턴스를 생성하는 과정에서 객체가 만들어진다.<br/>
+                        이에 비해 자바스크립트에서는 클래스라는 개념이 없고,<br/>객체 리터럴이나 생성자 함수 등 별도의 생성 방식이 존재한다.
+                    </p>
+                    <div class="h5">
+                        <h5>Object() 생성자 함수</h5>
+                        <p>
+                            자바스크립트에서는 객체를 생성할 때, 내장 Object() 생성자 함수를 제공한다.
+                        </p>
+                        <pre>
+                            // Object()를 이용해서 foo 빈 객체 생성
+                            var foo = new Object();
+
+                            // foo 객체 프로퍼티 생성
+                            foo.name = 'foo';
+                            foo.age = 30;
+                            foo.gender = 'male';
+
+                            console.log(typeof foo); → "object"
+                            console.log(foo); → Object { name: "foo", age: 30, gender: "male" }
+                        </pre>
+                        <h5>객체 리터럴 방식</h5>
+                        <p>
+                            리터럴이란 용어의 의미는 표기법이라 생각하면 된다.<br/>
+                            { 프로퍼티이름1 : 프로퍼티값1, 프로퍼티이름2 : 프로퍼티값2, ...  }<br/>
+                            프로퍼티이름 → 문자열이나 숫자<br/>
+                            프로퍼티값 → 자바스크립트의 값을 나타내는 어떤 표현식<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            이 값이 함수일 경우 이러한 프로퍼티를 메서드라고 부른다.
+                        </p>
+                        <pre>
+                            // 객체 리터럴 방식으로 foo 객체 생성
+                            var foo = {
+                                name : 'foo',
+                                age : 30,
+                                gender : 'male'
+                            };
+
+                            console.log(typeof foo); → "object"
+                            console.log(foo); → Object { name: "foo", age: 30, gender: "male" }
+                        </pre>
+                        <h5>생성자 함수 이용</h5>
+                        <p>
+                            자바스크립트의 경우는 함수를 통해서도 객체를 생성할 수 있다.<br/>
+                            이렇게 객체를 생성하는 함수를 생성자 함수라고 부른다.<br/>
+                            <!--생성자 함수는 4장에서 자세히 살펴볼 것이다.-->
+                        </p>
+                    </div>
+                    <script>
+                        // 객체 리터럴 방식으로 foo 객체 생성
+                        var foo = {
+                            name : 'foo',
+                            age : 30,
+                            gender : 'male'
+                        };
+
+                        console.log(typeof foo);
+                        console.log(foo);
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="nth56" class="nth00">
+        <h1>jQuery</h1>
+        <div class="h2">
+            <h2>jQuery References</h2>
+            <div class="h3">
+                <h3>jQuery Selectors</h3>
+                <table class="tblType1 v2">
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">$('div + p')</th>
+                        <td>div 아래 최초로 나오는 동급 p 하나만 적용된다.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">$('div ~ p')</th>
+                        <td>div 아래 동급 p들은 모두 적용된다.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">$('img:not([alt])')</th>
+                        <td>alt 없는 img</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">$('[title*="hello world"]')</th>
+                        <td>title에 'hello world'가 포함된 요소</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>jQuery Events</h3>
+                <p>
+                    Event methods trigger or attach a function to an event handler for the selected elements.<br/>
+                    The following table lists all the jQuery methods used to handle events.
+                </p>
+                <table class="tblType1 v2">
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr class="unionB">
+                        <th scope="row" class="chk">blur()</th>
+                        <td>
+                            Attaches/Triggers the blur event → focus를 잃었을 때
+                        </td>
+                    </tr>
+                    <tr class="unionT">
+                        <th scope="row" class="chk">focus()</th>
+                        <td>
+                            Attaches/Triggers the focus event
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">change()</th>
+                        <td>
+                            Attaches/Triggers the change event<br/>
+                            → checkbox, input, select, textarea 내용이 변경될 때<br/>
+                            → radio는 선택이 될 때
+                        </td>
+                    </tr>
+                    <tr class="unionB">
+                        <th scope="row">click()</th>
+                        <td>Attaches/Triggers the click event</td>
+                    </tr>
+                    <tr class="unionT">
+                        <th scope="row">dblclick()</th>
+                        <td>Attaches/Triggers the double click event</td>
+                    </tr>
+                    <tr class="unionB">
+                        <th scope="row" class="chk">
+                            <a href="nhn/exam/key001.html" target="_blank">keypress()</a>
+                        </th>
+                        <td> Attaches/Triggers the keypress event → 출력키만 인식, 한글 인식X</td>
+                    </tr>
+                    <tr class="unionTB">
+                        <th scope="row" class="chk">keydown()</th>
+                        <td> Attaches/Triggers the keydown event → 모든키를 인식</td>
+                    </tr>
+                    <tr class="unionT">
+                        <th scope="row" class="chk">keyup()</th>
+                        <td> Attaches/Triggers the keyup event → 키를 놓을 때</td>
+                    </tr>
+                    <tr class="unionB">
+                        <th scope="row" class="chk">
+                            <a href="nhn/exam/mouse001.html" target="_blank">mouseover()</a>
+                        </th>
+                        <td>
+                            Attaches/Triggers the mouseover event<br/>
+                            → 해당영역에 진입할 때, 해당영역에서 새로운 요소를 만날 때 발생하는 이벤트
+                        </td>
+                    </tr>
+                    <tr class="unionT">
+                        <th scope="row" class="chk"> mouseenter()</th>
+                        <td>
+                            Attaches/Triggers the mouseenter event<br/>
+                            → 해당영역에 진입하면 한번 발생하는 이벤트
+                        </td>
+                    </tr>
+                    <tr class="unionB">
+                        <th scope="row" class="chk">
+                            <a href="nhn/exam/mouse002.html" target="_blank">mouseout()</a>
+                        </th>
+                        <td>
+                            Attaches/Triggers the mouseout event <br/>
+                            → 해당영역 안을 벗어나면 연속적으로 발생하는 이벤트
+                        </td>
+                    </tr>
+                    <tr class="unionT">
+                        <th scope="row" class="chk">mouseleave()</th>
+                        <td>
+                            Attaches/Triggers the mouseleave event <br/>
+                            → 해당영역을 벗어나면 한번 발생하는 이벤트
+                        </td>
+                    </tr>
+                    <tr class="unionB">
+                        <th scope="row">mouseup()</th>
+                        <td>Attaches/Triggers the mouseup event</td>
+                    </tr>
+                    <tr class="unionT">
+                        <th scope="row">mousedown()</th>
+                        <td>Attaches/Triggers the mousedown event</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">mousemove()</th>
+                        <td>Attaches/Triggers the mousemove event</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">resize()</th>
+                        <td>Attaches/Triggers the resize event</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">scroll()</th>
+                        <td>Attaches/Triggers the scroll event</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">select()</th>
+                        <td>Attaches/Triggers the select event</td>
+                    </tr>
+                    <tr>
+                        <td>submit()</td>
+                        <td>Attaches/Triggers the submit event</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">error()</th>
+                        <td>Deprecated in version 1.8. Attaches/Triggers the error event</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">trigger()</th>
+                        <td>
+                            Triggers all events bound to the selected elements<br/>
+                            트리거는 사전적 의미로 '방아쇠'를 뜻하는데,<br/>
+                            단어 뜻 그대로, 방아쇠를 당기면 자동으로 총알이 나가듯이<br/>
+                            테이블에 무슨 일이 일어나면 트리거가 자동으로 실행된다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">triggerHandler()</th>
+                        <td>Triggers all functions bound to a specified event for the selected elements</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>jQuery Effects</h3>
+                <p>The following table lists all the jQuery methods for creating animation effects.</p>
+                <h3>jQuery HTML/CSS</h3>
+                <p>
+                    The following table lists all the methods used to manipulate the HTML and CSS.<br/>
+                    The methods below work for both HTML and XML documents. Exception: the html() method.
+                </p>
+                <p>
+                    Inserts 메소드는 새로운 content를 생성하거나, 기존 content를 Cut&middot;삽입한다. (즉, 순환이 가능하다.)
+                </p>
+                <table class="tblType1 v3">
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="rowgroup" rowspan="8">Inserts</th>
+                        <th scope="row" class="chk">before()</th>
+                        <td>Inserts content before selected elements</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">after()</th>
+                        <td>Inserts content after selected elements</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">prepend()</th>
+                        <td>Inserts content at the beginning of selected elements <br/> → node.insertBefore(newnode,existingnode)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">append()</th>
+                        <td>Inserts content at the end of selected elements <br/> → node.appendChild(newnode)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">insertBefore()</th>
+                        <td>Inserts HTML elements before selected elements</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">insertAfter()</th>
+                        <td>Inserts HTML elements after selected elements</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">prependTo()</th>
+                        <td>Inserts HTML elements at the beginning of selected elements</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">appendTo()</th>
+                        <td>Inserts HTML elements at the end of selected elements</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <figure>
+                    <img src="nhn/images/jq1_1.png" alt="before, after"/>
+                    <figcaption class="dnone">
+                        $(function(){
+                        var cntB = 0;
+                        var cntA = 0;
+
+                        $('#btn1').click(function(){
+                        $('p').before('&lt;div&gt;Hello before!' + ++cntB + '&lt;/div&gt;')
+                        });
+                        $('#btn2').click(function(){
+                        $('p').after('&lt;div&gt;Hello after!' + ++cntA + '&lt;/div&gt;')
+                        });
+                        })
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="nhn/images/jq1_2.png" alt="prepend, append"/>
+                    <figcaption class="dnone">
+                        $(function(){
+                        var cntB = 0;
+                        var cntA = 0;
+
+                        $('#btn1').click(function(){
+                        $('p').before('&lt;div&gt;Hello before!' + ++cntB + '&lt;/div&gt;')
+                        });
+                        $('#btn2').click(function(){
+                        $('p').after('&lt;div&gt;Hello after!' + ++cntA + '&lt;/div&gt;')
+                        });
+                        })
+                    </figcaption>
+                </figure>
+                <table class="tblType1 v2">
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">remove()</th>
+                        <td>$("div").remove(); → div포함 모두 제거</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table class="tblType1 v3">
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="rowgroup" rowspan="4">Wraps</th>
+                        <th scope="row" class="chk">unwrap()</th>
+                        <td>
+                            $('p').unwrap(); → p를 감싸는 직속 부모태그를 제거한다. body불가
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">wrap()</th>
+                        <td>
+                            $('p').wrap("&lt;div&gt;"); → p를 div로 감싼다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">wrapInner()</th>
+                        <td>
+                            $('p').wrapInner('&lt;div&gt;'); → p안을 div로 감싼다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">wrapAll()</th>
+                        <td>
+                            $('p').wrapAll('&lt;div&gt;'); → 모든 p를 모아서 div로 감싼다.
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>jQuery Traversing</h3>
+                <table class="tblType1 v2">
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row" rowspan="2" class="chk">children()</th>
+                        <td>$('target').children(); → target안에 모든 직속 자식들</td>
+                    </tr>
+                    <tr>
+                        <td class="exc">$('target').children('ul'); → target안에 모든 직속 ul자식들</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">parent()</th>
+                        <td>
+                            $('target').parent(); → 직속 부모<br/>
+                            $('target').parent('li'); → 직속 부모 지정 가능
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">parents()</th>
+                        <td class="exc">
+                            $('target').parents(); → 상위 모든 부모들 (body, html 포함)<br/>
+                            $('target').parents('div'); → 상위 모든 div<br/>
+                            $('target').parents('div, li'); → 상위 모든 div, li
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">parentsUntil()</th>
+                        <td class="exc">
+                            $('span').parentsUntil('target').css('border','1px solid red'); <br/>→ span &lt; css 적용되는 태그들 &lt; target
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">end()</th>
+                        <td class="exc">
+                            $('p').find('span').end().css('border','1px solid red'); → span이 아니라 p
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk">map()</th>
+                        <td class="exc"><a href="http://api.jquery.com/jquery.map/" target="_blank">새로운 객체 생성</a></td>
+                    </tr>
+                    <tr class="unionB">
+                        <th scope="row" class="chk">not()</th>
+                        <td class="exc">
+                            $('p').not('.intro').css('background-color', 'yellow'); → intro가 아닌 p
+                        </td>
+                    </tr>
+                    <tr class="unionT">
+                        <th scope="row" class="chk">filter()</th>
+                        <td class="exc">
+                            $('p').filter('.intro').css('background-color', 'yellow'); → intro인 p
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="chk" title="클로제스트">closest()</th>
+                        <td class="exc">
+                            $('span').closest('div').css('border','2px solid red'); → span에서 가장 가까운 div
+                        </td>
+                    </tr>
+                    <tr class="unionB">
+                        <th scope="row" class="chk">first()</th>
+                        <td class="exc">
+                            $('target p').first().addClass('grep'); → 처음 target 의 p
+                        </td>
+                    </tr>
+                    <tr class="unionT">
+                        <th scope="row" class="chk">last()</th>
+                        <td class="exc">
+                            $('target p').last().addClass('grep'); → 마지막 target 의 p
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>jQuery AJAX</h3>
+                <p>
+                    AJAX is the art of exchanging data with a server, and update parts of a web page - without reloading the whole page.
+                   <br/>
+                    The following table lists all the jQuery AJAX methods:
+                </p>
+                <h3>jQuery Misc</h3>
+                <h3>jQuery Properties</h3>
+            </div>
+        </div>
+    </section>
+    <section id="nth99" class="nth00">
+        <h1>Etc</h1>
+        <div class="h2">
+            <h2>FTP</h2>
+            <p>경로\파일 이름은 &quot; &quot;로 묶어주고, 공백은 그대로 놔두면 된다.</p>
+            <div class="h3">
+                <h3>z.bat</h3>
+                <pre>
+                   ftp -i -s:"C:\Users\Administrator\Desktop\z.ftp"
+                </pre>
+                <h3>z.ftp</h3>
+                <pre>
+                    open che28614.oranc.co.kr
+                    che28614
+                    kiosiao
+                    binary
+                    // cd auto
+                    // mdelete * huhnn6qq
+                    mput "C:\Users\Administrator\.WebStorm9\config\keymaps\Eclipse copy.xml"
+                    quit
+                </pre>
+            </div>
+            <h2>jQuery</h2>
+            <div class="h3">
+                <h3>memo</h3>
+                <pre>
+                    <span class="preTtl_1">문서 길이</span>
+                    $(document).scrollTop() //returns scroll position from top of document
+                    $(document).width(); → 스크롤바를 제외한 가로 길이 (padding,border,margin 도 제외, 순수한 길이)
+                    $(document).height(); → 스크롤바를 제외한 세로 길이 (padding,border,margin 도 제외, 순수한 길이)
+                    (크롬,파폭,익스) 스크롤바의 길이는 17px
+
+                    var elmnt = document.getElementById("content");
+                    var y = elmnt.scrollHeight → element의 padding을 포함한 height (border,margin 제외)
+                    var x = elmnt.scrollWidth → element의 padding을 포함한 width (border,margin 제외)
+
+                    http://stackoverflow.com/questions/3407133/how-do-i-get-the-scroll-position-of-a-document
+
+                    <span class="preTtl_1">cssText</span>
+                    $('div').css('cssText','width:500px;height:50px;border:1px solid red !important');
+
+                    <span class="preTtl_1">diplay:none이 아닌 div 갯수</span>
+                    $('div:visible').length
+                    $('div:not(:hidden )').length
+
+                    <span class="preTtl_1">기존 내용이 제거되고</span>
+                    $('p').text('&lt;b&gt;cheche&lt;/b&gt;'); → 그대로 출력
+                    $('p').html('&lt;b&gt;cheche&lt;/b&gt;'); → b태그 적용
+
+                    <span class="preTtl_1">The change event occurs when the value of an element is changed</span>
+                    $('input').change(function(){
+                        ... 내용이 변경될 때
+                    });
+
+                    <span class="preTtl_1">is ... true &amp; false</span>
+                    $('.target').is('div') ... 자신이 div라면 true
+                    $('.target').parents().is('div') ... 부모들중 div가 있다면 true
+
+                    <span class="preTtl_1">prop</span>
+                    prop() 는 속성값 반환 또는 설정하는 메소드이다. // attr 참조
+                    $("input").prop("required","true") → input에 required를 설정(IE10 이상)
+                    <a href="http://api.jquery.com/prop/" target="_blank">link</a>
+
+                    <span class="preTtl_1">Version</span>
+                    $().jquery;
+                    $.fn.jquery;
+
+                    e.preventDefault();
+                    e.stopPropagation();
+                    <a href="http://ismydream.tistory.com/98" target="_blank">event.stopPropagation(), event.preventDefault () 이해하기</a>
+
+                    모바일에서 touch 이벤트를 정확하게 처리하기 위해서는
+                    touch 이벤트를 처리하는 모든 메소드에 아래의 소스 코드를 추가해 주어야 하는 것 같습니다.
+                    아래의 소스 코드는 터치 이벤트 기본 행위를 하지 않도록 설정하는 것으로
+                    개발자가 터치 이벤트로 발생되는 이동 등을 모두 처리할 경우 사용하시면 됩니다.
+                    event.preventDefault();
+
+                    <span class="preTtl_1">mouseover & mouseenter</span>
+                    mouseover는 해당영역에서 상하로 움직이면 발생하는 이벤트
+                    mouseenter는 해당영역에 한번 진입하면 발생하는 이벤트
+
+                    <a href="http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_sel_animated" target="_blank">animate callback</a>
+
+                    <span class="preTtl_1">클릭 변환</span>
+                    var state = true;
+                    $( "#button" ).click(function() {
+                        if ( state ) { alert(1); }
+                        else { alert(2); }
+                        state = !state;
+                    });
+                </pre>
+            </div>
+            <h2>javascript</h2>
+            <div class="h3">
+                <h3>memo</h3>
+                <pre>
+                    <span class="preTtl_1">요소갯수 구하기</span>
+                    function cntP(obj) {
+                        var count = -1;
+
+                        for(var prop in obj) {
+                            if(obj.hasOwnProperty(prop))
+                                count++;
+                        }
+
+                        return count;
+                    }
+
+                    var id_name = document.getElementById('id_name');
+                    var theTarget = id_name.getElementsByTagName('dd');
+
+                    alert(cntP(theTarget));
+
+                    <span class="preTtl_1">텍스트 변경</span>
+                    var theTarget = document.getElementsByTagName('body')[0];
+                    theTarget.innerHTML = theTarget.innerHTML
+                                            .replace(/확인/g, '&lt;span style="color:blue"&gt;확인&lt;/span&gt;')
+                                            .replace(/취소/g, '&lt;span style="color:red"&gt;취소&lt;/span&gt;');
+
+                    아래는 jQuery
+                    $("div:contains('확인')").each(function(){
+                        $(this).html( $(this).html().replace("확인","&lt;span style='color:blue'&gt;확인&lt;/span&gt;") );
+                    });
+
+                    <span class="preTtl_1">location</span>
+                    window.location.reload();
+                    window.location.replace("http://www.naver.com");
+                    window.location.assign("http://www.naver.com");
+                    window.location.href = "http://www.naver.com";
+                    window.location.href = window.location.href;
+
+                    window.location.href → http://localhost:9999/PhpstormProjects/nhn/test.html?id=cheche&pass=caocao#0001
+                    window.location.protocol → http:
+                    window.location.hostname → localhost
+                    window.location.port → 9999
+                    window.location.host → localhost:9999
+                    window.location.origin → http://localhost:9999
+                    window.location.pathname → /PhpstormProjects/nhn/test.html
+                    window.location.search → ?id=cheche&pass=caocao
+                    window.location.hash → #0001
+
+                    <span class="preTtl_1">object</span>
+                    alert(window); // object Window
+                    alert(document); // object HTMLDocument
+
+                    <span class="preTtl_1">open &amp; close</span>
+                    var w;
+                    function myFunction() {
+                        w = window.open("", "", "width=200, height=100");
+                        w.document.open();
+                        w.document.write("&lt;h1&gt;Hello World!&lt;/h1&gt;");
+                        w.document.close();
+                    }
+                    function myFunction2() {
+                        w.close();
+                    }
+
+                    <span class="preTtl_1">노드 컬렉션(NODELIST와 HTMLCOLLECTION)</span>
+                    alert(document.body.childNodes); // object NodeList NodeList
+                    alert(document.body.querySelectorAll('div')); // object NodeList
+                    alert(document.getElementsByName('che')); // object NodeList
+                    alert(document.getElementsByTagName('div')); // object HTMLCollection
+                    alert(document.getElementsByClassName('cls')); // object HTMLCollection
+                    alert(document.body.children); // object HTMLCollection
+
+                    <span class="preTtl_1">firstChild, lastChild 구하기</span>
+                    function chd(tg, fl) {
+                        var target = document.getElementById(tg);
+                        var myNodes = target.childNodes;
+                        var myNodes2 = [];
+                        var j=0;
+
+                        for(var i=0; i&lt;myNodes.length; i++){
+                            if(myNodes[i].nodeType === 1){
+                                myNodes2[j++] = myNodes[i];
+                            }
+                        }
+
+                        var firstChild = myNodes2[0];
+                        var lastChild = myNodes2[myNodes2.length-1];
+
+                        if(fl === 'f'){
+                            return firstChild;
+                        }else if(fl === 'l'){
+                            return lastChild;
+                        }else{
+                            return false;
+                        }
+                    }
+
+                    chd('myList', 'l').style.backgroundColor = 'red';
+
+                    <span class="preTtl_1">최신버전에서 형제(Sibling) 구하기</span>
+                    var content = document.getElementById('target');
+
+                    var previousSibling = content.previousSibling;
+                    while(previousSibling.nodeType !== 1){
+                        previousSibling = previousSibling.previousSibling;
+                    }
+                    previousSibling.style.border = '1px solid red';
+
+                    var nextSibling = content.nextSibling;
+                    while(nextSibling.nodeType !== 1){
+                        nextSibling = nextSibling.nextSibling;
+                    }
+                    nextSibling.style.border = '1px solid red';
+
+                    <span class="preTtl_1">새로운 요소 생성, 삽입</span>
+                    처음에 노드를 생성한다.
+                    createElement, createTextNode
+
+                    생성된 노드를 어느 위치에 삽입한다.
+                    insertBefore appendChild
+
+                    참조 : 노드 생성 및 추가는 innerHTML을 이용할 수 있다.
+
+                    <span class="preTtl_1">정규식</span>
+                    &lt;input type=&quot;text&quot; id=&quot;phone&quot; placeholder=&quot;010-1234-5678&quot; title=&quot;&#55092;&#45824;&#51204;&#54868;&#48264;&#54840;&quot;/&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;userName&quot; title=&quot;&#49324;&#50857;&#51088;&#51060;&#47492;&quot;/&gt;
+
+                    &lt;script src=&quot;nhn/js/placeholders.min.js&quot;&gt;&lt;/script&gt;
+                    &lt;script&gt;
+                        var phone = document.getElementById('phone');
+
+                        if(typeof String.prototype.trim !== 'function') {
+                            String.prototype.trim = function() {
+                                return this.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+                            }
+                        }
+
+                        phone.onblur = function(){
+                            var phoneVal = document.getElementById('phone').value.trim();
+                            var reg = /(010|011|016|019)-\d{3,4}-\d{4}$/;
+
+                            if (!reg.test(phoneVal)) {
+                                alert('010-1234-5678 형식으로 넣어주세요');
+                                document.getElementById('phone').value = '';
+                                phone.focus();
+                            }else{
+                                document.getElementById('phone').value = phoneVal;
+                            }
+
+                        }
+                    &lt;/script&gt;
+
+                    <span class="preTtl_1">익스플로러 구분</span>
+                    if( -1 != navigator.userAgent.indexOf('MSIE') ){
+                        alert('익스플로러')
+                    }else{
+                        alert('기타 브라우저');
+                    }
+
+                    <a href="http://stackoverflow.com/questions/5899783/detect-safari-chrome-ie-firefox-opera-with-user-agent" target="_blank">LINK</a>
+
+                    <span class="preTtl_1">IE버전 구분</span>
+                    <a href="http://tanalin.com/en/articles/ie-version-js/" target="_blank">LINK</a>
+                </pre>
+            </div>
+            <h2>Css</h2>
+            <div class="h3">
+                <h3>memo</h3>
+                <pre>
+                    <span class="preTtl_1">alt 없는 img</span>
+                    img:not([alt]) {border:10px solid red}
+
+                    <span class="preTtl_1">type 없는 input</span>
+                    input:not([type]) {border:10px solid red}
+
+                    <span class="preTtl_1">white-space</span>
+                    pre요소 → 브라우저 영역 나감
+                    white-space: pre → pre요소
+                    white-space: pre-line → 브라우저 영역. 앞에 공백 무시
+                    white-space: pre-wrap → 브라우저 영역. 앞에 공백 적용
+                    white-space: nowrap → 한줄 처리
+                    white-space: normal → default
+<!--
+                    2개일 경우 2번째로 검색
+                    input:not([type|title]) {border:10px solid red}
+
+                    3개일 경우 검색 못함
+                    input:not([type|title|name]) {border:10px solid red}
+                    zzzz11
+-->
+                </pre>
+            </div>
+            <div class="h3">
+                <h3>Etc</h3>
+                <pre>
+                    <span class="preTtl_1">조건 주석문</span>
+                    <xmp>
+                <!--[if IE 6 ]> <html class="ie6" lang="ko"> <![endif]-->
+                <!--[if IE 7 ]> <html class="ie7" lang="ko"> <![endif]-->
+                <!--[if IE 8 ]> <html class="ie8" lang="ko"> <![endif]-->
+                <!--[if IE 9 ]> <html class="ie9" lang="ko"> <![endif]-->
+                <!--[if (gt IE 9)|!(IE)]><!-->
+                <html class="noie" lang="ko">
+                <!--<![endif]-->
+                    </xmp>
+                </pre>
+            </div>
+            <h2>Tomcat</h2>
+            <p> Tomcat은 JSP용 아파치</p>
+            <div class="h3">
+                <h3>Dowoload &amp; Install</h3>
+                <p>
+                    우선 JDK를 다운로드 받아서 설치하여야 한다. google에서 jdk download를 검색한다. <br/>
+                    <a href="https://www.youtube.com/watch?v=dwF9KN3VmOE&feature=youtu.be" target="_blank">자바 프로그래밍 - 자바 (java) JDK 다운로드, 설치 및 환경설정 동영상</a>
+                </p>
+                <figure>
+                    <figcaption>JDK 설치후 아래와 같이 시스템 변수 세팅</figcaption>
+                    <img src="nhn/images/etc1.png" alt="etc1"/>
+                </figure>
+                <p>
+                    <a href="http://tomcat.apache.org/" target="_blank">tomcat.apache.org</a> 에서 최신버전을 다운 받는다. <br/>
+                    좌측 Download → 최신버전 Core 부분에서 다운받는다. <br/>
+                    <a href="http://blog.naver.com/illulir2/220273408261" target="_blank">아파치톰캣 설치,기본셋팅법</a>
+                </p>
+                <h3>브라우저 접속</h3>
+                <p>
+                    http://localhost:8000 는 아래 경로의 index.jsp를 불러온다. <br/>
+                    C:\Program Files\Apache Software Foundation\Tomcat 8.0\webapps\ROOT<br/><br/>
+
+                    외부 IP로 접속하려면 포트를 열어줘야 한다. → WF.msc <br/>
+                    제어판 - 시스템 및 보안 - Windows 방화벽 - 고급설정 - 인바운드 규칙 - 우측클릭 - 새 규칙<br/>
+                    포트(o) - TCP(t) , 특정 로컬 포트(s) : 8000입력 - 연결 허용(a) - 도메인,개인,공용 체크 - 이름,설명 작성후 마침<br/>
+                    http://172.30.1.30:8000 이제 외부에서 접속이 가능하다.
+                    <!-- 아래는 굳이 안해도 되는데, 참조할 것
+                    톰캣에서  서버에서 localhost 로는 접속이 되는데 외부에서 서버IP로 접근할 때 페이지가 안열리는 경우
+                    server.xml 의 connector 태그에 address="0.0.0.0" 을 추가한다.
+                    <Connector port="8080" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" address="0.0.0.0" />
+                    -->
+                </p>
+            </div>
+            <h2>localset</h2>
+            <p>
+                1. include로 공통 부분 처리 <br/>
+                2. 아이피로 접속 가능 ( wf.msc에서 포트를 열어 주어야 한다. )
+            </p>
+            <div class="h3">
+                <h3>http.conf</h3>
+                <p>
+                    C:/Users/Administrator/WebstormProjects 아래 모든 디렉토리는 8080포트 Open<br/>
+                    D:/ 아래 모든 디렉토리는 8100포트 Open
+                </p>
+                <pre>
+                    Listen 8080
+                    Listen 8100
+                </pre>
+                <h3>httpd-userdir.conf</h3>
+                <pre>
+                    &lt;Directory "C:/Users/Administrator/WebstormProjects"&gt;
+                        Options FollowSymLinks
+                        AllowOverride None
+                        Order allow,deny
+                        Allow from all
+                    &lt;/Directory>
+
+                    &lt;Directory "D:/"&gt;
+                        Options FollowSymLinks
+                        AllowOverride None
+                        Order allow,deny
+                        Allow from all
+                    &lt;/Directory&gt;
+                </pre>
+                <h3>httpd-vhosts.conf</h3>
+                <pre>
+                    &lt;VirtualHost *:8080>
+                        ServerName localhost
+                        DocumentRoot "C:/Users/Administrator/WebstormProjects"
+                        ErrorLog "logs/prj_error.log"
+                        CustomLog "logs/prj_access.log" common env=!favicon
+
+                        AddHandler application/x-httpd-php .html
+                        &lt;IfModule dir_module&gt;
+                            DirectoryIndex index.html index.php
+                        &lt;/IfModule&gt;
+                    &lt;/VirtualHost&gt;
+
+                    &lt;VirtualHost *:8100&gt;
+                        ServerName localhost
+                        DocumentRoot "D:/"
+                        ErrorLog "logs/prj_error.log"
+                        CustomLog "logs/prj_access.log" common env=!favicon
+
+                        AddHandler application/x-httpd-php .html
+                        &lt;IfModule dir_module&gt;
+                            DirectoryIndex index.html index.php
+                        &lt;/IfModule&gt;
+                    &lt;/VirtualHost&gt;
+                </pre>
+                <h3>EditPlus</h3>
+                <figure>
+                    <figcaption>localhost대신에 IP Address를 직접 넣을 수 있다.</figcaption>
+                    <img src="nhn/images/etc2.png" alt="etc2"/>
+                </figure>
+            </div>
+            <h2>CSS</h2>
+            <div class="h3">
+                <h3>색</h3>
+                <p>
+                    ie9 + : rgb(a) <br/>
+                    all : #0f0f0f <br/>
+                    즉, pc에서는 rgb를 쓰지 않도록 한다.
+                </p>
+                <h3>투명도</h3>
+                <p>
+                    ie9 + : opacity : 0.5 (0~1) <br/>
+                    ie8 : -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)" (0~100)<br/>
+                    ie7 : filter: alpha(opacity=50) (0~100) <br/>
+                    → 0으로 하면 완전 투명
+                </p>
+                <p>
+                    position으로 지정한 a요소는 ie8이하에서 포커스가 잡히지 않는다. <br/>
+                    a요소에 background-color를 넣으면 포커스가 잡힌다. <br/>투명도를 0으로 설정하여 색을 투명하게 한다. <br/>
+                    → background: #000; opacity: 0; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter: alpha(opacity=0)
+                </p>
+            </div>
+            <h2>VIM</h2>
+            <div class="h3">
+                <h3>Tip</h3>
+                <pre>
+                    :10,20y → 10~20 copy
+                    :30pu → 30행에 paste
+                    :10,20d → 10~20 delete
+                    :edit filename → FIle open
+                    Ctrl ^ → File switch
+                </pre>
+            </div>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Button</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+        xmp { margin-left: 20px; font-family: Helvetica, AppleGothic, sans-serif;}
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>bs3-button-group:vertical</h1>
+    <hr/>
+
+    <div class="btn-group-vertical btn-group-vertical-lg">
+        <button type="button" class="btn btn-default">Button</button>
+        <button type="button" class="btn btn-default">Button</button>
+        <div class="btn-group">
+            <button id="btnGroupVerticalDrop1" type="button" class="btn btn-default dropdown-toggle"
+                    data-toggle="dropdown">
+                Dropdown
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop1">
+                <li><a href="#">Dropdown link</a></li>
+                <li><a href="#">Dropdown link</a></li>
+            </ul>
+        </div>
+        <button type="button" class="btn btn-default">Button</button>
+    </div>
+
+</div>
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<!--
+<script>
+    var button = document.getElementsByTagName('button');
+    for(var k=0; k<button.length; k++){
+        button[k].innerHTML = button[k].getAttribute('class'); // 버튼내용 생성
+    }
+
+    var xmp = document.getElementsByTagName('xmp');
+    var src = new Array(xmp.length);
+    for(var i=0; i<xmp.length; i++){
+        src[i] = xmp[i].previousSibling.previousSibling.outerHTML;
+        xmp[i].innerHTML = src[i]; // 소스 출력
+    }
+</script>
+-->
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Button</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+        xmp { margin-left: 20px; font-family: Helvetica, AppleGothic, sans-serif;}
+    </style>
+</head>
+
+<body>
+
+<div class="container"><!-- container -->
+
+<h1>bs3-button-group</h1>
+<hr/>
+
+<div>
+    <button type="button" class="btn"></button>
+    <button type="button" class="btn btn-default"></button>
+    <button type="button" class="btn btn-link"></button>
+    <button type="button" class="btn btn-primary"></button>
+    <button type="button" class="btn btn-success"></button>
+    <button type="button" class="btn btn-info"></button>
+    <button type="button" class="btn btn-warning"></button>
+    <button type="button" class="btn btn-danger"></button>
+</div>
+<xmp></xmp>
+
+<div class="btn-group">
+    <button type="button" class="btn"></button>
+    <button type="button" class="btn btn-default"></button>
+    <button type="button" class="btn btn-link"></button>
+    <button type="button" class="btn btn-primary"></button>
+    <button type="button" class="btn btn-success"></button>
+    <button type="button" class="btn btn-info"></button>
+    <button type="button" class="btn btn-warning"></button>
+    <button type="button" class="btn btn-danger"></button>
+</div>
+<xmp></xmp>
+
+<div class="btn-group">
+    <button type="button" class="btn btn-primary active"></button>
+    <button type="button" class="btn btn-primary"></button>
+    <button type="button" class="btn btn-primary disabled"></button>
+</div>
+<xmp></xmp>
+
+<div class="btn-group btn-group-lg">
+    <button type="button" class="btn btn-primary"></button>
+    <button type="button" class="btn btn-primary"></button>
+    <button type="button" class="btn btn-primary"></button>
+</div>
+<xmp></xmp>
+
+<div class="btn-group">
+    <button type="button" class="btn btn-lg"></button>
+    <button type="button" class="btn"></button>
+    <button type="button" class="btn btn-sm"></button>
+    <button type="button" class="btn btn-xs"></button>
+</div>
+<xmp></xmp>
+
+<div class="btn-group">
+    <button type="button" class="btn btn-success"></button>
+    <a href="#" role="button" class="btn"></a>
+    <a href="#" role="button" class="btn btn-link"></a>
+    <a href="#" role="button" class="btn btn-success"></a>
+    <input type="button" class="btn btn-success" value=""/>
+    <input type="submit" class="btn btn-success" value=""/>
+</div>
+<xmp></xmp>
+
+<button type="button" class="btn btn-block"></button>
+<xmp></xmp>
+
+</div><!-- //container -->
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<script>
+    $('a.btn').click(function(e){
+        e.preventDefault();
+    });
+
+    var xmp = document.getElementsByTagName('xmp');
+    var src = new Array(xmp.length);
+    for(var i=0; i<xmp.length; i++){
+        src[i] = xmp[i].previousSibling.previousSibling.outerHTML;
+        xmp[i].innerHTML = src[i]; // 소스 출력
+    }
+
+    var button = document.getElementsByTagName('button');
+    for(var b=0; b<button.length; b++){
+        button[b].innerHTML = button[b].getAttribute('class'); // button 내용 생성
+    }
+
+    var link = document.getElementsByTagName('a');
+    for(var a=0; a<link.length; a++){
+        link[a].innerHTML = link[a].getAttribute('class'); // a 내용 생성
+    }
+
+    var inputList = document.getElementsByTagName("input");
+    for(var n in inputList) {
+        if(inputList[n].getAttribute("type") === "button" || inputList[n].getAttribute("type") === "submit") {
+            inputList[n].value = inputList[n].getAttribute('class'); // input:button,submit 내용 생성
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0 }
+body { font-family: '맑은 고딕', 'Malgun Gothic', '돋움', Dotum, serif; font-size: 14px }
+a { text-decoration: none;}
+th a { text-decoration: underline;}
+figcaption { margin-bottom: 5px}
+.blind {position:absolute; top:0; left:0; overflow:hidden; display:inline-block !important; width:1px !important; height:1px !important; margin:0 !important; font-size:0 !important; line-height:0 !important;}
+#hidden { text-indent: -10000px; display: inline-block; width: 100px;}
+
+#nav { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background: rgba(0, 0, 0, 1); font-size: 14px;
+    z-index: 10; }
+#nav dl { width: 1040px; margin: 0 auto; line-height: 60px }
+#nav dt { position: absolute; right: 100px; top: -2px; z-index: 10 }
+#nav dd { display: inline; margin-right: 19px; position: relative }
+#nav dd:before { position: absolute; right: -15px; top: -22px; content: '|'; color: #fff }
+#nav dd:last-child:before { content: '' }
+#nav dd a { font-weight: bold; text-decoration: none; color: #fff }
+#nav dt a { color: #fff; font-size: 24px; font-weight: bold }
+
+#wrap { width: 1040px; margin: 60px auto 0 }
+#quick_menu { position: fixed; right: 14%; top: 70px; display: none;}
+#quick_menu dl dt { margin-top: 10px; font-weight: bold }
+#quick_menu dl dd { text-indent: 10px }
+
+.nth00 { min-height: 863px; padding: 20px;}
+.nth00:nth-child(odd) { background: #f2f5fa;}
+.nth00:nth-child(even) { background: #e6ebf5;}
+/*.nth00:nth-last-child(1) { padding-bottom: 157px;}*/
+
+h1 { color: #000099 }
+h2 { color: #000FA8 }
+h3 { color: #001FB8 }
+h4 { color: #002EC7 }
+h5 { color: #003DD6 }
+h6 { color: #004CE6 }
+h1 { font-size: 20px }
+h2 { font-size: 18px; margin-top: 24px }
+h3 { font-size: 16px; margin-top: 16px }
+h4 { font-size: 14px; margin-top: 12px }
+h5 { font-size: 12px; margin-top: 10px }
+h6 { font-size: 12px; margin-top: 10px }
+.h2 > p { font-size: 16px; padding: 5px 0 0 3px }
+.h3 > p { font-size: 14px; padding: 8px 0 0 3px; line-height: 20px }
+.h3 > figure { padding: 8px 0 0 8px;}
+.h3 > p.info { width: 840px; border: 1px solid #ff2b21; margin: 5px 0 0; padding: 5px 10px; font-size: 12px; }
+.h4 > p { font-size: 13px; padding: 5px 0 0 3px }
+.h5 > p { font-size: 12px; padding: 5px 0 0 3px }
+.h6 > p { font-size: 12px; padding: 5px 0 0 3px }
+
+.h2, .h3, .h4, .h5, .h6 { padding-left: 20px }
+.h2 > ul { margin: 5px 0 0 20px }
+.h2 > ul > li > strong { display: inline-block; margin: 5px 0 }
+.h2 > ul > li > ul > li { list-style: decimal; margin-left: 20px }
+
+.h3 table { width: 75%; border-collapse: collapse; margin: 5px 0 0 8px; border: 1px solid #000; }
+.h3 th, td { border: 1px solid #000; padding: 3px 10px }
+.h3 caption.top { caption-side: top }
+.h3 caption.bottom { caption-side: bottom }
+.h3 .tblType2 td { text-align: center }
+.h3 .tblType1.v1 col:first-child { width: 20% }
+.h3 .tblType1.v2 col:first-child { width: 27% }
+.h3 .tblType1.v2 tbody tr th { text-align: left }
+.h3 .tblType1.v2 tbody tr td:first-child { font-weight: bold }
+.h3 .tblType1.v2 tbody tr td.exc:first-child { font-weight: normal }
+.h3 .tblType1.v3 tbody tr th.chk:after,
+.h3 .tblType1.v2 tbody tr th.chk:after,
+.h3 .tblType1.v2 tbody tr td.chk:after
+{ display: inline; content: '•'; color: #f00; margin-left: 3px } /* 사용중인 단축키 */
+.h3 .tblType1.v2 tbody tr td.star:after { display: inline; content: '★'; color: #484cff; margin-left: 3px } /* 추가 설명 */
+.h3 .tblType1.v2 tbody tr td span.cm { font-weight: bold; color: #ff7518 } /* Customization */
+.h3 .tblType1.v2 tbody tr td span.ec { font-weight: bold; color: #00f } /* Eclipse */
+.h3 .tblType1.v2 tbody tr td span:before { display: inline; content: '(' }
+.h3 .tblType1.v2 tbody tr td span:after { display: inline; content: ')' }
+.h3 .tblType1.v3 col:nth-child(1) { width: 15% }
+.h3 .tblType1.v3 col:nth-child(2) { width: 22% }
+.h3 .tblType1.v2 tbody tr.unionB th,
+.h3 .tblType1.v2 tbody tr.unionB td { border-bottom: 0 }
+.h3 .tblType1.v2 tbody tr.unionTB th,
+.h3 .tblType1.v2 tbody tr.unionTB td { border-top: 0; border-bottom: 0 }
+.h3 .tblType1.v2 tbody tr.unionT th,
+.h3 .tblType1.v2 tbody tr.unionT td { border-top: 0 }
+
+.h3 > ul, .h3 ol { margin: 5px 0 0 28px }
+.h3 > ul > li { margin-bottom: 2px }
+.h3 > ul > li > span { display: block; margin-top: 3px; font-size: 12px }
+.h3 > ul > li > ul { margin-top: 3px }
+.h3 > ul > li > ul li { list-style: circle inside; font-size: 12px; margin-top: 3px }
+.h3 > ul > li > ul li:first-child { list-style-type: none }
+.h4 > ul { margin: 5px 0 0 20px }
+.h4 > ul.exam { margin: 5px 0 0 20px }
+.h4 > ul.exam li { list-style: none; }
+
+li.star:after { display: inline; content: '★'; color: #484cff; margin-left: 3px } /* 추가 설명 */
+.h3 pre { font-size: 12px; margin: 8px 0 -16px -70px; font-family: '맑은 고딕', 'Malgun Gothic', '돋움', Dotum, serif; color: #e9741b;}
+.h4 pre { font-size: 12px; width: 700px; margin-left: 0; position: relative; left: -80px }
+.h5 pre { font-size: 12px; width: 700px; margin-left: 0; position: relative; left: -100px }
+.h6 pre { font-size: 12px; width: 700px; margin-left: 0; position: relative; left: -120px }
+.h5 figure { margin: 5px 0 0 4px }
+.h4 figcaption { font-size: 13px }
+.h5 figcaption { font-size: 12px }
+figcaption { margin-top: 5px;}
+
+/* color */
+.bg1 { background-color: #e1e1e1 }
+.bgn { background: none }
+.fc1 { color: #00f; font-weight: bold; display: inline !important }
+.fc2 { color: #f00;}
+.fc4 { color: #2a77ff;}
+.preTtl_1 { color: #0064ff;}
+.preTtl_2 { color: #001dff;}
+
+/* etc */
+span.u { text-decoration: underline; color: #f00;}
+span.db { display: block; margin-top: 5px;}
+span.db2 { display: block; margin-top: 5px; font-size: 12px;}
+.dnone { display: none;}
+img:not([src]), img:not([alt]), /* src, alt 없는 img */
+input:not([type]), input:not([title]), input:not([id]) /* type, title, id 없는 input */
+{border:10px solid red}

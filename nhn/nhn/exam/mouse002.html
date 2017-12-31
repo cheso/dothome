@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div {width: 400px; height: 400px; background: pink; box-sizing: border-box; padding: 75px;}
+        .div2 { margin-top: 50px}
+        section { width: 250px; height: 250px; background: hotpink; box-sizing: border-box; padding: 75px;}
+        article { width: 100px; height: 100px; background: deeppink; box-sizing: border-box}
+        span{ display: block;}
+    </style>
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <script>
+        $(function(){
+            var cnt1 = 0; var cnt2 = 0; var cnt3 = 0;
+            $('.div1').mouseout(function(){
+                $('#b1').text(++cnt1);
+            });
+            $('.div1 section').mouseout(function(){
+                $('#b2').text(++cnt2);
+            });
+            $('.div1 article').mouseout(function(){
+                $('#b3').text(++cnt3);
+            });
+
+            var cnt4 = 0; var cnt5 = 0; var cnt6 = 0;
+            $('.div2').mouseleave(function(){
+                $('#b4').text(++cnt4);
+            });
+            $('.div2 section').mouseleave(function(){
+                $('#b5').text(++cnt5);
+            });
+            $('.div2 article').mouseleave(function(){
+                $('#b6').text(++cnt6);
+            });
+        });
+    </script>
+</head>
+<body>
+<h1>mouseout & mouseleave 차이</h1>
+<div class="div1">
+    <section>
+        <article></article>
+    </section>
+    <span>A : <b id="b1"></b></span>
+    <span>B : <b id="b2"></b></span>
+    <span>C : <b id="b3"></b></span>
+</div>
+
+<div class="div2">
+    <section>
+        <article></article>
+    </section>
+    <span>A : <b id="b4"></b></span>
+    <span>B : <b id="b5"></b></span>
+    <span>C : <b id="b6"></b></span>
+</div>
+
+</body>
+</html>

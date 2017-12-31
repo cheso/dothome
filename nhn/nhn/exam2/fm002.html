@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <style>
+        div{}
+    </style>
+    <script>
+        $(function(){
+            $("input.required").prop("required", "true");
+        });
+    </script>
+</head>
+<body>
+
+<form action="" method="post">
+    <input type="text" name="first_name" maxlength="150" title="정보입력창1" class="required">
+    <input type="text" name="first_name" maxlength="150" title="정보입력창2" class="required">
+    <input type="text" name="first_name" maxlength="150" title="정보입력창3" class="required">
+    <input type="submit">
+</form>
+
+<a href="http://stackoverflow.com/questions/19166685/jquery-add-required-to-input-fields">LINK</a>
+
+</body>
+</html>
