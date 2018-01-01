@@ -3,7 +3,9 @@
 .wrap { margin: auto; width: 1080px;}
 
 h1 {}
-h2 { padding-left: 10px;}
-h3 { padding-left: 20px;}
+h2 { padding-left: 10px; color: #459cff;}
+h3 { padding-left: 20px; color: #f00;}
 .h3-area { padding-left: 20px;}
-.h3-area p { margin-top: -30px; white-space: pre-line;}
+.h3-area ul { margin-left: -10px;}
+.h3-area ul strong { margin-right: 4px; }
+.h3-area ul li p { margin-top: -20px; white-space: pre-line;}
