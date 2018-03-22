@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib.min.js"></script>
+    <script src="sitemap.js"></script>
+</head>
+<body>
+
+<div class="sitemap">
+
+</div>
+<div class="frame">
+    <div class="address">
+        <a href="#" target="_blank"></a>
+    </div>
+    <div class="view v--320">
+        <iframe id="ifr" name="ifr" src="" frameborder="0"></iframe>
+    </div>
+</div>
+
+<script>
+    (function ($) {
+        function tree(arr) {
+            var list = '<li><a href="{{link}}" target="ifr">{{title}}</a>{{item}}</li>';
+            var el = '<ul>';
+            _.each(arr, function (node, i) {
+                el += list.replace('{{title}}', node.title).replace('{{link}}', '/#/' + node.link);
+                if (node.item) {
+                    el = el.replace('{{item}}', tree(node.item));
+                }
+            });
+            el += '</ul>';
+            return el.replace(/{{item}}/g, '');
+        }
+
+        var html = tree(window.sitemap);
+        $('.sitemap').html(html);
+    })(jQuery);
+</script>
+
+<script>
+    (function (e) {
+        var screen = ['320', '360', '375', '414'];
+        var $view = $('.view');
+        $(document).on('keydown', function (e) {
+            var id = e.keyCode - 49;
+            if (id < 0 || id > 3) return;
+            $view.attr('class', 'view v--' + screen[id]);
+        });
+
+        $('.sitemap').on('click', 'a', function (e) {
+
+            $('.link--active').removeClass('link--active');
+            $(e.currentTarget).addClass('link--active');
+            var href = $(e.currentTarget).attr('href');
+            $('.address a').attr('href', href).text(href);
+        });
+
+        /* son 2017-12-06 */
+        $(".sitemap > ul > li > ul > li > a[href*='/#/undefined']").on('click', function () {
+            var tit = $(this).text();
+            $(".sitemap > ul > li > ul > li > a").removeClass("on");
+            if (!$(this).hasClass("link--active")) {
+                $(".sitemap > ul > li > ul > li > a[href*='" + tit + "']").addClass("on");
+            }
+        });
+    })(jQuery);
+</script>
+
+</body>
+</html>
