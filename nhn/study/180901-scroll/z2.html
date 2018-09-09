@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../nhn/js/jquery-1.11.2.js"></script>
+    <style>
+        body{overflow-y: visible;}
+        div{border: 1px solid black; margin-bottom: 10px;}
+        .div1{height: 400px;overflow-y: scroll}
+        .css1{background: #555;}
+    </style>
+</head>
+<body>
+
+<!--
+스크롤 중지
+https://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily
+
+스크롤 위아래 탐지
+http://jsfiddle.net/designaroni/sj3euzL7/
+-->
+
+<div class="div0">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae doloribus esse iste iusto maiores nam nemo neque, officia placeat qui quis repellat repellendus velit. Ipsa officiis perspiciatis temporibus vitae. A adipisci deleniti, dicta dolores, dolorum explicabo harum illum incidunt labore libero molestias necessitatibus nesciunt odit omnis perferendis provident quas ratione rem repudiandae sit temporibus tenetur velit voluptatum. Assumenda consectetur culpa distinctio enim eos est eveniet ex facilis harum hic illum impedit iure magnam maxime minus modi nemo nostrum odit praesentium quam quidem quod, quos ratione rem repellat repudiandae sequi sunt tenetur veniam veritatis voluptas voluptate voluptates voluptatum. Deleniti, impedit, sapiente.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae doloribus esse iste iusto maiores nam nemo neque, officia placeat qui quis repellat repellendus velit. Ipsa officiis perspiciatis temporibus vitae. A adipisci deleniti, dicta dolores, dolorum explicabo harum illum incidunt labore libero molestias necessitatibus nesciunt odit omnis perferendis provident quas ratione rem repudiandae sit temporibus tenetur velit voluptatum. Assumenda consectetur culpa distinctio enim eos est eveniet ex facilis harum hic illum impedit iure magnam maxime minus modi nemo nostrum odit praesentium quam quidem quod, quos ratione rem repellat repudiandae sequi sunt tenetur veniam veritatis voluptas voluptate voluptates voluptatum. Deleniti, impedit, sapiente.
+</div>
+
+<div class="div1">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae doloribus esse iste iusto maiores nam nemo neque, officia placeat qui quis repellat repellendus velit. Ipsa officiis perspiciatis temporibus vitae. A adipisci deleniti, dicta dolores, dolorum explicabo harum illum incidunt labore libero molestias necessitatibus nesciunt odit omnis perferendis provident quas ratione rem repudiandae sit temporibus tenetur velit voluptatum. Assumenda consectetur culpa distinctio enim eos est eveniet ex facilis harum hic illum impedit iure magnam maxime minus modi nemo nostrum odit praesentium quam quidem quod, quos ratione rem repellat repudiandae sequi sunt tenetur veniam veritatis voluptas voluptate voluptates voluptatum. Deleniti, impedit, sapiente.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae doloribus esse iste iusto maiores nam nemo neque, officia placeat qui quis repellat repellendus velit. Ipsa officiis perspiciatis temporibus vitae. A adipisci deleniti, dicta dolores, dolorum explicabo harum illum incidunt labore libero molestias necessitatibus nesciunt odit omnis perferendis provident quas ratione rem repudiandae sit temporibus tenetur velit voluptatum. Assumenda consectetur culpa distinctio enim eos est eveniet ex facilis harum hic illum impedit iure magnam maxime minus modi nemo nostrum odit praesentium quam quidem quod, quos ratione rem repellat repudiandae sequi sunt tenetur veniam veritatis voluptas voluptate voluptates voluptatum. Deleniti, impedit, sapiente.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae doloribus esse iste iusto maiores nam nemo neque, officia placeat qui quis repellat repellendus velit. Ipsa officiis perspiciatis temporibus vitae. A adipisci deleniti, dicta dolores, dolorum explicabo harum illum incidunt labore libero molestias necessitatibus nesciunt odit omnis perferendis provident quas ratione rem repudiandae sit temporibus tenetur velit voluptatum. Assumenda consectetur culpa distinctio enim eos est eveniet ex facilis harum hic illum impedit iure magnam maxime minus modi nemo nostrum odit praesentium quam quidem quod, quos ratione rem repellat repudiandae sequi sunt tenetur veniam veritatis voluptas voluptate voluptates voluptatum. Deleniti, impedit, sapiente.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae doloribus esse iste iusto maiores nam nemo neque, officia placeat qui quis repellat repellendus velit. Ipsa officiis perspiciatis temporibus vitae. A adipisci deleniti, dicta dolores, dolorum explicabo harum illum incidunt labore libero molestias necessitatibus nesciunt odit omnis perferendis provident quas ratione rem repudiandae sit temporibus tenetur velit voluptatum. Assumenda consectetur culpa distinctio enim eos est eveniet ex facilis harum hic illum impedit iure magnam maxime minus modi nemo nostrum odit praesentium quam quidem quod, quos ratione rem repellat repudiandae sequi sunt tenetur veniam veritatis voluptas voluptate voluptates voluptatum. Deleniti, impedit, sapiente.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae doloribus esse iste iusto maiores nam nemo neque, officia placeat qui quis repellat repellendus velit. Ipsa officiis perspiciatis temporibus vitae. A adipisci deleniti, dicta dolores, dolorum explicabo harum illum incidunt labore libero molestias necessitatibus nesciunt odit omnis perferendis provident quas ratione rem repudiandae sit temporibus tenetur velit voluptatum. Assumenda consectetur culpa distinctio enim eos est eveniet ex facilis harum hic illum impedit iure magnam maxime minus modi nemo nostrum odit praesentium quam quidem quod, quos ratione rem repellat repudiandae sequi sunt tenetur veniam veritatis voluptas voluptate voluptates voluptatum. Deleniti, impedit, sapiente.
+</div>
+
+<div class="div2" style="display: block;">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias aliquid, aspernatur autem consequatur corporis dignissimos dolores eveniet excepturi facilis illum impedit incidunt inventore ipsum itaque iure labore natus necessitatibus nemo nihil non odio pariatur possimus praesentium quis quisquam quo sequi ut vel voluptatum. Accusantium ad aperiam aspernatur at dolorem, doloremque eius error ex facilis fugit ipsum laboriosam libero officiis pariatur quaerat, quis quo repudiandae sapiente tempore vitae? Ab animi commodi consequatur distinctio eum, hic id impedit, molestiae nihil nobis quia quisquam reiciendis voluptatem? Asperiores at eaque fugit, magnam magni neque porro recusandae totam velit! Ad adipisci animi asperiores aspernatur aut beatae consequuntur cumque deleniti, eius eos excepturi exercitationem illum in ipsum laudantium molestias nesciunt nihil nisi odit praesentium quaerat quisquam, recusandae reiciendis similique sunt tenetur voluptatibus? Accusamus aliquam aspernatur, aut, culpa cumque deserunt est eveniet harum inventore laborum maxime mollitia nam neque nisi odio odit omnis perspiciatis, praesentium qui quis rerum sapiente sint tenetur ullam unde velit voluptatibus. Adipisci blanditiis culpa dolore ea enim inventore ipsa ipsam labore magni, maiores maxime neque obcaecati, provident quas quidem quis ratione sequi totam unde voluptatem! Aliquid amet animi assumenda doloribus eos ipsam, iure magnam maiores nesciunt nisi officiis sapiente? Ab accusantium animi beatae consequatur corporis, doloremque earum, error excepturi explicabo illo ipsa ipsam, iure molestias obcaecati perspiciatis porro qui quis quisquam quos sed tempora tempore vel voluptatibus. Alias asperiores incidunt neque quia recusandae sequi tempore voluptate voluptatum. Aperiam asperiores consectetur dignissimos ea ex ipsum, labore, nam numquam placeat quidem, recusandae reprehenderit! Ab ad assumenda blanditiis culpa cum cupiditate debitis dolores ea eius esse et eveniet excepturi facere facilis harum incidunt maiores maxime modi, mollitia nihil non numquam officiis perferendis provident quam qui quis quisquam ratione rem sapiente similique sint sit sunt tempora tenetur ullam ut. Accusamus aliquid at autem beatae, commodi consequuntur cupiditate dolorum enim esse et expedita explicabo fuga incidunt itaque labore magni odit perferendis perspiciatis placeat repellendus reprehenderit repudiandae rerum saepe suscipit tempora. Aperiam, assumenda aut beatae blanditiis commodi ipsam quidem. Aliquid aspernatur facilis laborum perspiciatis reiciendis sit totam ut veritatis. A aliquam doloremque ea id incidunt libero nam, nihil nulla quas temporibus! Accusantium alias atque blanditiis debitis delectus doloremque eius eos eveniet expedita, ipsam labore laudantium libero nesciunt nulla odit officia quidem repellendus sed? Accusamus animi aperiam at consequatur ea eaque, eius enim eveniet fuga inventore, ipsam iure magnam magni necessitatibus nemo neque nobis non nostrum, odit officia porro quam quo reprehenderit repudiandae rerum similique sit tempore totam vitae voluptatem. Delectus quaerat rerum saepe tempora vero. A accusantium aliquam aperiam atque beatae consequuntur, cum ducimus harum hic inventore iure labore magnam minima nemo nesciunt nisi nostrum odit officia perferendis voluptatum? Aperiam cum deserunt distinctio eius error esse fugiat harum incidunt ipsam ipsum labore magnam minima minus neque nesciunt nisi placeat, quia recusandae, reiciendis rerum sapiente suscipit voluptatum! Aut, debitis delectus eos ex facere fuga ipsam magni neque nesciunt nisi odio officiis provident quam qui ratione. Accusantium at deserunt dolore molestias nesciunt rerum soluta? Ad aperiam aspernatur aut consequuntur culpa deleniti deserunt et illum inventore magnam, magni omnis perferendis praesentium quis ratione repellat rerum unde vel, voluptate voluptatum. Minus natus nihil nulla odio quas quibusdam, tempore voluptate! Adipisci, animi blanditiis commodi cupiditate deleniti dolores eum fuga hic illo incidunt, ipsam laudantium minima minus nulla odio provident, quasi quo ratione recusandae rem reprehenderit sed sint sit suscipit ut veritatis voluptas voluptatem? Dolorum earum exercitationem nemo odio suscipit. Aliquam architecto, blanditiis consectetur eligendi, illum itaque labore minus necessitatibus non, optio quidem rerum saepe sed. Accusantium cupiditate explicabo fugiat nam natus! Atque cum eius facere nam! Debitis exercitationem minima nulla quaerat sequi. Aliquid aut exercitationem explicabo tempore voluptate? Delectus non quisquam recusandae tempora. Architecto ipsa magnam molestiae? Architecto atque commodi delectus deleniti dignissimos error eveniet fuga laborum magnam necessitatibus nisi pariatur quis ratione repudiandae, sint, temporibus voluptatum. Architecto commodi consequuntur esse est et exercitationem facilis illum incidunt labore magnam minus molestias perspiciatis placeat quidem quis, repellat rerum similique sunt tempore, ut vero voluptates, voluptatibus? Ab accusantium aliquam aliquid aspernatur distinctio facilis, hic placeat quo quos sunt! Eaque eos expedita in incidunt ipsum iste quisquam repellendus. Beatae libero maxime odit officiis praesentium repellendus repudiandae ut velit. Ab accusantium adipisci consectetur culpa debitis dicta eaque eius eos eveniet ex, explicabo facilis in laborum nostrum placeat provident quae quisquam ratione similique vitae. Aliquam aut, dicta ea illo illum, magni nobis, odit officia quod reiciendis sed sint. Animi aperiam eius, eos et eum, fuga illo in nam placeat, possimus ratione tenetur vitae voluptatibus. Atque deserunt doloribus eum ex natus, numquam quibusdam quod velit. A cupiditate earum error minima, reprehenderit veritatis voluptas voluptate? Animi beatae blanditiis deleniti eveniet harum ipsa ipsam minus molestias nobis officiis quam, ratione repellendus tenetur voluptatem voluptatibus! Accusantium ad aliquam animi architecto delectus ducimus, earum exercitationem facilis fugit hic incidunt maiores necessitatibus nihil pariatur perspiciatis quo suscipit, unde vel vero voluptas. Atque esse maxime minima ratione. Aperiam architecto at atque cum dignissimos dolores earum error est eum harum illo illum ipsa laboriosam laudantium nisi perspiciatis quaerat quam repellat, velit vero. Accusamus, atque esse illum ipsa iste nulla obcaecati tempore velit. Aperiam aspernatur illo ipsam placeat, repudiandae vitae! Ad aperiam consectetur eligendi eveniet iusto magni modi nemo, officiis quia quibusdam recusandae, rem similique unde voluptate voluptatibus. Dolorum excepturi harum iste mollitia necessitatibus neque reprehenderit, repudiandae vel? Aspernatur consequatur cumque delectus fugiat suscipit, tempora veniam! Ad assumenda at, beatae cupiditate deserunt est ex fugiat illo impedit minus nemo odio officiis placeat, provident, reiciendis repudiandae sed! Ab accusantium aut autem blanditiis dignissimos distinctio ea eligendi eum excepturi facere id illo in magnam magni maxime nam necessitatibus nesciunt nulla numquam obcaecati optio pariatur perferendis perspiciatis quam quas quidem, reiciendis repellat tempore temporibus ut. Amet asperiores blanditiis cum enim, nihil quibusdam quo saepe totam vitae voluptas. Ipsam, possimus reprehenderit. Eum in itaque quas quos sequi tempora voluptatem! At cumque, deserunt eos et hic illo itaque labore maxime minima, necessitatibus nisi optio perspiciatis praesentium quasi recusandae sapiente tempore totam. Cupiditate dolores doloribus est iste nobis qui velit. Libero, minus similique!
+</div>
+
+<script>
+    // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+    // left: 37, up: 38, right: 39, down: 40
+    var keys = {32: 1, 33: 1, 34: 1, 35: 1, 36: 1, 37: 1, 38: 1, 39: 1, 40: 1};
+
+    function preventDefault(e) {
+        e = e || window.event;
+        if (e.preventDefault)
+            e.preventDefault();
+        e.returnValue = false;
+    }
+
+    function preventDefaultForScrollKeys(e) {
+        if (keys[e.keyCode]) {
+            preventDefault(e);
+            return false;
+        }
+    }
+
+    function disableScroll() {
+        if (window.addEventListener) // older FF
+            window.addEventListener('DOMMouseScroll', preventDefault, false);
+        window.onwheel = preventDefault; // modern standard
+        window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+        window.ontouchmove = preventDefault; // mobile
+        document.onkeydown = preventDefaultForScrollKeys;
+    }
+
+    function enableScroll() {
+        if (window.removeEventListener)
+            window.removeEventListener('DOMMouseScroll', preventDefault, false);
+        window.onmousewheel = document.onmousewheel = null;
+        window.onwheel = null;
+        window.ontouchmove = null;
+        document.onkeydown = null;
+    }
+
+    $('.div1').hover(function () {
+        disableScroll();
+        console.log('disabled');
+    }, function () {
+        enableScroll();
+        console.log('enabled');
+    })
+</script>
+
+</body>
+</html>
