@@ -1,0 +1,4678 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://github.com/thekalinga/bootstrap4-intellij -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+  <link rel="dns-prefetch" href="https://assets-cdn.github.com/">
+  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com/">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+
+
+  <link crossorigin="anonymous" media="all" integrity="sha512-Z0JAar9+DkI1NjGVdZr3GivARUgJtA0o2eHlTv7Ou2gshR5awWVf8QGsq11Ns9ZxQLEs+G5/SuARmvpOLMzulw==" rel="stylesheet" href="./guide_files/frameworks-95aff0b550d3fe338b645a4deebdcb1b.css">
+  <link crossorigin="anonymous" media="all" integrity="sha512-cPNe2ujxkLVIsIfpqsGH3fmUuiNQ3wfPV8niT1uB9ziMQTNwKSHIyIBZk4ZAkIYydrF798X7+JQlreQlMNkYXg==" rel="stylesheet" href="./guide_files/github-9fe41072c7eb61e44d5923e65f8af9fa.css">
+  
+  
+  
+  
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>thekalinga/bootstrap4-intellij: IntelliJ plugin for Bootstrap 4 &amp; Font awesome</title>
+    <meta name="description" content="IntelliJ plugin for Bootstrap 4 &amp; Font awesome. Contribute to thekalinga/bootstrap4-intellij development by creating an account on GitHub.">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://github.com/opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    
+    <meta property="og:image" content="https://avatars0.githubusercontent.com/u/452518?s=400&amp;v=4"><meta property="og:site_name" content="GitHub"><meta property="og:type" content="object"><meta property="og:title" content="thekalinga/bootstrap4-intellij"><meta property="og:url" content="https://github.com/thekalinga/bootstrap4-intellij"><meta property="og:description" content="IntelliJ plugin for Bootstrap 4 &amp; Font awesome. Contribute to thekalinga/bootstrap4-intellij development by creating an account on GitHub.">
+
+  <link rel="assets" href="https://assets-cdn.github.com/">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MzE1NDQwNzIzOjU1YzEzMDRmNTIwNjgyNjk2MThkODRiMTY2ZDQ1MGFmNDEzNjVjN2Q4ZmI3YjAyYzMyYzQ1NDk1OWVmOWRmOWQ=--6b13c6444931c378880e83ad513d52c930dfbbcb">
+  <meta name="pjax-timeout" content="1000">
+  <link rel="sudo-modal" href="https://github.com/sessions/sudo_modal">
+  <meta name="request-id" content="096A:18B7:3826:5433:5B97A278" data-pjax-transient="">
+
+
+  
+
+  <meta name="selected-link" value="repo_source" data-pjax-transient="">
+
+      <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
+
+  <meta name="octolytics-host" content="collector.githubapp.com"><meta name="octolytics-app-id" content="github"><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event"><meta name="octolytics-dimension-request_id" content="096A:18B7:3826:5433:5B97A278"><meta name="octolytics-dimension-region_edge" content="sea"><meta name="octolytics-dimension-region_render" content="iad"><meta name="octolytics-actor-id" content="7362326"><meta name="octolytics-actor-login" content="cheso"><meta name="octolytics-actor-hash" content="6e0312a5f34880fb346af74e780822c445218b88381896f9df5e346ca0e4cec1">
+<meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;" data-pjax-transient="true">
+
+
+
+    <meta name="google-analytics" content="UA-3769691-2">
+
+  <meta class="js-ga-set" name="userId" content="562c5e7718cf9c0d07fd71a7e54a1129" %="">
+
+<meta class="js-ga-set" name="dimension1" content="Logged In">
+
+
+
+  
+
+      <meta name="hostname" content="github.com">
+    <meta name="user-login" content="cheso">
+
+      <meta name="expected-hostname" content="github.com">
+    <meta name="js-proxy-site-detection-payload" content="OTg5YjE2YTEyOTBmYjY1YTUxMDU2YzBkMThmMDI2MDYyY2QzMjA2Yjc1ZmJhNzgzYzRjYjQyYmIzYmIyMGEyNnx7InJlbW90ZV9hZGRyZXNzIjoiMjIxLjE0OS44LjEwMiIsInJlcXVlc3RfaWQiOiIwOTZBOjE4Qjc6MzgyNjo1NDMzOjVCOTdBMjc4IiwidGltZXN0YW1wIjoxNTM2NjY0MTg0LCJob3N0IjoiZ2l0aHViLmNvbSJ9">
+
+    <meta name="enabled-features" content="DASHBOARD_V2_LAYOUT_OPT_IN,EXPLORE_DISCOVER_REPOSITORIES,UNIVERSE_BANNER,FREE_TRIALS,MARKETPLACE_INSIGHTS,MARKETPLACE_DOCKERFILE_CI_CTA,MARKETPLACE_PLAN_RESTRICTION_EDITOR,MARKETPLACE_SEARCH,MARKETPLACE_INSIGHTS_CONVERSION_PERCENTAGES,MARKETPLACE_RETARGETING">
+
+  <meta name="html-safe-nonce" content="28dd716dcc3f2b0726d8eb4618dd2f1e4ae1f791">
+
+  <meta http-equiv="x-pjax-version" content="1c205be420deb4d2f586d03707cbf586">
+  
+
+      <link href="https://github.com/thekalinga/bootstrap4-intellij/commits/master.atom" rel="alternate" title="Recent Commits to bootstrap4-intellij:master" type="application/atom+xml">
+
+  <meta name="go-import" content="github.com/thekalinga/bootstrap4-intellij git https://github.com/thekalinga/bootstrap4-intellij.git">
+
+  <meta name="octolytics-dimension-user_id" content="452518"><meta name="octolytics-dimension-user_login" content="thekalinga"><meta name="octolytics-dimension-repository_id" content="76477069"><meta name="octolytics-dimension-repository_nwo" content="thekalinga/bootstrap4-intellij"><meta name="octolytics-dimension-repository_public" content="true"><meta name="octolytics-dimension-repository_is_fork" content="false"><meta name="octolytics-dimension-repository_network_root_id" content="76477069"><meta name="octolytics-dimension-repository_network_root_nwo" content="thekalinga/bootstrap4-intellij"><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false">
+
+
+    <link rel="canonical" href="https://github.com/thekalinga/bootstrap4-intellij" data-pjax-transient="">
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+  <meta name="u2f-support" content="true">
+
+  <link rel="manifest" href="https://github.com/manifest.json" crossorigin="use-credentials">
+
+  </head>
+
+  <body class="logged-in env-production intent-mouse" inmaintabuse="jlb">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="https://github.com/thekalinga/bootstrap4-intellij#start-of-content" tabindex="1" class="p-3 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+
+    
+    
+    
+
+
+
+        
+<header class="Header  f5" role="banner">
+  <div class="d-flex flex-justify-between px-3 container-lg">
+    <div class="d-flex flex-justify-between ">
+      <div class="">
+        <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+  <svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+</a>
+
+      </div>
+
+    </div>
+
+    <div class="HeaderMenu d-flex flex-justify-between flex-auto">
+      <div class="d-flex">
+            <div class="">
+              <div class="header-search scoped-search site-scoped-search js-site-search position-relative js-jump-to" role="search combobox" aria-owns="jump-to-results" aria-label="Search or jump to" aria-haspopup="listbox" aria-expanded="true">
+  <div class="position-relative">
+    <!-- '"` --><!-- </textarea></xmp> --><form class="js-site-search-form" data-scope-type="Repository" data-scope-id="76477069" data-scoped-search-url="/thekalinga/bootstrap4-intellij/search" data-unscoped-search-url="/search" action="https://github.com/thekalinga/bootstrap4-intellij/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+      <label class="form-control header-search-wrapper header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center js-chromeless-input-container">
+        <input type="text" class="form-control header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable" data-hotkey="s,/" name="q" value="" placeholder="Search or jump to…" data-unscoped-placeholder="Search or jump to…" data-scoped-placeholder="Search or jump to…" autocapitalize="off" aria-autocomplete="list" aria-controls="jump-to-results" data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=Z3mzJj1HNULgY+JmnEXPVSJBwmx48tZDeU7WzSTmi2Ugt2IsJnDnu/M9Ru0839VHwH/OkwwvRQ70tfAAf005ig==" spellcheck="false" autocomplete="off">
+          <input type="hidden" class="js-site-search-type-field" name="type">
+            <img src="./guide_files/search-shortcut-hint.svg" alt="" class="mr-2 header-search-key-slash">
+
+            <div class="Box position-absolute overflow-hidden jump-to-suggestions js-jump-to-suggestions-container d-none">
+              <ul class="d-none js-jump-to-suggestions-template-container">
+                <li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item">
+                  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center p-2 jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open" href="https://github.com/thekalinga/bootstrap4-intellij">
+                    <div class="jump-to-octicon js-jump-to-octicon mr-2 text-center d-none">
+                      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+                      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"></path></svg>
+                      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"></path></svg>
+                    </div>
+
+                    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="https://github.com/thekalinga/bootstrap4-intellij" width="28" height="28">
+
+                    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+                    </div>
+
+                    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+                      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+                        In this repository
+                      </span>
+                      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+                        All GitHub
+                      </span>
+                      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+                    </div>
+
+                    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+                      Jump to
+                      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <ul class="d-none js-jump-to-no-results-template-container">
+                <li class="d-flex flex-justify-center flex-items-center p-3 f5 d-none">
+                  <span class="text-gray">No suggested jump to results</span>
+                </li>
+              </ul>
+
+              <ul id="jump-to-results" class="js-navigation-container jump-to-suggestions-results-container js-jump-to-suggestions-results-container js-active-navigation-container"><li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item">
+                  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center p-2 jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open" href="https://github.com/bodiam/intellij-bootstrap" data-target-type="Repository" data-target-id="24639949" data-client-rank="0" data-server-rank="3">
+                    <div class="jump-to-octicon js-jump-to-octicon mr-2 text-center">
+                      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+                      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"></path></svg>
+                      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"></path></svg>
+                    </div>
+
+                    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="https://github.com/thekalinga/bootstrap4-intellij" width="28" height="28">
+
+                    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target" aria-label="bodiam/intellij-bootstrap">bodiam/intellij-bootstrap</div>
+
+                    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+                      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+                        In this repository
+                      </span>
+                      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+                        All GitHub
+                      </span>
+                      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+                    </div>
+
+                    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-on-nav-focus js-jump-to-badge-jump">
+                      Jump to
+                      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+                    </div>
+                  </a>
+                </li><li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item">
+                  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center p-2 jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open" href="https://github.com/kenwheeler/slick" data-target-type="Repository" data-target-id="18049133" data-client-rank="1" data-server-rank="1">
+                    <div class="jump-to-octicon js-jump-to-octicon mr-2 text-center">
+                      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+                      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"></path></svg>
+                      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"></path></svg>
+                    </div>
+
+                    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="https://github.com/thekalinga/bootstrap4-intellij" width="28" height="28">
+
+                    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target" aria-label="kenwheeler/slick">kenwheeler/slick</div>
+
+                    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+                      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+                        In this repository
+                      </span>
+                      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+                        All GitHub
+                      </span>
+                      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+                    </div>
+
+                    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-on-nav-focus js-jump-to-badge-jump">
+                      Jump to
+                      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+                    </div>
+                  </a>
+                </li></ul>
+            </div>
+      </label>
+</form>  </div>
+</div>
+
+            </div>
+
+          <ul class="d-flex pl-2 flex-items-center text-bold list-style-none" role="navigation">
+            <li>
+              <a class="js-selected-navigation-item HeaderNavlink px-2" data-hotkey="g p" data-ga-click="Header, click, Nav menu - item:pulls context:user" aria-label="Pull requests you created" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls" href="https://github.com/pulls">
+                Pull requests
+</a>            </li>
+            <li>
+              <a class="js-selected-navigation-item HeaderNavlink px-2" data-hotkey="g i" data-ga-click="Header, click, Nav menu - item:issues context:user" aria-label="Issues you created" data-selected-links="/issues /issues/assigned /issues/mentioned /issues" href="https://github.com/issues">
+                Issues
+</a>            </li>
+              <li>
+                <a class="js-selected-navigation-item HeaderNavlink px-2" data-ga-click="Header, click, Nav menu - item:marketplace context:user" data-octo-click="marketplace_click" data-octo-dimensions="location:nav_bar" data-selected-links=" /marketplace" href="https://github.com/marketplace">
+                   Marketplace
+</a>              </li>
+            <li>
+              <a class="js-selected-navigation-item HeaderNavlink px-2" data-ga-click="Header, click, Nav menu - item:explore" data-selected-links="/explore /trending /trending/developers /integrations /integrations/feature/code /integrations/feature/collaborate /integrations/feature/ship showcases showcases_search showcases_landing /explore" href="https://github.com/explore">
+                Explore
+</a>            </li>
+          </ul>
+      </div>
+
+      <div class="d-flex">
+        
+<ul class="user-nav d-flex flex-items-center list-style-none" id="user-links">
+  <li class="dropdown">
+    <span class="d-inline-block  px-2">
+      
+    <a aria-label="You have no unread notifications" class="notification-indicator tooltipped tooltipped-s  js-socket-channel js-notification-indicator" data-hotkey="g n" data-ga-click="Header, go to notifications, icon:read" data-channel="notification-changed:7362326" href="https://github.com/notifications">
+        <span class="mail-status "></span>
+        <svg class="octicon octicon-bell" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M13.99 11.991v1H0v-1l.73-.58c.769-.769.809-2.547 1.189-4.416.77-3.767 4.077-4.996 4.077-4.996 0-.55.45-1 .999-1 .55 0 1 .45 1 1 0 0 3.387 1.229 4.156 4.996.38 1.879.42 3.657 1.19 4.417l.659.58h-.01zM6.995 15.99c1.11 0 1.999-.89 1.999-1.999H4.996c0 1.11.89 1.999 1.999 1.999z"></path></svg>
+</a>
+    </span>
+  </li>
+
+  <li class="dropdown">
+    <details class="details-overlay details-reset d-flex px-2 flex-items-center">
+      <summary class="HeaderNavlink" aria-label="Create new…" data-ga-click="Header, create new, icon:add" aria-haspopup="menu">
+        <svg class="octicon octicon-plus float-left mr-1 mt-1" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        <span class="dropdown-caret mt-1"></span>
+      </summary>
+      <details-menu class="dropdown-menu dropdown-menu-sw" role="menu">
+        
+<a role="menuitem" class="dropdown-item" href="https://github.com/new" data-ga-click="Header, create new repository">
+  New repository
+</a>
+
+  <a role="menuitem" class="dropdown-item" href="https://github.com/new/import" data-ga-click="Header, import a repository">
+    Import repository
+  </a>
+
+<a role="menuitem" class="dropdown-item" href="https://gist.github.com/" data-ga-click="Header, create new gist">
+  New gist
+</a>
+
+  <a role="menuitem" class="dropdown-item" href="https://github.com/organizations/new" data-ga-click="Header, create new organization">
+    New organization
+  </a>
+
+
+  <div class="dropdown-divider"></div>
+  <div class="dropdown-header">
+    <span title="thekalinga/bootstrap4-intellij">This repository</span>
+  </div>
+    <a role="menuitem" class="dropdown-item" href="https://github.com/thekalinga/bootstrap4-intellij/issues/new" data-ga-click="Header, create new issue">
+      New issue
+    </a>
+
+      </details-menu>
+    </details>
+  </li>
+
+  <li class="dropdown">
+
+    <details class="details-overlay details-reset d-flex pl-2 flex-items-center">
+      <summary class="HeaderNavlink name mt-1" aria-label="View profile and more" data-ga-click="Header, show menu, icon:avatar" aria-haspopup="menu">
+        <img alt="@cheso" class="avatar float-left mr-1" src="./guide_files/7362326" height="20" width="20">
+        <span class="dropdown-caret"></span>
+      </summary>
+      <details-menu class="dropdown-menu dropdown-menu-sw" role="menu">
+        <ul>
+          <li class="header-nav-current-user css-truncate"><a role="menuitem" class="no-underline user-profile-link px-3 pt-2 pb-2 mb-n2 mt-n1 d-block" href="https://github.com/cheso" data-ga-click="Header, go to profile, text:Signed in as">Signed in as <strong class="css-truncate-target">cheso</strong></a></li>
+          <li class="dropdown-divider"></li>
+          <li><a role="menuitem" class="dropdown-item" href="https://github.com/cheso" data-ga-click="Header, go to profile, text:your profile">Your profile</a></li>
+          <li><a role="menuitem" class="dropdown-item" href="https://github.com/cheso?tab=repositories" data-ga-click="Header, go to repositories, text:your repositories">Your repositories</a></li>
+          <li><a role="menuitem" class="dropdown-item" href="https://github.com/cheso?tab=stars" data-ga-click="Header, go to starred repos, text:your stars">Your stars</a></li>
+            <li><a role="menuitem" class="dropdown-item" href="https://gist.github.com/" data-ga-click="Header, your gists, text:your gists">Your gists</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a role="menuitem" class="dropdown-item" href="https://help.github.com/" data-ga-click="Header, go to help, text:help">Help</a></li>
+          <li><a role="menuitem" class="dropdown-item" href="https://github.com/settings/profile" data-ga-click="Header, go to settings, icon:settings">Settings</a></li>
+          <li>
+            <!-- '"` --><!-- </textarea></xmp> --><form class="logout-form" action="https://github.com/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="F7Rc39XcCrOrY2RpZCDQWwNvz+K/wv32hSqCDmXs3M35dClDF9bzA+pga+Vg+RvdP9Lj7dKL41Azrt0010O4uA==">
+              <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout" role="menuitem">
+                Sign out
+              </button>
+</form>          </li>
+        </ul>
+      </details-menu>
+    </details>
+  </li>
+</ul>
+
+
+
+        <!-- '"` --><!-- </textarea></xmp> --><form class="sr-only right-0" action="https://github.com/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="55bxgf7NKge4nzXj9pK6w9rnIUJRjXctb7o2a4muZsQJVoQdPMfTt/mcOm/yS3FF5loNTTzEaYvZPmlROwECsQ==">
+          <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+            Sign out
+          </button>
+</form>      </div>
+    </div>
+  </div>
+</header>
+
+      
+
+  </div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+    <div id="js-flash-container">
+
+
+</div>
+
+
+
+  <div role="main" class="application-main ">
+        <div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="">
+    <div id="js-repo-pjax-container" data-pjax-container="">
+      
+
+
+
+
+
+  <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav  ">
+    <div class="repohead-details-container clearfix container">
+
+      <ul class="pagehead-actions">
+  <li>
+        <!-- '"` --><!-- </textarea></xmp> --><form data-autosubmit="true" data-remote="true" class="js-social-container" action="https://github.com/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="cEa6qQmfzRT0m4sDSycKwcbIFFCK2UeTGOz5NUOxwuVRVWKZ1iz3dRDFkFwDmfBGJ3/BtXunG6u5Sg44Yo2RSg==">      <input type="hidden" name="repository_id" id="repository_id" value="76477069" class="form-control">
+
+        <div class="select-menu js-menu-container js-select-menu">
+          <a href="https://github.com/thekalinga/bootstrap4-intellij/subscription" class="btn btn-sm btn-with-count select-menu-button js-menu-target" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Toggle repository notifications menu" data-ga-click="Repository, click Watch settings, action:files#disambiguate">
+            <span class="js-select-button">
+                <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+                Watch
+            </span>
+          </a>
+          <a class="social-count js-social-count" href="https://github.com/thekalinga/bootstrap4-intellij/watchers" aria-label="4 users are watching this repository">
+            4
+          </a>
+
+        <div class="select-menu-modal-holder">
+          <div class="select-menu-modal subscription-menu-modal js-menu-content">
+            <div class="select-menu-header js-navigation-enable" tabindex="-1">
+              <svg class="octicon octicon-x js-menu-close" role="img" aria-label="Close" viewBox="0 0 12 16" version="1.1" width="12" height="16"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+              <span class="select-menu-title">Notifications</span>
+            </div>
+
+              <div class="select-menu-list js-navigation-container" role="menu">
+
+                <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+                  <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+                  <div class="select-menu-item-text">
+                    <input type="radio" name="do" id="do_included" value="included" checked="checked">
+                    <span class="select-menu-item-heading">Not watching</span>
+                    <span class="description">Be notified when participating or @mentioned.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+                      Watch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+                  <div class="select-menu-item-text">
+                    <input type="radio" name="do" id="do_subscribed" value="subscribed">
+                    <span class="select-menu-item-heading">Watching</span>
+                    <span class="description">Be notified of all conversations.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+                        Unwatch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+                  <div class="select-menu-item-text">
+                    <input type="radio" name="do" id="do_ignore" value="ignore">
+                    <span class="select-menu-item-heading">Ignoring</span>
+                    <span class="description">Never be notified.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg class="octicon octicon-mute v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 2.81v10.38c0 .67-.81 1-1.28.53L3 10H1c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1h2l3.72-3.72C7.19 1.81 8 2.14 8 2.81zm7.53 3.22l-1.06-1.06-1.97 1.97-1.97-1.97-1.06 1.06L11.44 8 9.47 9.97l1.06 1.06 1.97-1.97 1.97 1.97 1.06-1.06L13.56 8l1.97-1.97z"></path></svg>
+                        Stop ignoring
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+</form>
+  </li>
+
+  <li>
+    
+  <div class="js-toggler-container js-social-container starring-container ">
+    <!-- '"` --><!-- </textarea></xmp> --><form class="starred js-social-form" action="https://github.com/thekalinga/bootstrap4-intellij/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="67eMqEHn9GmdJfPe3UAwS5EACac9mlws0tEjAphYc2CAm8Q1YLy5YUkbIXtAFlUbH6w5KyXZl+DEo2yKQe9OrQ==">
+      <input type="hidden" name="context" value="repository">
+      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Unstar thekalinga/bootstrap4-intellij" data-ga-click="Repository, click unstar button, action:files#disambiguate; text:Unstar">
+        <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="https://github.com/thekalinga/bootstrap4-intellij/stargazers" aria-label="53 users starred this repository">
+          53
+        </a>
+</form>
+    <!-- '"` --><!-- </textarea></xmp> --><form class="unstarred js-social-form" action="https://github.com/thekalinga/bootstrap4-intellij/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="GU1c0F9JA7ckV5nC4xDrrH7wfS04m4wogljh1Q5dZbLHGCVBo863e7AVc1rv20Vzc25kcZGe7hIkle2mqa33jA==">
+      <input type="hidden" name="context" value="repository">
+      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Star this repository" title="Star thekalinga/bootstrap4-intellij" data-ga-click="Repository, click star button, action:files#disambiguate; text:Star">
+        <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="https://github.com/thekalinga/bootstrap4-intellij/stargazers" aria-label="53 users starred this repository">
+          53
+        </a>
+</form>  </div>
+
+  </li>
+
+  <li>
+          <!-- '"` --><!-- </textarea></xmp> --><form class="btn-with-count" action="https://github.com/thekalinga/bootstrap4-intellij/fork" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="7cgw/PYNW6oqmiOMmuCIKepbLsGB2EwMNt26JVSRY2JOxdOIWAggVhQqlrKW7VxzmR2FWXQ0licz9Ywxqce5dA==">
+            <button type="submit" class="btn btn-sm btn-with-count" data-ga-click="Repository, show fork modal, action:files#disambiguate; text:Fork" title="Fork your own copy of thekalinga/bootstrap4-intellij to your account" aria-label="Fork your own copy of thekalinga/bootstrap4-intellij to your account">
+              <svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+              Fork
+            </button>
+</form>
+    <a href="https://github.com/thekalinga/bootstrap4-intellij/network/members" class="social-count" aria-label="12 users forked this repository">
+      12
+    </a>
+  </li>
+</ul>
+
+      <h1 class="public ">
+  <svg class="octicon octicon-repo" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+  <span class="author" itemprop="author"><a class="url fn" rel="author" href="https://github.com/thekalinga">thekalinga</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a data-pjax="#js-repo-pjax-container" href="https://github.com/thekalinga/bootstrap4-intellij">bootstrap4-intellij</a></strong>
+
+</h1>
+
+    </div>
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax container" itemscope="" itemtype="http://schema.org/BreadcrumbList" role="navigation" data-pjax="#js-repo-pjax-container">
+
+  <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a class="js-selected-navigation-item selected reponav-item" itemprop="url" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /thekalinga/bootstrap4-intellij" href="https://github.com/thekalinga/bootstrap4-intellij">
+      <svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"></path></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a itemprop="url" data-hotkey="g i" class="js-selected-navigation-item reponav-item" data-selected-links="repo_issues repo_labels repo_milestones /thekalinga/bootstrap4-intellij/issues" href="https://github.com/thekalinga/bootstrap4-intellij/issues">
+        <svg class="octicon octicon-issue-opened" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+        <span itemprop="name">Issues</span>
+        <span class="Counter">5</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a data-hotkey="g p" itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_pulls checks /thekalinga/bootstrap4-intellij/pulls" href="https://github.com/thekalinga/bootstrap4-intellij/pulls">
+      <svg class="octicon octicon-git-pull-request" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="Counter">0</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+    <a data-hotkey="g b" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /thekalinga/bootstrap4-intellij/projects" href="https://github.com/thekalinga/bootstrap4-intellij/projects">
+      <svg class="octicon octicon-project" viewBox="0 0 15 16" version="1.1" width="15" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"></path></svg>
+      Projects
+      <span class="Counter">0</span>
+</a>
+
+    <a class="js-selected-navigation-item reponav-item" data-hotkey="g w" data-selected-links="repo_wiki /thekalinga/bootstrap4-intellij/wiki" href="https://github.com/thekalinga/bootstrap4-intellij/wiki">
+      <svg class="octicon octicon-book" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"></path></svg>
+      Wiki
+</a>
+
+  <a class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors dependency_graph pulse /thekalinga/bootstrap4-intellij/pulse" href="https://github.com/thekalinga/bootstrap4-intellij/pulse">
+    <svg class="octicon octicon-graph" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"></path></svg>
+    Insights
+</a>
+
+</nav>
+
+
+  </div>
+
+<div class="container new-discussion-timeline experiment-repo-nav  ">
+  <div class="repository-content ">
+
+    
+  
+
+  <div class="js-repo-meta-container">
+  <div class="repository-meta mb-0  js-repo-meta-edit js-details-container ">
+    <div class="repository-meta-content col-11 mb-1">
+          <span class="col-11 text-gray-dark mr-2" itemprop="about">
+            IntelliJ plugin for Bootstrap 4 &amp; Font awesome
+          </span>
+    </div>
+
+  </div>
+
+    <div class="mb-3 repository-topics-container js-repository-topics-container js-details-container">
+      <div id="topics-list-container" data-url="/thekalinga/bootstrap4-intellij/settings/topics">
+          <div class="list-topics-container f6 mt-1">
+      <a href="https://github.com/topics/bootstrap4" class="topic-tag topic-tag-link" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:bootstrap4">
+        bootstrap4
+      </a>
+      <a href="https://github.com/topics/intellij-plugin" class="topic-tag topic-tag-link" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:intellij-plugin">
+        intellij-plugin
+      </a>
+  </div>
+
+
+      </div>
+
+    </div>
+</div>
+
+
+
+  <div class="overall-summary overall-summary-bottomless">
+    <div class="stats-switcher-viewport js-stats-switcher-viewport">
+      <div class="stats-switcher-wrapper">
+      <ul class="numbers-summary">
+        <li class="commits">
+          <a data-pjax="" href="https://github.com/thekalinga/bootstrap4-intellij/commits/master">
+              <svg class="octicon octicon-history" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 13H6V6h5v2H8v5zM7 1C4.81 1 2.87 2.02 1.59 3.59L0 2v4h4L2.5 4.5C3.55 3.17 5.17 2.3 7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-.34.03-.67.09-1H.08C.03 7.33 0 7.66 0 8c0 3.86 3.14 7 7 7s7-3.14 7-7-3.14-7-7-7z"></path></svg>
+              <span class="num text-emphasized">
+                30
+              </span>
+              commits
+          </a>
+        </li>
+        <li>
+          <a data-pjax="" href="https://github.com/thekalinga/bootstrap4-intellij/branches">
+            <svg class="octicon octicon-git-branch" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+            <span class="num text-emphasized">
+              1
+            </span>
+            branch
+          </a>
+        </li>
+
+        <li>
+          <a href="https://github.com/thekalinga/bootstrap4-intellij/releases">
+            <svg class="octicon octicon-tag" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.685 1.72a2.49 2.49 0 0 0-1.76-.726H3.48A2.5 2.5 0 0 0 .994 3.48v2.456c0 .656.269 1.292.726 1.76l6.024 6.024a.99.99 0 0 0 1.402 0l4.563-4.563a.99.99 0 0 0 0-1.402L7.685 1.72zM2.366 7.048A1.54 1.54 0 0 1 1.9 5.925V3.48c0-.874.716-1.58 1.58-1.58h2.456c.418 0 .825.159 1.123.467l6.104 6.094-4.702 4.702-6.094-6.114zm.626-4.066h1.989v1.989H2.982V2.982h.01z"></path></svg>
+            <span class="num text-emphasized">
+              5
+            </span>
+            releases
+          </a>
+        </li>
+
+        <li>
+            <a href="https://github.com/thekalinga/bootstrap4-intellij/graphs/contributors">
+  <svg class="octicon octicon-organization" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 12.999c0 .439-.45 1-1 1H7.995c-.539 0-.994-.447-.995-.999H1c-.54 0-1-.561-1-1 0-2.634 3-4 3-4s.229-.409 0-1c-.841-.621-1.058-.59-1-3 .058-2.419 1.367-3 2.5-3s2.442.58 2.5 3c.058 2.41-.159 2.379-1 3-.229.59 0 1 0 1s1.549.711 2.42 2.088C9.196 9.369 10 8.999 10 8.999s.229-.409 0-1c-.841-.62-1.058-.59-1-3 .058-2.419 1.367-3 2.5-3s2.437.581 2.495 3c.059 2.41-.158 2.38-1 3-.229.59 0 1 0 1s3.005 1.366 3.005 4z"></path></svg>
+    <span class="num text-emphasized">
+      1
+    </span>
+    contributor
+</a>
+
+        </li>
+          <li>
+            <a href="https://github.com/thekalinga/bootstrap4-intellij/blob/master/LICENSE">
+              <svg class="octicon octicon-law" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 4c-.83 0-1.5-.67-1.5-1.5S6.17 1 7 1s1.5.67 1.5 1.5S7.83 4 7 4zm7 6c0 1.11-.89 2-2 2h-1c-1.11 0-2-.89-2-2l2-4h-1c-.55 0-1-.45-1-1H8v8c.42 0 1 .45 1 1h1c.42 0 1 .45 1 1H3c0-.55.58-1 1-1h1c0-.55.58-1 1-1h.03L6 5H5c0 .55-.45 1-1 1H3l2 4c0 1.11-.89 2-2 2H2c-1.11 0-2-.89-2-2l2-4H1V5h3c0-.55.45-1 1-1h4c.55 0 1 .45 1 1h3v1h-1l2 4zM2.5 7L1 10h3L2.5 7zM13 10l-1.5-3-1.5 3h3z"></path></svg>
+                MIT
+            </a>
+          </li>
+      </ul>
+
+        <div class="repository-lang-stats">
+          <ol class="repository-lang-stats-numbers">
+            <li>
+                <a href="https://github.com/thekalinga/bootstrap4-intellij/search?l=html" data-ga-click="Repository, language stats search click, location:repo overview">
+                  <span class="color-block language-color" style="background-color:#e34c26;"></span>
+                  <span class="lang">HTML</span>
+                  <span class="percent">79.3%</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/thekalinga/bootstrap4-intellij/search?l=groovy" data-ga-click="Repository, language stats search click, location:repo overview">
+                  <span class="color-block language-color" style="background-color:#e69f56;"></span>
+                  <span class="lang">Groovy</span>
+                  <span class="percent">20.1%</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/thekalinga/bootstrap4-intellij/search?l=java" data-ga-click="Repository, language stats search click, location:repo overview">
+                  <span class="color-block language-color" style="background-color:#b07219;"></span>
+                  <span class="lang">Java</span>
+                  <span class="percent">0.6%</span>
+                </a>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <button type="button" class="d-flex p-0 repository-lang-stats-graph js-toggle-lang-stats" title="Click for language details" data-ga-click="Repository, language bar stats toggle, location:repo overview">
+      <span class="language-color" aria-label="HTML 79.3%" style="width:79.3%; background-color:#e34c26;" itemprop="keywords">HTML</span>
+      <span class="language-color" aria-label="Groovy 20.1%" style="width:20.1%; background-color:#e69f56;" itemprop="keywords">Groovy</span>
+      <span class="language-color" aria-label="Java 0.6%" style="width:0.6%; background-color:#b07219;" itemprop="keywords">Java</span>
+  </button>
+
+
+
+    <div class="mt-2">
+      
+    </div>
+
+  <div class="file-navigation in-mid-page d-flex flex-items-start">
+  
+<div class="select-menu branch-select-menu js-menu-container js-select-menu float-left">
+  <button class=" btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w" type="button" aria-label="Switch branches or tags" aria-expanded="false" aria-haspopup="true">
+      <i>Branch:</i>
+      <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax="">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <svg class="octicon octicon-x js-menu-close" role="img" aria-label="Close" viewBox="0 0 12 16" version="1.1" width="12" height="16"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+        <span class="select-menu-title">Switch branches/tags</span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="form-control js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="https://github.com/thekalinga/bootstrap4-intellij#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="https://github.com/thekalinga/bootstrap4-intellij#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open selected" href="https://github.com/thekalinga/bootstrap4-intellij/tree/master" data-name="master" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                master
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/thekalinga/bootstrap4-intellij/tree/2.1.2" data-name="2.1.2" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.1.2">
+                2.1.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/thekalinga/bootstrap4-intellij/tree/2.1.1" data-name="2.1.1" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.1.1">
+                2.1.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/thekalinga/bootstrap4-intellij/tree/2.1.0" data-name="2.1.0" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.1.0">
+                2.1.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/thekalinga/bootstrap4-intellij/tree/2.0.0" data-name="2.0.0" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.0.0">
+                2.0.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/thekalinga/bootstrap4-intellij/tree/1.0.2" data-name="1.0.2" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.0.2">
+                1.0.2
+              </span>
+            </a>
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+        <a href="https://github.com/thekalinga/bootstrap4-intellij/pull/new/master" class="btn btn-sm new-pull-request-btn" data-pjax="" data-ga-click="Repository, new pull request, location:repo overview">
+          New pull request
+        </a>
+
+  <div class="breadcrumb flex-auto">
+    
+  </div>
+
+  <div class="BtnGroup">
+      
+  <!-- '"` --><!-- </textarea></xmp> --><form class="BtnGroup-form" action="https://github.com/thekalinga/bootstrap4-intellij/new/master" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="el4zAKVfZJZlTL2DRl93WE+C1zuzR0Oq+1J/r5gyqqqKF3iGAPjqqhnC2MBUIA3GiRVzIOMcAo/yIfY0tHR7Og==">
+    <button class="btn btn-sm BtnGroup-item" type="submit" data-disable-with="Creating file…">
+      Create new file
+    </button>
+</form>
+
+      
+  <a href="https://github.com/thekalinga/bootstrap4-intellij/upload/master" class="btn btn-sm BtnGroup-item">
+    Upload files
+  </a>
+
+
+    <a href="https://github.com/thekalinga/bootstrap4-intellij/find/master" class="btn btn-sm empty-icon float-right BtnGroup-item" data-pjax="" data-hotkey="t" data-ga-click="Repository, find file, location:repo overview">
+      Find file
+    </a>
+  </div>
+  
+
+    <details class="get-repo-select-menu js-get-repo-select-menu position-relative details-overlay details-reset">
+  <summary class="btn btn-sm btn-primary">
+    Clone or download
+    <span class="dropdown-caret"></span>
+  </summary>
+  <div class="position-relative">
+    <div class="get-repo-modal dropdown-menu dropdown-menu-sw pb-0 js-toggler-container  js-get-repo-modal">
+
+      <div class="get-repo-modal-options">
+          <div class="clone-options https-clone-options">
+              <!-- '"` --><!-- </textarea></xmp> --><form data-remote="true" action="https://github.com/users/set_protocol?protocol_selector=ssh&amp;protocol_type=clone" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="5C16Z6fDMeG28fWu96KxP3dLvcX6t+eG3fJ9vuym/XPzfEER3f5wAF40Gz/jQQa8qK44H2z0cvlEb3JF+hh/mQ=="><button type="submit" class="btn-link btn-change-protocol js-toggler-target float-right">Use SSH</button></form>
+
+            <h4 class="mb-1">
+              Clone with HTTPS
+              <a class="muted-link" href="https://help.github.com/articles/which-remote-url-should-i-use" target="_blank" title="Which remote URL should I use?">
+                <svg class="octicon octicon-question" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6 10h2v2H6v-2zm4-3.5C10 8.64 8 9 8 9H6c0-.55.45-1 1-1h.5c.28 0 .5-.22.5-.5v-1c0-.28-.22-.5-.5-.5h-1c-.28 0-.5.22-.5.5V7H4c0-1.5 1.5-3 3-3s3 1 3 2.5zM7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7z"></path></svg>
+              </a>
+            </h4>
+            <p class="mb-2 get-repo-decription-text">
+              Use Git or checkout with SVN using the web URL.
+            </p>
+
+            <div class="input-group">
+  <input type="text" class="form-control input-monospace input-sm" data-autoselect="" value="https://github.com/thekalinga/bootstrap4-intellij.git" aria-label="Clone this repository at https://github.com/thekalinga/bootstrap4-intellij.git" readonly="">
+  <div class="input-group-button">
+    <clipboard-copy value="https://github.com/thekalinga/bootstrap4-intellij.git" aria-label="Copy to clipboard" class="btn btn-sm" tabindex="0" role="button">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"></path></svg>
+    </clipboard-copy>
+  </div>
+</div>
+
+          </div>
+
+          <div class="clone-options ssh-clone-options">
+              <!-- '"` --><!-- </textarea></xmp> --><form data-remote="true" action="https://github.com/users/set_protocol?protocol_selector=https&amp;protocol_type=clone" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="KH/6TwS1MpekcG4c21JGhBGEpW3yHLjDeNdwEcLAbw4/LsE5fohzdky1gI3PsfEHzmEgt2RfLbzhSn/q1H7t5A=="><button type="submit" class="btn-link btn-change-protocol js-toggler-target float-right">Use HTTPS</button></form>
+
+              <h4 class="mb-1">
+                Clone with SSH
+                <a class="muted-link" href="https://help.github.com/articles/which-remote-url-should-i-use" target="_blank" title="Which remote URL should I use?">
+                  <svg class="octicon octicon-question" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6 10h2v2H6v-2zm4-3.5C10 8.64 8 9 8 9H6c0-.55.45-1 1-1h.5c.28 0 .5-.22.5-.5v-1c0-.28-.22-.5-.5-.5h-1c-.28 0-.5.22-.5.5V7H4c0-1.5 1.5-3 3-3s3 1 3 2.5zM7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7z"></path></svg>
+                </a>
+              </h4>
+              <p class="mb-2 get-repo-decription-text">
+                Use an SSH key and passphrase from account.
+              </p>
+
+              <div class="input-group">
+  <input type="text" class="form-control input-monospace input-sm" data-autoselect="" value="git@github.com:thekalinga/bootstrap4-intellij.git" aria-label="Clone this repository at git@github.com:thekalinga/bootstrap4-intellij.git" readonly="">
+  <div class="input-group-button">
+    <clipboard-copy value="git@github.com:thekalinga/bootstrap4-intellij.git" aria-label="Copy to clipboard" class="btn btn-sm" tabindex="0" role="button">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"></path></svg>
+    </clipboard-copy>
+  </div>
+</div>
+
+          </div>
+        <div class="mt-2">
+            <a href="github-windows://openRepo/https://github.com/thekalinga/bootstrap4-intellij" class="btn btn-outline get-repo-btn tooltipped tooltipped-s tooltipped-multiline js-get-repo" data-open-app="windows" aria-label="Clone thekalinga/bootstrap4-intellij to your computer and use it in GitHub Desktop.">
+    Open in Desktop
+  </a>
+
+<a href="https://github.com/thekalinga/bootstrap4-intellij/archive/master.zip" class="btn btn-outline get-repo-btn
+" rel="nofollow" data-ga-click="Repository, download zip, location:repo overview">
+  Download ZIP
+</a>
+
+        </div>
+      </div>
+
+      <div class="js-modal-download-mac py-2 px-3 d-none">
+        <h4 class="lh-condensed mb-3">Launching GitHub Desktop<span class="animated-ellipsis-container"><span class="animated-ellipsis">...</span></span></h4>
+        <p class="text-gray">If nothing happens, <a href="https://desktop.github.com/">download GitHub Desktop</a> and try again.</p>
+        <p><button class="btn-link js-get-repo-modal-download-back">Go back</button></p>
+      </div>
+
+      <div class="js-modal-download-windows py-2 px-3 d-none">
+        <h4 class="lh-condensed mb-3">Launching GitHub Desktop<span class="animated-ellipsis-container"><span class="animated-ellipsis">...</span></span></h4>
+        <p class="text-gray">If nothing happens, <a href="https://desktop.github.com/">download GitHub Desktop</a> and try again.</p>
+        <p><button class="btn-link js-get-repo-modal-download-back">Go back</button></p>
+      </div>
+
+      <div class="js-modal-download-xcode py-2 px-3 d-none">
+        <h4 class="lh-condensed mb-3">Launching Xcode<span class="animated-ellipsis-container"><span class="animated-ellipsis">...</span></span></h4>
+        <p class="text-gray">If nothing happens, <a href="https://developer.apple.com/xcode/">download Xcode</a> and try again.</p>
+        <p><button class="btn-link js-get-repo-modal-download-back">Go back</button></p>
+      </div>
+
+      <div class="js-modal-download-visual-studio py-2 px-3 d-none">
+        <h4 class="lh-condensed mb-3">Launching Visual Studio<span class="animated-ellipsis-container"><span class="animated-ellipsis">...</span></span></h4>
+        <p class="text-gray">If nothing happens, <a href="https://visualstudio.github.com/">download the GitHub extension for Visual Studio</a> and try again.</p>
+        <p><button class="btn-link js-get-repo-modal-download-back">Go back</button></p>
+      </div>
+
+    </div>
+  </div>
+</details>
+
+</div>
+
+
+  
+
+
+  <div class="commit-tease js-details-container Details d-flex">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="thekalinga">
+
+        <a class="avatar" data-skip-pjax="true" data-hovercard-user-id="452518" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/thekalinga" aria-describedby="hovercard-aria-description">
+          <img height="20" width="20" alt="@thekalinga" src="./guide_files/452518">
+</a>  </div>
+</div>
+
+    <div class="flex-auto f6 no-wrap mr-3">
+      
+      <a href="https://github.com/thekalinga/bootstrap4-intellij/commits?author=thekalinga" class="commit-author tooltipped tooltipped-s user-mention" aria-label="View all commits by thekalinga">thekalinga</a>
+
+
+  
+
+
+        <a data-pjax="true" title="Chore" class="message" href="https://github.com/thekalinga/bootstrap4-intellij/commit/96f8e63044698b457097af0cbaee0f695eb75097">Chore</a>
+
+    </div>
+    <div class="no-wrap">
+      Latest commit
+      <a class="commit-tease-sha" href="https://github.com/thekalinga/bootstrap4-intellij/commit/96f8e63044698b457097af0cbaee0f695eb75097" data-pjax="">
+        96f8e63
+      </a>
+      <span itemprop="dateModified"><relative-time datetime="2017-02-16T07:39:59Z" title="2017년 2월 16일 오후 4:39 GMT+9">on 16 Feb 2017</relative-time></span>
+    </div>
+  </div>
+
+
+
+
+<div class="file-wrap">
+  <a class="d-none js-permalink-shortcut" data-hotkey="y" href="https://github.com/thekalinga/bootstrap4-intellij/tree/96f8e63044698b457097af0cbaee0f695eb75097">Permalink</a>
+
+  <table class="files js-navigation-container" data-pjax="">
+
+
+    <tbody>
+      <tr class="warning include-fragment-error">
+        <td class="icon"><svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></td>
+        <td class="content" colspan="3">Failed to load latest commit information.</td>
+      </tr>
+
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg class="octicon octicon-file-directory" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+            <img width="16" height="16" class="spinner" alt="" src="./guide_files/octocat-spinner-32.gif">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title="This path skips through empty directories" id="04f339d50ad8be9d7500be3f70cd5d57-1c497550d05c8b524c36644dfafa3d4dfea550a1" href="https://github.com/thekalinga/bootstrap4-intellij/tree/master/gradle/wrapper"><span class="simplified-path">gradle/</span>wrapper</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a data-pjax="true" title="Init" class="message" href="https://github.com/thekalinga/bootstrap4-intellij/commit/12af3ff6d89d39faca30a7781cab3d24ea57a3af">Init</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-12-14T15:24:41Z" title="2016년 12월 15일 오전 12:24 GMT+9">2 years ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg class="octicon octicon-file-directory" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+            <img width="16" height="16" class="spinner" alt="" src="./guide_files/octocat-spinner-32.gif">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title="src" id="25d902c24283ab8cfbac54dfa101ad31-aaf70b8f886d2e98b51ce12dab3901bccb6e7973" href="https://github.com/thekalinga/bootstrap4-intellij/tree/master/src">src</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a data-pjax="true" title="Fixed issues with dropdown" class="message" href="https://github.com/thekalinga/bootstrap4-intellij/commit/916dff7341c19295537dcb805d763baa55effe26">Fixed issues with dropdown</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-02-16T07:28:58Z" title="2017년 2월 16일 오후 4:28 GMT+9">2 years ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img width="16" height="16" class="spinner" alt="" src="./guide_files/octocat-spinner-32.gif">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title=".gitignore" id="a084b794bc0759e7a6b77810e01874f2-9635de1d68dc47cf27324fc11c0e9089d4274781" href="https://github.com/thekalinga/bootstrap4-intellij/blob/master/.gitignore">.gitignore</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a data-pjax="true" title="Chore" class="message" href="https://github.com/thekalinga/bootstrap4-intellij/commit/96f8e63044698b457097af0cbaee0f695eb75097">Chore</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-02-16T07:39:59Z" title="2017년 2월 16일 오후 4:39 GMT+9">2 years ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img width="16" height="16" class="spinner" alt="" src="./guide_files/octocat-spinner-32.gif">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title=".version" id="2bc0e46110b507d6d5a344264ef15ada-eca07e4c1a8cbc603e5d5c2885dc0f0f9b1eef8d" href="https://github.com/thekalinga/bootstrap4-intellij/blob/master/.version">.version</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a data-pjax="true" title="Fixed issues with dropdown" class="message" href="https://github.com/thekalinga/bootstrap4-intellij/commit/916dff7341c19295537dcb805d763baa55effe26">Fixed issues with dropdown</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-02-16T07:28:58Z" title="2017년 2월 16일 오후 4:28 GMT+9">2 years ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img width="16" height="16" class="spinner" alt="" src="./guide_files/octocat-spinner-32.gif">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title="CHANGELOG.md" id="4ac32a78649ca5bdd8e0ba38b7006a1e-03ec8b6b06c14f2574cdd403d362c5e40ca65436" href="https://github.com/thekalinga/bootstrap4-intellij/blob/master/CHANGELOG.md">CHANGELOG.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a data-pjax="true" title="Fixed issues with dropdown" class="message" href="https://github.com/thekalinga/bootstrap4-intellij/commit/916dff7341c19295537dcb805d763baa55effe26">Fixed issues with dropdown</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-02-16T07:28:58Z" title="2017년 2월 16일 오후 4:28 GMT+9">2 years ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img width="16" height="16" class="spinner" alt="" src="./guide_files/octocat-spinner-32.gif">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title="LICENSE" id="9879d6db96fd29134fc802214163b95a-d13cc4b26a53906de87bb29eb6c1ab82b1ef91fe" itemprop="license" href="https://github.com/thekalinga/bootstrap4-intellij/blob/master/LICENSE">LICENSE</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a data-pjax="true" title="1. Added support for badges
+2. Modified build script slightly" class="message" href="https://github.com/thekalinga/bootstrap4-intellij/commit/7963cfd19fe76b98333ef13167181241848e623e">1. Added support for badges</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-01-24T14:23:20Z" title="2017년 1월 24일 오후 11:23 GMT+9">2 years ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item navigation-focus" aria-selected="true">
+          <td class="icon">
+            <svg class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img width="16" height="16" class="spinner" alt="" src="./guide_files/octocat-spinner-32.gif">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title="README.md" id="04c6e90faac2675aa89e2176d2eec7d8-f7b474df38e89e2043745f41ac24015f0eed54d7" href="https://github.com/thekalinga/bootstrap4-intellij/blob/master/README.md">README.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a data-pjax="true" title="1. Added support for badges
+2. Modified build script slightly" class="message" href="https://github.com/thekalinga/bootstrap4-intellij/commit/7963cfd19fe76b98333ef13167181241848e623e">1. Added support for badges</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-01-24T14:23:20Z" title="2017년 1월 24일 오후 11:23 GMT+9">2 years ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img width="16" height="16" class="spinner" alt="" src="./guide_files/octocat-spinner-32.gif">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title="RELEASE-STEPS.md" id="7d44e8eab2cdf54f6f89ebad18aa7e8b-5eedb71d0c3d169ae544f550c2c255bd271a4cee" href="https://github.com/thekalinga/bootstrap4-intellij/blob/master/RELEASE-STEPS.md">RELEASE-STEPS.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a data-pjax="true" title="Chore" class="message" href="https://github.com/thekalinga/bootstrap4-intellij/commit/96f8e63044698b457097af0cbaee0f695eb75097">Chore</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-02-16T07:39:59Z" title="2017년 2월 16일 오후 4:39 GMT+9">2 years ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img width="16" height="16" class="spinner" alt="" src="./guide_files/octocat-spinner-32.gif">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title="build.gradle" id="c197962302397baf3a4cc36463dce5ea-80d44e74f2335c803d8693424473b8c55a45ce7c" href="https://github.com/thekalinga/bootstrap4-intellij/blob/master/build.gradle">build.gradle</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a data-pjax="true" title="Fixed issues with dropdown" class="message" href="https://github.com/thekalinga/bootstrap4-intellij/commit/916dff7341c19295537dcb805d763baa55effe26">Fixed issues with dropdown</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-02-16T07:28:58Z" title="2017년 2월 16일 오후 4:28 GMT+9">2 years ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img width="16" height="16" class="spinner" alt="" src="./guide_files/octocat-spinner-32.gif">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title="gradlew" id="36ffbd2ea7085cf19547193a7faf30c8-9aa616c273d8c0be67cb25eaac11e07209f5c034" href="https://github.com/thekalinga/bootstrap4-intellij/blob/master/gradlew">gradlew</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a data-pjax="true" title="Init" class="message" href="https://github.com/thekalinga/bootstrap4-intellij/commit/12af3ff6d89d39faca30a7781cab3d24ea57a3af">Init</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-12-14T15:24:41Z" title="2016년 12월 15일 오전 12:24 GMT+9">2 years ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img width="16" height="16" class="spinner" alt="" src="./guide_files/octocat-spinner-32.gif">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title="gradlew.bat" id="c9b677a57d25a366595a35b2230d0502-f9553162f122c71b34635112e717c3e733b5b212" href="https://github.com/thekalinga/bootstrap4-intellij/blob/master/gradlew.bat">gradlew.bat</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a data-pjax="true" title="Init" class="message" href="https://github.com/thekalinga/bootstrap4-intellij/commit/12af3ff6d89d39faca30a7781cab3d24ea57a3af">Init</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-12-14T15:24:41Z" title="2016년 12월 15일 오전 12:24 GMT+9">2 years ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img width="16" height="16" class="spinner" alt="" src="./guide_files/octocat-spinner-32.gif">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title="help.gif" id="a49f52d30a40853a993c5073ba53405a-117470eb636a8cab602c3a16a9a5ccb676463127" href="https://github.com/thekalinga/bootstrap4-intellij/blob/master/help.gif">help.gif</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a data-pjax="true" title="Fixed minor issues" class="message" href="https://github.com/thekalinga/bootstrap4-intellij/commit/1d08659438880a4ccd38f666050894541e3f7b18">Fixed minor issues</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-12-15T07:57:43Z" title="2016년 12월 15일 오후 4:57 GMT+9">2 years ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img width="16" height="16" class="spinner" alt="" src="./guide_files/octocat-spinner-32.gif">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title="settings.gradle" id="88b7c47e47b8ee65263b6784b86fa0a7-c9d1820da822eafaa0629883bf5d9c1ed2f9385b" href="https://github.com/thekalinga/bootstrap4-intellij/blob/master/settings.gradle">settings.gradle</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a data-pjax="true" title="Updated to the latest version of plugin" class="message" href="https://github.com/thekalinga/bootstrap4-intellij/commit/684dd6271de07be30ba3106f487039126cbdccd9">Updated to the latest version of plugin</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-12-14T16:35:27Z" title="2016년 12월 15일 오전 1:35 GMT+9">2 years ago</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+            <img width="16" height="16" class="spinner" alt="" src="./guide_files/octocat-spinner-32.gif">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title="settings.gradle~" id="ff1528ca054b34c85bd657804fafb688-56d19fc9b5810a9076e33f38dd37b8c7251f53f1" href="https://github.com/thekalinga/bootstrap4-intellij/blob/master/settings.gradle~">settings.gradle~</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a data-pjax="true" title="Updated to the latest version of plugin" class="message" href="https://github.com/thekalinga/bootstrap4-intellij/commit/684dd6271de07be30ba3106f487039126cbdccd9">Updated to the latest version of plugin</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-12-14T16:35:27Z" title="2016년 12월 15일 오전 1:35 GMT+9">2 years ago</time-ago></span>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+
+
+  <div id="readme" class="Box Box--condensed instapaper_body md">
+    <div class="Box-header px-2 clearfix">
+      <h3 class="Box-title pr-3">
+        <svg class="octicon octicon-book" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"></path></svg>
+        README.md
+      </h3>
+    </div>
+      <div class="Box-body p-6">
+        <article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-bootstrap-4--font-awesome-snippets-for-intellij" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#bootstrap-4--font-awesome-snippets-for-intellij"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bootstrap 4 &amp; Font awesome snippets for IntelliJ</h1>
+<p>A set of Bootstrap 4 &amp; Font awesome snippets for the following JetBrains products:</p>
+<ul>
+<li>IntelliJ IDEA</li>
+<li>WebStorm and PhpStorm</li>
+<li>PyCharm</li>
+<li>RubyMine</li>
+</ul>
+<h2><a id="user-content-usage" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#usage"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage</h2>
+<p>Create a new HTML document and</p>
+<ol>
+<li>Type <code>b4-</code> followed by pressing <code>Ctrl+Space</code> to see all available bootstrap 4 snippets.</li>
+<li>Type <code>fa-</code> followed by pressing <code>Ctrl+Space</code> to see all available font awesome snippets.</li>
+</ol>
+<p>Alternatively you can type <code>jumbotron</code> followed by <code>Ctrl+J</code> to see the snippet matches</p>
+<p>The detailed list of supported actions are listed <a href="https://github.com/thekalinga/bootstrap4-intellij#documentation">below</a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/thekalinga/bootstrap4-intellij/blob/master/help.gif"><img src="./guide_files/help.gif" alt="Plugin in action" style="max-width:100%;"></a></p>
+<p>Feel free to let me know what else you want added via the <a href="https://github.com/thekalinga/bootstrap4-intellij/issues">issues</a></p>
+<p>Suggestions, feedback and other comments welcome via <a href="https://twitter.com/thekalinga" rel="nofollow">@thekalinga</a> on Twitter.</p>
+<h2><a id="user-content-installation-in-3-easy-steps" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#installation-in-3-easy-steps"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation (in 3 easy steps)</h2>
+<p>To install the plugin open your editor (IntelliJ) and hit:</p>
+<ol>
+<li><code>File &gt; Settings &gt; Plugins</code> and click on the <code>Browse repositories</code> button.</li>
+<li>Look for <code>Bootstrap 4</code> the right click and select <code>Download plugin</code>.</li>
+<li>Finally hit the <code>Apply</code> button, agree to restart your IDE and you're all done!</li>
+</ol>
+<h2><a id="user-content-contribution-guidelines" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#contribution-guidelines"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Contribution guidelines</h2>
+<ol>
+<li>Clone this repo</li>
+<li>Modify the html snippet resources under <code>src/util/resources/bootstrap</code>. These Html snippets must follow Sublime text snippet format</li>
+<li>Send me a pull request</li>
+</ol>
+<blockquote>
+<p>You just need to create the template htmls in sublime snippet format. There is no need to update <code>README.md</code>/<code>snippets.json</code> manually. The build will take care of regenerating these files from the templates automatically</p>
+</blockquote>
+<h2><a id="user-content-changelog" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#changelog"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Changelog</h2>
+<p>See <a href="https://github.com/thekalinga/bootstrap4-intellij/blob/master/CHANGELOG.md">here</a></p>
+<h2><a id="user-content-documentation" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#documentation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Documentation</h2>
+<h3><a id="user-content-bootstrap-master-template" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#bootstrap-master-template"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bootstrap master template</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$</td>
+<td>Bootstrap master template</td>
+</tr></tbody></table>
+<h3><a id="user-content-alert" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#alert"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Alert</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alert-additional-content</td>
+<td>Alert additional content</td>
+</tr>
+<tr>
+<td>alert-closable</td>
+<td>Alert closable</td>
+</tr>
+<tr>
+<td>alert-danger-a</td>
+<td>Alert danger with link</td>
+</tr>
+<tr>
+<td>alert-danger</td>
+<td>Alert danger</td>
+</tr>
+<tr>
+<td>alert-dismissible</td>
+<td>Alert dismissible</td>
+</tr>
+<tr>
+<td>alert-info-a</td>
+<td>Alert info with link</td>
+</tr>
+<tr>
+<td>alert-info</td>
+<td>Alert info</td>
+</tr>
+<tr>
+<td>alert-success-a</td>
+<td>Alert success with link</td>
+</tr>
+<tr>
+<td>alert-success</td>
+<td>Alert success</td>
+</tr>
+<tr>
+<td>alert-warning-a</td>
+<td>Alert warning with link</td>
+</tr>
+<tr>
+<td>alert-warning</td>
+<td>Alert warning</td>
+</tr></tbody></table>
+<h3><a id="user-content-badge" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#badge"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Badge</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>badge-danger-pill</td>
+<td>Badge danger pill</td>
+</tr>
+<tr>
+<td>badge-danger</td>
+<td>Badge danger</td>
+</tr>
+<tr>
+<td>badge-default-pill</td>
+<td>Badge default pill</td>
+</tr>
+<tr>
+<td>badge-default</td>
+<td>Badge default</td>
+</tr>
+<tr>
+<td>badge-info-pill</td>
+<td>Badge info pill</td>
+</tr>
+<tr>
+<td>badge-info</td>
+<td>Badge info</td>
+</tr>
+<tr>
+<td>badge-primary-pill</td>
+<td>Badge primary pill</td>
+</tr>
+<tr>
+<td>badge-primary</td>
+<td>Badge primary</td>
+</tr>
+<tr>
+<td>badge-success-pill</td>
+<td>Badge success pill</td>
+</tr>
+<tr>
+<td>badge-success</td>
+<td>Badge success</td>
+</tr>
+<tr>
+<td>badge-warning-pill</td>
+<td>Badge warning pill</td>
+</tr>
+<tr>
+<td>badge-warning</td>
+<td>Badge warning</td>
+</tr></tbody></table>
+<h3><a id="user-content-button-group" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#button-group"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Button group</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bgroup-default</td>
+<td>Button group default</td>
+</tr>
+<tr>
+<td>bgroup-dropdown-vertical</td>
+<td>Button group dropdown vertical</td>
+</tr>
+<tr>
+<td>bgroup-dropdown</td>
+<td>Button group dropdown</td>
+</tr>
+<tr>
+<td>bgroup-size</td>
+<td>Button group size</td>
+</tr>
+<tr>
+<td>bgroup-toolbar</td>
+<td>Button group toolbar</td>
+</tr></tbody></table>
+<h3><a id="user-content-breadcrumb" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#breadcrumb"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Breadcrumb</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>breadcrumb-default</td>
+<td>Breadcrumb default</td>
+</tr>
+<tr>
+<td>breadcrumb-list</td>
+<td>Breadcrumb list</td>
+</tr></tbody></table>
+<h3><a id="user-content-button" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#button"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Button</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>button-a</td>
+<td>Button with link</td>
+</tr>
+<tr>
+<td>button-block</td>
+<td>Button block</td>
+</tr>
+<tr>
+<td>button-checkbox</td>
+<td>Button checkbox</td>
+</tr>
+<tr>
+<td>button-default</td>
+<td>Button default</td>
+</tr>
+<tr>
+<td>button-disabled-a</td>
+<td>Button disabled with link</td>
+</tr>
+<tr>
+<td>button-input</td>
+<td>Button input</td>
+</tr>
+<tr>
+<td>button-outline</td>
+<td>Button outline</td>
+</tr>
+<tr>
+<td>button-radio</td>
+<td>Button radio</td>
+</tr>
+<tr>
+<td>button-sizes</td>
+<td>Button sizes</td>
+</tr>
+<tr>
+<td>button-toggle</td>
+<td>Button toggle</td>
+</tr></tbody></table>
+<h3><a id="user-content-card" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#card"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Card</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>card-align</td>
+<td>Card align</td>
+</tr>
+<tr>
+<td>card-background-custom</td>
+<td>Card background custom</td>
+</tr>
+<tr>
+<td>card-background</td>
+<td>Card background</td>
+</tr>
+<tr>
+<td>card-blockquote</td>
+<td>Card blockquote</td>
+</tr>
+<tr>
+<td>card-columns</td>
+<td>Card columns</td>
+</tr>
+<tr>
+<td>card-decks</td>
+<td>Card decks</td>
+</tr>
+<tr>
+<td>card-default</td>
+<td>Card default</td>
+</tr>
+<tr>
+<td>card-grid</td>
+<td>Card grid</td>
+</tr>
+<tr>
+<td>card-groups</td>
+<td>Card groups</td>
+</tr>
+<tr>
+<td>card-head-foot</td>
+<td>Card head foot</td>
+</tr>
+<tr>
+<td>card-links</td>
+<td>Card links</td>
+</tr>
+<tr>
+<td>card-list</td>
+<td>Card list</td>
+</tr>
+<tr>
+<td>card-outline</td>
+<td>Card outline</td>
+</tr>
+<tr>
+<td>card-overlay</td>
+<td>Card overlay</td>
+</tr>
+<tr>
+<td>card-pill-head</td>
+<td>Card pill head</td>
+</tr>
+<tr>
+<td>card-subtitle</td>
+<td>Card subtitle</td>
+</tr>
+<tr>
+<td>card-tab-head</td>
+<td>Card tab head</td>
+</tr></tbody></table>
+<h3><a id="user-content-carousel" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#carousel"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Carousel</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>carousel-caption</td>
+<td>Carousel caption</td>
+</tr>
+<tr>
+<td>carousel-default</td>
+<td>Carousel default</td>
+</tr></tbody></table>
+<h3><a id="user-content-collapse" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#collapse"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Collapse</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>collapse-accordion</td>
+<td>Collapse accordion</td>
+</tr>
+<tr>
+<td>collapse-button</td>
+<td>Collapse button</td>
+</tr>
+<tr>
+<td>collapse-default</td>
+<td>Collapse default</td>
+</tr></tbody></table>
+<h3><a id="user-content-dropdown" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#dropdown"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dropdown</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dropdown-alignment</td>
+<td>Dropdown alignment</td>
+</tr>
+<tr>
+<td>dropdown-anchor</td>
+<td>Dropdown anchor</td>
+</tr>
+<tr>
+<td>dropdown-button</td>
+<td>Dropdown button</td>
+</tr>
+<tr>
+<td>dropdown-colored</td>
+<td>Dropdown colored</td>
+</tr>
+<tr>
+<td>dropdown-default</td>
+<td>Dropdown default</td>
+</tr>
+<tr>
+<td>dropdown-sized</td>
+<td>Dropdown sized</td>
+</tr>
+<tr>
+<td>dropdown-split</td>
+<td>Dropdown split</td>
+</tr>
+<tr>
+<td>dropdown-up-split</td>
+<td>Dropdown up split</td>
+</tr>
+<tr>
+<td>dropdown-up</td>
+<td>Dropdown up</td>
+</tr></tbody></table>
+<h3><a id="user-content-form" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#form"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Form</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>form-checkbox-custom</td>
+<td>Form checkbox custom</td>
+</tr>
+<tr>
+<td>form-checkbox-inline</td>
+<td>Form checkbox inline</td>
+</tr>
+<tr>
+<td>form-checkbox-nolabel</td>
+<td>Form checkbox nolabel</td>
+</tr>
+<tr>
+<td>form-checkbox</td>
+<td>Form checkbox</td>
+</tr>
+<tr>
+<td>form-email</td>
+<td>Form email</td>
+</tr>
+<tr>
+<td>form-file-custom</td>
+<td>Form file custom</td>
+</tr>
+<tr>
+<td>form-file</td>
+<td>Form file</td>
+</tr>
+<tr>
+<td>form-grid</td>
+<td>Form grid</td>
+</tr>
+<tr>
+<td>form-group-text</td>
+<td>Form group text</td>
+</tr>
+<tr>
+<td>form-group</td>
+<td>Form group</td>
+</tr>
+<tr>
+<td>form-help-text-inline</td>
+<td>Form help text inline</td>
+</tr>
+<tr>
+<td>form-help-text</td>
+<td>Form help text</td>
+</tr>
+<tr>
+<td>form-hidden</td>
+<td>Form hidden</td>
+</tr>
+<tr>
+<td>form-inline</td>
+<td>Form inline</td>
+</tr>
+<tr>
+<td>form-input-sizing</td>
+<td>Form input sizing</td>
+</tr>
+<tr>
+<td>form-input-text</td>
+<td>Form input text</td>
+</tr>
+<tr>
+<td>form-input</td>
+<td>Form input</td>
+</tr>
+<tr>
+<td>form-multi-select-custom</td>
+<td>Form multi select custom</td>
+</tr>
+<tr>
+<td>form-multi-select</td>
+<td>Form multi select</td>
+</tr>
+<tr>
+<td>form-multil-select-sizing</td>
+<td>Form multil select sizing</td>
+</tr>
+<tr>
+<td>form-password</td>
+<td>Form password</td>
+</tr>
+<tr>
+<td>form-radio-custom</td>
+<td>Form radio custom</td>
+</tr>
+<tr>
+<td>form-radio-inline</td>
+<td>Form radio inline</td>
+</tr>
+<tr>
+<td>form-radio-nolabel</td>
+<td>Form radio nolabel</td>
+</tr>
+<tr>
+<td>form-radio</td>
+<td>Form radio</td>
+</tr>
+<tr>
+<td>form-reset</td>
+<td>Form reset</td>
+</tr>
+<tr>
+<td>form-select-custom</td>
+<td>Form select custom</td>
+</tr>
+<tr>
+<td>form-select-sizing</td>
+<td>Form select sizing</td>
+</tr>
+<tr>
+<td>form-select</td>
+<td>Form select</td>
+</tr>
+<tr>
+<td>form-submit</td>
+<td>Form submit</td>
+</tr>
+<tr>
+<td>form-textarea</td>
+<td>Form textarea</td>
+</tr>
+<tr>
+<td>form-validation</td>
+<td>Form validation</td>
+</tr></tbody></table>
+<h3><a id="user-content-input-group" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#input-group"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Input group</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>igroup-button</td>
+<td>Input group button</td>
+</tr>
+<tr>
+<td>igroup-checkbox-radio</td>
+<td>Input group checkbox radio</td>
+</tr>
+<tr>
+<td>igroup-dropdown-segmented</td>
+<td>Input group dropdown segmented</td>
+</tr>
+<tr>
+<td>igroup-dropdown</td>
+<td>Input group dropdown</td>
+</tr>
+<tr>
+<td>igroup-size</td>
+<td>Input group size</td>
+</tr>
+<tr>
+<td>igroup-text-both</td>
+<td>Input group text both</td>
+</tr>
+<tr>
+<td>igroup-text-prefix</td>
+<td>Input group text prefix</td>
+</tr>
+<tr>
+<td>igroup-text-sufix</td>
+<td>Input group text sufix</td>
+</tr></tbody></table>
+<h3><a id="user-content-jumbotron" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#jumbotron"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Jumbotron</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>jumbotron-default</td>
+<td>Jumbotron default</td>
+</tr>
+<tr>
+<td>jumbotron-fluid</td>
+<td>Jumbotron fluid</td>
+</tr></tbody></table>
+<h3><a id="user-content-label" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#label"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Label</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>label-default</td>
+<td>Label default</td>
+</tr>
+<tr>
+<td>label-heading</td>
+<td>Label heading</td>
+</tr>
+<tr>
+<td>label-pill</td>
+<td>Label pill</td>
+</tr></tbody></table>
+<h3><a id="user-content-list" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#list"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>list-a</td>
+<td>List with link</td>
+</tr>
+<tr>
+<td>list-button</td>
+<td>List button</td>
+</tr>
+<tr>
+<td>list-colors</td>
+<td>List colors</td>
+</tr>
+<tr>
+<td>list-custom-ul</td>
+<td>List custom with unordered list</td>
+</tr>
+<tr>
+<td>list-custom</td>
+<td>List custom</td>
+</tr>
+<tr>
+<td>list-minimal-ul</td>
+<td>List minimal with unordered list</td>
+</tr></tbody></table>
+<h3><a id="user-content-modal" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#modal"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Modal</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>modal-customize</td>
+<td>Modal customize</td>
+</tr>
+<tr>
+<td>modal-default</td>
+<td>Modal default</td>
+</tr>
+<tr>
+<td>modal-grid</td>
+<td>Modal grid</td>
+</tr>
+<tr>
+<td>modal-sizes</td>
+<td>Modal sizes</td>
+</tr></tbody></table>
+<h3><a id="user-content-nav" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#nav"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Nav</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nav-a</td>
+<td>Nav with link</td>
+</tr>
+<tr>
+<td>nav-complete</td>
+<td>Nav complete</td>
+</tr>
+<tr>
+<td>nav-tabs-pills-a-variation</td>
+<td>Nav tabs pills with link variation</td>
+</tr>
+<tr>
+<td>nav-tabs-pills-dropdown</td>
+<td>Nav tabs pills dropdown</td>
+</tr>
+<tr>
+<td>nav-tabs-pills-ul-variation</td>
+<td>Nav tabs pills with unordered list variation</td>
+</tr>
+<tr>
+<td>nav-ul</td>
+<td>Nav with unordered list</td>
+</tr></tbody></table>
+<h3><a id="user-content-navbar" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#navbar"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Navbar</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>navbar-background-color</td>
+<td>Navbar background color</td>
+</tr>
+<tr>
+<td>navbar-background</td>
+<td>Navbar background</td>
+</tr>
+<tr>
+<td>navbar-default</td>
+<td>Navbar default</td>
+</tr>
+<tr>
+<td>navbar-minimal-a</td>
+<td>Navbar minimal with link</td>
+</tr>
+<tr>
+<td>navbar-minimal-ul</td>
+<td>Navbar minimal with unordered list</td>
+</tr>
+<tr>
+<td>navbar-non-responsive</td>
+<td>Navbar non responsive</td>
+</tr>
+<tr>
+<td>navbar-placement</td>
+<td>Navbar placement</td>
+</tr></tbody></table>
+<h3><a id="user-content-pagination" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#pagination"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pagination</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pagination-default</td>
+<td>Pagination default</td>
+</tr>
+<tr>
+<td>pagination-sized</td>
+<td>Pagination sized</td>
+</tr></tbody></table>
+<h3><a id="user-content-popover" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#popover"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Popover</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>popover-default</td>
+<td>Popover default</td>
+</tr>
+<tr>
+<td>popover-direction</td>
+<td>Popover direction</td>
+</tr>
+<tr>
+<td>popover-dismissable</td>
+<td>Popover dismissable</td>
+</tr></tbody></table>
+<h3><a id="user-content-progress" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#progress"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Progress</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>progress-colored</td>
+<td>Progress colored</td>
+</tr>
+<tr>
+<td>progress-default</td>
+<td>Progress default</td>
+</tr>
+<tr>
+<td>progress-ie9</td>
+<td>Progress ie9</td>
+</tr>
+<tr>
+<td>progress-striped</td>
+<td>Progress striped</td>
+</tr></tbody></table>
+<h3><a id="user-content-scrollspy" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#scrollspy"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scrollspy</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scrollspy-default</td>
+<td>Scrollspy default</td>
+</tr></tbody></table>
+<h3><a id="user-content-tooltip" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#tooltip"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tooltip</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tooltip-default</td>
+<td>Tooltip default</td>
+</tr></tbody></table>
+<h3><a id="user-content-figure" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#figure"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Figure</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>figure-default</td>
+<td>Figure default</td>
+</tr></tbody></table>
+<h3><a id="user-content-image" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#image"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Image</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>image-default</td>
+<td>Image default</td>
+</tr></tbody></table>
+<h3><a id="user-content-table" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#table"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Table</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>table-default</td>
+<td>Table default</td>
+</tr>
+<tr>
+<td>table-responsive</td>
+<td>Table responsive</td>
+</tr>
+<tr>
+<td>table-special</td>
+<td>Table special</td>
+</tr></tbody></table>
+<h3><a id="user-content-typography" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#typography"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Typography</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>typography-blockquote-reverse</td>
+<td>Typography blockquote reverse</td>
+</tr>
+<tr>
+<td>typography-blockquote</td>
+<td>Typography blockquote</td>
+</tr>
+<tr>
+<td>typography-description-list</td>
+<td>Typography description list</td>
+</tr>
+<tr>
+<td>typography-display-heading</td>
+<td>Typography display heading</td>
+</tr>
+<tr>
+<td>typography-lead</td>
+<td>Typography lead</td>
+</tr>
+<tr>
+<td>typography-list-inline</td>
+<td>Typography list inline</td>
+</tr>
+<tr>
+<td>typography-list-unstyled</td>
+<td>Typography list unstyled</td>
+</tr>
+<tr>
+<td>typography-muted-text</td>
+<td>Typography muted text</td>
+</tr></tbody></table>
+<h3><a id="user-content-grid" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#grid"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Grid</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>grid-col</td>
+<td>Grid column</td>
+</tr>
+<tr>
+<td>grid-container-fluid</td>
+<td>Grid container fluid</td>
+</tr>
+<tr>
+<td>grid-container</td>
+<td>Grid container</td>
+</tr>
+<tr>
+<td>grid-default</td>
+<td>Grid default</td>
+</tr>
+<tr>
+<td>grid-row</td>
+<td>Grid row</td>
+</tr></tbody></table>
+<h3><a id="user-content-media" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#media"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Media</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>media-bottom</td>
+<td>Media bottom</td>
+</tr>
+<tr>
+<td>media-default</td>
+<td>Media default</td>
+</tr>
+<tr>
+<td>media-list</td>
+<td>Media list</td>
+</tr>
+<tr>
+<td>media-middle</td>
+<td>Media middle</td>
+</tr>
+<tr>
+<td>media-nesting</td>
+<td>Media nesting</td>
+</tr>
+<tr>
+<td>media-right</td>
+<td>Media right</td>
+</tr>
+<tr>
+<td>media-top</td>
+<td>Media top</td>
+</tr></tbody></table>
+<h3><a id="user-content-responsive" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#responsive"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Responsive</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>responsive-print-hide-custom</td>
+<td>Responsive print hide custom</td>
+</tr>
+<tr>
+<td>responsive-print-hide</td>
+<td>Responsive print hide</td>
+</tr>
+<tr>
+<td>responsive-print-show</td>
+<td>Responsive print show</td>
+</tr></tbody></table>
+<h3><a id="user-content-font-awesome" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#font-awesome"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Font awesome</h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>500px</td>
+</tr>
+<tr>
+<td>address-book</td>
+</tr>
+<tr>
+<td>address-book-o</td>
+</tr>
+<tr>
+<td>address-card</td>
+</tr>
+<tr>
+<td>address-card-o</td>
+</tr>
+<tr>
+<td>adjust</td>
+</tr>
+<tr>
+<td>adn</td>
+</tr>
+<tr>
+<td>align-center</td>
+</tr>
+<tr>
+<td>align-justify</td>
+</tr>
+<tr>
+<td>align-left</td>
+</tr>
+<tr>
+<td>align-right</td>
+</tr>
+<tr>
+<td>amazon</td>
+</tr>
+<tr>
+<td>ambulance</td>
+</tr>
+<tr>
+<td>american-sign-language-interpreting</td>
+</tr>
+<tr>
+<td>anchor</td>
+</tr>
+<tr>
+<td>android</td>
+</tr>
+<tr>
+<td>angellist</td>
+</tr>
+<tr>
+<td>angle-double-down</td>
+</tr>
+<tr>
+<td>angle-double-left</td>
+</tr>
+<tr>
+<td>angle-double-right</td>
+</tr>
+<tr>
+<td>angle-double-up</td>
+</tr>
+<tr>
+<td>angle-down</td>
+</tr>
+<tr>
+<td>angle-left</td>
+</tr>
+<tr>
+<td>angle-right</td>
+</tr>
+<tr>
+<td>angle-up</td>
+</tr>
+<tr>
+<td>apple</td>
+</tr>
+<tr>
+<td>archive</td>
+</tr>
+<tr>
+<td>area-chart</td>
+</tr>
+<tr>
+<td>arrow-circle-down</td>
+</tr>
+<tr>
+<td>arrow-circle-left</td>
+</tr>
+<tr>
+<td>arrow-circle-o-down</td>
+</tr>
+<tr>
+<td>arrow-circle-o-left</td>
+</tr>
+<tr>
+<td>arrow-circle-o-right</td>
+</tr>
+<tr>
+<td>arrow-circle-o-up</td>
+</tr>
+<tr>
+<td>arrow-circle-right</td>
+</tr>
+<tr>
+<td>arrow-circle-up</td>
+</tr>
+<tr>
+<td>arrow-down</td>
+</tr>
+<tr>
+<td>arrow-left</td>
+</tr>
+<tr>
+<td>arrow-right</td>
+</tr>
+<tr>
+<td>arrows</td>
+</tr>
+<tr>
+<td>arrows-alt</td>
+</tr>
+<tr>
+<td>arrows-h</td>
+</tr>
+<tr>
+<td>arrows-v</td>
+</tr>
+<tr>
+<td>arrow-up</td>
+</tr>
+<tr>
+<td>asl-interpreting</td>
+</tr>
+<tr>
+<td>assistive-listening-systems</td>
+</tr>
+<tr>
+<td>asterisk</td>
+</tr>
+<tr>
+<td>at</td>
+</tr>
+<tr>
+<td>audio-description</td>
+</tr>
+<tr>
+<td>automobile</td>
+</tr>
+<tr>
+<td>backward</td>
+</tr>
+<tr>
+<td>balance-scale</td>
+</tr>
+<tr>
+<td>ban</td>
+</tr>
+<tr>
+<td>bandcamp</td>
+</tr>
+<tr>
+<td>bank</td>
+</tr>
+<tr>
+<td>bar-chart</td>
+</tr>
+<tr>
+<td>bar-chart-o</td>
+</tr>
+<tr>
+<td>barcode</td>
+</tr>
+<tr>
+<td>bars</td>
+</tr>
+<tr>
+<td>bath</td>
+</tr>
+<tr>
+<td>bathtub</td>
+</tr>
+<tr>
+<td>battery</td>
+</tr>
+<tr>
+<td>battery-0</td>
+</tr>
+<tr>
+<td>battery-1</td>
+</tr>
+<tr>
+<td>battery-2</td>
+</tr>
+<tr>
+<td>battery-3</td>
+</tr>
+<tr>
+<td>battery-4</td>
+</tr>
+<tr>
+<td>battery-empty</td>
+</tr>
+<tr>
+<td>battery-full</td>
+</tr>
+<tr>
+<td>battery-half</td>
+</tr>
+<tr>
+<td>battery-quarter</td>
+</tr>
+<tr>
+<td>battery-three-quarters</td>
+</tr>
+<tr>
+<td>bed</td>
+</tr>
+<tr>
+<td>beer</td>
+</tr>
+<tr>
+<td>behance</td>
+</tr>
+<tr>
+<td>behance-square</td>
+</tr>
+<tr>
+<td>bell</td>
+</tr>
+<tr>
+<td>bell-o</td>
+</tr>
+<tr>
+<td>bell-slash</td>
+</tr>
+<tr>
+<td>bell-slash-o</td>
+</tr>
+<tr>
+<td>bicycle</td>
+</tr>
+<tr>
+<td>binoculars</td>
+</tr>
+<tr>
+<td>birthday-cake</td>
+</tr>
+<tr>
+<td>bitbucket</td>
+</tr>
+<tr>
+<td>bitbucket-square</td>
+</tr>
+<tr>
+<td>bitcoin</td>
+</tr>
+<tr>
+<td>black-tie</td>
+</tr>
+<tr>
+<td>blind</td>
+</tr>
+<tr>
+<td>bluetooth</td>
+</tr>
+<tr>
+<td>bluetooth-b</td>
+</tr>
+<tr>
+<td>bold</td>
+</tr>
+<tr>
+<td>bolt</td>
+</tr>
+<tr>
+<td>bomb</td>
+</tr>
+<tr>
+<td>book</td>
+</tr>
+<tr>
+<td>bookmark</td>
+</tr>
+<tr>
+<td>bookmark-o</td>
+</tr>
+<tr>
+<td>braille</td>
+</tr>
+<tr>
+<td>briefcase</td>
+</tr>
+<tr>
+<td>btc</td>
+</tr>
+<tr>
+<td>bug</td>
+</tr>
+<tr>
+<td>building</td>
+</tr>
+<tr>
+<td>building-o</td>
+</tr>
+<tr>
+<td>bullhorn</td>
+</tr>
+<tr>
+<td>bullseye</td>
+</tr>
+<tr>
+<td>bus</td>
+</tr>
+<tr>
+<td>buysellads</td>
+</tr>
+<tr>
+<td>cab</td>
+</tr>
+<tr>
+<td>calculator</td>
+</tr>
+<tr>
+<td>calendar</td>
+</tr>
+<tr>
+<td>calendar-check-o</td>
+</tr>
+<tr>
+<td>calendar-minus-o</td>
+</tr>
+<tr>
+<td>calendar-o</td>
+</tr>
+<tr>
+<td>calendar-plus-o</td>
+</tr>
+<tr>
+<td>calendar-times-o</td>
+</tr>
+<tr>
+<td>camera</td>
+</tr>
+<tr>
+<td>camera-retro</td>
+</tr>
+<tr>
+<td>car</td>
+</tr>
+<tr>
+<td>caret-down</td>
+</tr>
+<tr>
+<td>caret-left</td>
+</tr>
+<tr>
+<td>caret-right</td>
+</tr>
+<tr>
+<td>caret-square-o-down</td>
+</tr>
+<tr>
+<td>caret-square-o-left</td>
+</tr>
+<tr>
+<td>caret-square-o-right</td>
+</tr>
+<tr>
+<td>caret-square-o-up</td>
+</tr>
+<tr>
+<td>caret-up</td>
+</tr>
+<tr>
+<td>cart-arrow-down</td>
+</tr>
+<tr>
+<td>cart-plus</td>
+</tr>
+<tr>
+<td>cc</td>
+</tr>
+<tr>
+<td>cc-amex</td>
+</tr>
+<tr>
+<td>cc-diners-club</td>
+</tr>
+<tr>
+<td>cc-discover</td>
+</tr>
+<tr>
+<td>cc-jcb</td>
+</tr>
+<tr>
+<td>cc-mastercard</td>
+</tr>
+<tr>
+<td>cc-paypal</td>
+</tr>
+<tr>
+<td>cc-stripe</td>
+</tr>
+<tr>
+<td>cc-visa</td>
+</tr>
+<tr>
+<td>certificate</td>
+</tr>
+<tr>
+<td>chain</td>
+</tr>
+<tr>
+<td>chain-broken</td>
+</tr>
+<tr>
+<td>check</td>
+</tr>
+<tr>
+<td>check-circle</td>
+</tr>
+<tr>
+<td>check-circle-o</td>
+</tr>
+<tr>
+<td>check-square</td>
+</tr>
+<tr>
+<td>check-square-o</td>
+</tr>
+<tr>
+<td>chevron-circle-down</td>
+</tr>
+<tr>
+<td>chevron-circle-left</td>
+</tr>
+<tr>
+<td>chevron-circle-right</td>
+</tr>
+<tr>
+<td>chevron-circle-up</td>
+</tr>
+<tr>
+<td>chevron-down</td>
+</tr>
+<tr>
+<td>chevron-left</td>
+</tr>
+<tr>
+<td>chevron-right</td>
+</tr>
+<tr>
+<td>chevron-up</td>
+</tr>
+<tr>
+<td>child</td>
+</tr>
+<tr>
+<td>chrome</td>
+</tr>
+<tr>
+<td>circle</td>
+</tr>
+<tr>
+<td>circle-o</td>
+</tr>
+<tr>
+<td>circle-o-notch</td>
+</tr>
+<tr>
+<td>circle-thin</td>
+</tr>
+<tr>
+<td>clipboard</td>
+</tr>
+<tr>
+<td>clock-o</td>
+</tr>
+<tr>
+<td>clone</td>
+</tr>
+<tr>
+<td>close</td>
+</tr>
+<tr>
+<td>cloud</td>
+</tr>
+<tr>
+<td>cloud-download</td>
+</tr>
+<tr>
+<td>cloud-upload</td>
+</tr>
+<tr>
+<td>cny</td>
+</tr>
+<tr>
+<td>code</td>
+</tr>
+<tr>
+<td>code-fork</td>
+</tr>
+<tr>
+<td>codepen</td>
+</tr>
+<tr>
+<td>codiepie</td>
+</tr>
+<tr>
+<td>coffee</td>
+</tr>
+<tr>
+<td>cog</td>
+</tr>
+<tr>
+<td>cogs</td>
+</tr>
+<tr>
+<td>columns</td>
+</tr>
+<tr>
+<td>comment</td>
+</tr>
+<tr>
+<td>commenting</td>
+</tr>
+<tr>
+<td>commenting-o</td>
+</tr>
+<tr>
+<td>comment-o</td>
+</tr>
+<tr>
+<td>comments</td>
+</tr>
+<tr>
+<td>comments-o</td>
+</tr>
+<tr>
+<td>compass</td>
+</tr>
+<tr>
+<td>compress</td>
+</tr>
+<tr>
+<td>connectdevelop</td>
+</tr>
+<tr>
+<td>contao</td>
+</tr>
+<tr>
+<td>copy</td>
+</tr>
+<tr>
+<td>copyright</td>
+</tr>
+<tr>
+<td>creative-commons</td>
+</tr>
+<tr>
+<td>credit-card</td>
+</tr>
+<tr>
+<td>credit-card-alt</td>
+</tr>
+<tr>
+<td>crop</td>
+</tr>
+<tr>
+<td>crosshairs</td>
+</tr>
+<tr>
+<td>css3</td>
+</tr>
+<tr>
+<td>cube</td>
+</tr>
+<tr>
+<td>cubes</td>
+</tr>
+<tr>
+<td>cut</td>
+</tr>
+<tr>
+<td>cutlery</td>
+</tr>
+<tr>
+<td>dashboard</td>
+</tr>
+<tr>
+<td>dashcube</td>
+</tr>
+<tr>
+<td>database</td>
+</tr>
+<tr>
+<td>deaf</td>
+</tr>
+<tr>
+<td>deafness</td>
+</tr>
+<tr>
+<td>dedent</td>
+</tr>
+<tr>
+<td>delicious</td>
+</tr>
+<tr>
+<td>desktop</td>
+</tr>
+<tr>
+<td>deviantart</td>
+</tr>
+<tr>
+<td>diamond</td>
+</tr>
+<tr>
+<td>digg</td>
+</tr>
+<tr>
+<td>dollar</td>
+</tr>
+<tr>
+<td>dot-circle-o</td>
+</tr>
+<tr>
+<td>download</td>
+</tr>
+<tr>
+<td>dribbble</td>
+</tr>
+<tr>
+<td>drivers-license</td>
+</tr>
+<tr>
+<td>drivers-license-o</td>
+</tr>
+<tr>
+<td>dropbox</td>
+</tr>
+<tr>
+<td>drupal</td>
+</tr>
+<tr>
+<td>edge</td>
+</tr>
+<tr>
+<td>edit</td>
+</tr>
+<tr>
+<td>eercast</td>
+</tr>
+<tr>
+<td>eject</td>
+</tr>
+<tr>
+<td>ellipsis-h</td>
+</tr>
+<tr>
+<td>ellipsis-v</td>
+</tr>
+<tr>
+<td>empire</td>
+</tr>
+<tr>
+<td>envelope</td>
+</tr>
+<tr>
+<td>envelope-o</td>
+</tr>
+<tr>
+<td>envelope-open</td>
+</tr>
+<tr>
+<td>envelope-open-o</td>
+</tr>
+<tr>
+<td>envelope-square</td>
+</tr>
+<tr>
+<td>envira</td>
+</tr>
+<tr>
+<td>eraser</td>
+</tr>
+<tr>
+<td>etsy</td>
+</tr>
+<tr>
+<td>eur</td>
+</tr>
+<tr>
+<td>euro</td>
+</tr>
+<tr>
+<td>exchange</td>
+</tr>
+<tr>
+<td>exclamation</td>
+</tr>
+<tr>
+<td>exclamation-circle</td>
+</tr>
+<tr>
+<td>exclamation-triangle</td>
+</tr>
+<tr>
+<td>expand</td>
+</tr>
+<tr>
+<td>expeditedssl</td>
+</tr>
+<tr>
+<td>external-link</td>
+</tr>
+<tr>
+<td>external-link-square</td>
+</tr>
+<tr>
+<td>eye</td>
+</tr>
+<tr>
+<td>eyedropper</td>
+</tr>
+<tr>
+<td>eye-slash</td>
+</tr>
+<tr>
+<td>fa</td>
+</tr>
+<tr>
+<td>facebook</td>
+</tr>
+<tr>
+<td>facebook-f</td>
+</tr>
+<tr>
+<td>facebook-official</td>
+</tr>
+<tr>
+<td>facebook-square</td>
+</tr>
+<tr>
+<td>fast-backward</td>
+</tr>
+<tr>
+<td>fast-forward</td>
+</tr>
+<tr>
+<td>fax</td>
+</tr>
+<tr>
+<td>feed</td>
+</tr>
+<tr>
+<td>female</td>
+</tr>
+<tr>
+<td>fighter-jet</td>
+</tr>
+<tr>
+<td>file</td>
+</tr>
+<tr>
+<td>file-archive-o</td>
+</tr>
+<tr>
+<td>file-audio-o</td>
+</tr>
+<tr>
+<td>file-code-o</td>
+</tr>
+<tr>
+<td>file-excel-o</td>
+</tr>
+<tr>
+<td>file-image-o</td>
+</tr>
+<tr>
+<td>file-movie-o</td>
+</tr>
+<tr>
+<td>file-o</td>
+</tr>
+<tr>
+<td>file-pdf-o</td>
+</tr>
+<tr>
+<td>file-photo-o</td>
+</tr>
+<tr>
+<td>file-picture-o</td>
+</tr>
+<tr>
+<td>file-powerpoint-o</td>
+</tr>
+<tr>
+<td>files-o</td>
+</tr>
+<tr>
+<td>file-sound-o</td>
+</tr>
+<tr>
+<td>file-text</td>
+</tr>
+<tr>
+<td>file-text-o</td>
+</tr>
+<tr>
+<td>file-video-o</td>
+</tr>
+<tr>
+<td>file-word-o</td>
+</tr>
+<tr>
+<td>file-zip-o</td>
+</tr>
+<tr>
+<td>film</td>
+</tr>
+<tr>
+<td>filter</td>
+</tr>
+<tr>
+<td>fire</td>
+</tr>
+<tr>
+<td>fire-extinguisher</td>
+</tr>
+<tr>
+<td>firefox</td>
+</tr>
+<tr>
+<td>first-order</td>
+</tr>
+<tr>
+<td>flag</td>
+</tr>
+<tr>
+<td>flag-checkered</td>
+</tr>
+<tr>
+<td>flag-o</td>
+</tr>
+<tr>
+<td>flash</td>
+</tr>
+<tr>
+<td>flask</td>
+</tr>
+<tr>
+<td>flickr</td>
+</tr>
+<tr>
+<td>floppy-o</td>
+</tr>
+<tr>
+<td>folder</td>
+</tr>
+<tr>
+<td>folder-o</td>
+</tr>
+<tr>
+<td>folder-open</td>
+</tr>
+<tr>
+<td>folder-open-o</td>
+</tr>
+<tr>
+<td>font</td>
+</tr>
+<tr>
+<td>font-awesome</td>
+</tr>
+<tr>
+<td>fonticons</td>
+</tr>
+<tr>
+<td>fort-awesome</td>
+</tr>
+<tr>
+<td>forumbee</td>
+</tr>
+<tr>
+<td>forward</td>
+</tr>
+<tr>
+<td>foursquare</td>
+</tr>
+<tr>
+<td>free-code-camp</td>
+</tr>
+<tr>
+<td>frown-o</td>
+</tr>
+<tr>
+<td>futbol-o</td>
+</tr>
+<tr>
+<td>gamepad</td>
+</tr>
+<tr>
+<td>gavel</td>
+</tr>
+<tr>
+<td>gbp</td>
+</tr>
+<tr>
+<td>ge</td>
+</tr>
+<tr>
+<td>gear</td>
+</tr>
+<tr>
+<td>gears</td>
+</tr>
+<tr>
+<td>genderless</td>
+</tr>
+<tr>
+<td>get-pocket</td>
+</tr>
+<tr>
+<td>gg</td>
+</tr>
+<tr>
+<td>gg-circle</td>
+</tr>
+<tr>
+<td>gift</td>
+</tr>
+<tr>
+<td>git</td>
+</tr>
+<tr>
+<td>github</td>
+</tr>
+<tr>
+<td>github-alt</td>
+</tr>
+<tr>
+<td>github-square</td>
+</tr>
+<tr>
+<td>gitlab</td>
+</tr>
+<tr>
+<td>git-square</td>
+</tr>
+<tr>
+<td>gittip</td>
+</tr>
+<tr>
+<td>glass</td>
+</tr>
+<tr>
+<td>glide</td>
+</tr>
+<tr>
+<td>glide-g</td>
+</tr>
+<tr>
+<td>globe</td>
+</tr>
+<tr>
+<td>google</td>
+</tr>
+<tr>
+<td>google-plus</td>
+</tr>
+<tr>
+<td>google-plus-circle</td>
+</tr>
+<tr>
+<td>google-plus-official</td>
+</tr>
+<tr>
+<td>google-plus-square</td>
+</tr>
+<tr>
+<td>google-wallet</td>
+</tr>
+<tr>
+<td>graduation-cap</td>
+</tr>
+<tr>
+<td>gratipay</td>
+</tr>
+<tr>
+<td>grav</td>
+</tr>
+<tr>
+<td>group</td>
+</tr>
+<tr>
+<td>hacker-news</td>
+</tr>
+<tr>
+<td>hand-grab-o</td>
+</tr>
+<tr>
+<td>hand-lizard-o</td>
+</tr>
+<tr>
+<td>hand-o-down</td>
+</tr>
+<tr>
+<td>hand-o-left</td>
+</tr>
+<tr>
+<td>hand-o-right</td>
+</tr>
+<tr>
+<td>hand-o-up</td>
+</tr>
+<tr>
+<td>hand-paper-o</td>
+</tr>
+<tr>
+<td>hand-peace-o</td>
+</tr>
+<tr>
+<td>hand-pointer-o</td>
+</tr>
+<tr>
+<td>hand-rock-o</td>
+</tr>
+<tr>
+<td>hand-scissors-o</td>
+</tr>
+<tr>
+<td>handshake-o</td>
+</tr>
+<tr>
+<td>hand-spock-o</td>
+</tr>
+<tr>
+<td>hand-stop-o</td>
+</tr>
+<tr>
+<td>hard-of-hearing</td>
+</tr>
+<tr>
+<td>hashtag</td>
+</tr>
+<tr>
+<td>hdd-o</td>
+</tr>
+<tr>
+<td>header</td>
+</tr>
+<tr>
+<td>headphones</td>
+</tr>
+<tr>
+<td>heart</td>
+</tr>
+<tr>
+<td>heartbeat</td>
+</tr>
+<tr>
+<td>heart-o</td>
+</tr>
+<tr>
+<td>history</td>
+</tr>
+<tr>
+<td>home</td>
+</tr>
+<tr>
+<td>hospital-o</td>
+</tr>
+<tr>
+<td>hotel</td>
+</tr>
+<tr>
+<td>hourglass</td>
+</tr>
+<tr>
+<td>hourglass-1</td>
+</tr>
+<tr>
+<td>hourglass-2</td>
+</tr>
+<tr>
+<td>hourglass-3</td>
+</tr>
+<tr>
+<td>hourglass-end</td>
+</tr>
+<tr>
+<td>hourglass-half</td>
+</tr>
+<tr>
+<td>hourglass-o</td>
+</tr>
+<tr>
+<td>hourglass-start</td>
+</tr>
+<tr>
+<td>houzz</td>
+</tr>
+<tr>
+<td>h-square</td>
+</tr>
+<tr>
+<td>html5</td>
+</tr>
+<tr>
+<td>i-cursor</td>
+</tr>
+<tr>
+<td>id-badge</td>
+</tr>
+<tr>
+<td>id-card</td>
+</tr>
+<tr>
+<td>id-card-o</td>
+</tr>
+<tr>
+<td>ils</td>
+</tr>
+<tr>
+<td>image</td>
+</tr>
+<tr>
+<td>imdb</td>
+</tr>
+<tr>
+<td>inbox</td>
+</tr>
+<tr>
+<td>indent</td>
+</tr>
+<tr>
+<td>industry</td>
+</tr>
+<tr>
+<td>info</td>
+</tr>
+<tr>
+<td>info-circle</td>
+</tr>
+<tr>
+<td>inr</td>
+</tr>
+<tr>
+<td>instagram</td>
+</tr>
+<tr>
+<td>institution</td>
+</tr>
+<tr>
+<td>internet-explorer</td>
+</tr>
+<tr>
+<td>intersex</td>
+</tr>
+<tr>
+<td>ioxhost</td>
+</tr>
+<tr>
+<td>italic</td>
+</tr>
+<tr>
+<td>joomla</td>
+</tr>
+<tr>
+<td>jpy</td>
+</tr>
+<tr>
+<td>jsfiddle</td>
+</tr>
+<tr>
+<td>key</td>
+</tr>
+<tr>
+<td>keyboard-o</td>
+</tr>
+<tr>
+<td>krw</td>
+</tr>
+<tr>
+<td>language</td>
+</tr>
+<tr>
+<td>laptop</td>
+</tr>
+<tr>
+<td>lastfm</td>
+</tr>
+<tr>
+<td>lastfm-square</td>
+</tr>
+<tr>
+<td>leaf</td>
+</tr>
+<tr>
+<td>leanpub</td>
+</tr>
+<tr>
+<td>legal</td>
+</tr>
+<tr>
+<td>lemon-o</td>
+</tr>
+<tr>
+<td>level-down</td>
+</tr>
+<tr>
+<td>level-up</td>
+</tr>
+<tr>
+<td>life-bouy</td>
+</tr>
+<tr>
+<td>life-buoy</td>
+</tr>
+<tr>
+<td>life-ring</td>
+</tr>
+<tr>
+<td>life-saver</td>
+</tr>
+<tr>
+<td>lightbulb-o</td>
+</tr>
+<tr>
+<td>line-chart</td>
+</tr>
+<tr>
+<td>link</td>
+</tr>
+<tr>
+<td>linkedin</td>
+</tr>
+<tr>
+<td>linkedin-square</td>
+</tr>
+<tr>
+<td>linode</td>
+</tr>
+<tr>
+<td>linux</td>
+</tr>
+<tr>
+<td>list</td>
+</tr>
+<tr>
+<td>list-alt</td>
+</tr>
+<tr>
+<td>list-ol</td>
+</tr>
+<tr>
+<td>list-ul</td>
+</tr>
+<tr>
+<td>location-arrow</td>
+</tr>
+<tr>
+<td>lock</td>
+</tr>
+<tr>
+<td>long-arrow-down</td>
+</tr>
+<tr>
+<td>long-arrow-left</td>
+</tr>
+<tr>
+<td>long-arrow-right</td>
+</tr>
+<tr>
+<td>long-arrow-up</td>
+</tr>
+<tr>
+<td>low-vision</td>
+</tr>
+<tr>
+<td>magic</td>
+</tr>
+<tr>
+<td>magnet</td>
+</tr>
+<tr>
+<td>mail-forward</td>
+</tr>
+<tr>
+<td>mail-reply</td>
+</tr>
+<tr>
+<td>mail-reply-all</td>
+</tr>
+<tr>
+<td>male</td>
+</tr>
+<tr>
+<td>map</td>
+</tr>
+<tr>
+<td>map-marker</td>
+</tr>
+<tr>
+<td>map-o</td>
+</tr>
+<tr>
+<td>map-pin</td>
+</tr>
+<tr>
+<td>map-signs</td>
+</tr>
+<tr>
+<td>mars</td>
+</tr>
+<tr>
+<td>mars-double</td>
+</tr>
+<tr>
+<td>mars-stroke</td>
+</tr>
+<tr>
+<td>mars-stroke-h</td>
+</tr>
+<tr>
+<td>mars-stroke-v</td>
+</tr>
+<tr>
+<td>maxcdn</td>
+</tr>
+<tr>
+<td>meanpath</td>
+</tr>
+<tr>
+<td>medium</td>
+</tr>
+<tr>
+<td>medkit</td>
+</tr>
+<tr>
+<td>meetup</td>
+</tr>
+<tr>
+<td>meh-o</td>
+</tr>
+<tr>
+<td>mercury</td>
+</tr>
+<tr>
+<td>microchip</td>
+</tr>
+<tr>
+<td>microphone</td>
+</tr>
+<tr>
+<td>microphone-slash</td>
+</tr>
+<tr>
+<td>minus</td>
+</tr>
+<tr>
+<td>minus-circle</td>
+</tr>
+<tr>
+<td>minus-square</td>
+</tr>
+<tr>
+<td>minus-square-o</td>
+</tr>
+<tr>
+<td>mixcloud</td>
+</tr>
+<tr>
+<td>mobile</td>
+</tr>
+<tr>
+<td>mobile-phone</td>
+</tr>
+<tr>
+<td>modx</td>
+</tr>
+<tr>
+<td>money</td>
+</tr>
+<tr>
+<td>moon-o</td>
+</tr>
+<tr>
+<td>mortar-board</td>
+</tr>
+<tr>
+<td>motorcycle</td>
+</tr>
+<tr>
+<td>mouse-pointer</td>
+</tr>
+<tr>
+<td>music</td>
+</tr>
+<tr>
+<td>navicon</td>
+</tr>
+<tr>
+<td>neuter</td>
+</tr>
+<tr>
+<td>newspaper-o</td>
+</tr>
+<tr>
+<td>object-group</td>
+</tr>
+<tr>
+<td>object-ungroup</td>
+</tr>
+<tr>
+<td>odnoklassniki</td>
+</tr>
+<tr>
+<td>odnoklassniki-square</td>
+</tr>
+<tr>
+<td>opencart</td>
+</tr>
+<tr>
+<td>openid</td>
+</tr>
+<tr>
+<td>opera</td>
+</tr>
+<tr>
+<td>optin-monster</td>
+</tr>
+<tr>
+<td>outdent</td>
+</tr>
+<tr>
+<td>pagelines</td>
+</tr>
+<tr>
+<td>paint-brush</td>
+</tr>
+<tr>
+<td>paperclip</td>
+</tr>
+<tr>
+<td>paper-plane</td>
+</tr>
+<tr>
+<td>paper-plane-o</td>
+</tr>
+<tr>
+<td>paragraph</td>
+</tr>
+<tr>
+<td>paste</td>
+</tr>
+<tr>
+<td>pause</td>
+</tr>
+<tr>
+<td>pause-circle</td>
+</tr>
+<tr>
+<td>pause-circle-o</td>
+</tr>
+<tr>
+<td>paw</td>
+</tr>
+<tr>
+<td>paypal</td>
+</tr>
+<tr>
+<td>pencil</td>
+</tr>
+<tr>
+<td>pencil-square</td>
+</tr>
+<tr>
+<td>pencil-square-o</td>
+</tr>
+<tr>
+<td>percent</td>
+</tr>
+<tr>
+<td>phone</td>
+</tr>
+<tr>
+<td>phone-square</td>
+</tr>
+<tr>
+<td>photo</td>
+</tr>
+<tr>
+<td>picture-o</td>
+</tr>
+<tr>
+<td>pie-chart</td>
+</tr>
+<tr>
+<td>pied-piper</td>
+</tr>
+<tr>
+<td>pied-piper-alt</td>
+</tr>
+<tr>
+<td>pied-piper-pp</td>
+</tr>
+<tr>
+<td>pinterest</td>
+</tr>
+<tr>
+<td>pinterest-p</td>
+</tr>
+<tr>
+<td>pinterest-square</td>
+</tr>
+<tr>
+<td>plane</td>
+</tr>
+<tr>
+<td>play</td>
+</tr>
+<tr>
+<td>play-circle</td>
+</tr>
+<tr>
+<td>play-circle-o</td>
+</tr>
+<tr>
+<td>plug</td>
+</tr>
+<tr>
+<td>plus</td>
+</tr>
+<tr>
+<td>plus-circle</td>
+</tr>
+<tr>
+<td>plus-square</td>
+</tr>
+<tr>
+<td>plus-square-o</td>
+</tr>
+<tr>
+<td>podcast</td>
+</tr>
+<tr>
+<td>power-off</td>
+</tr>
+<tr>
+<td>print</td>
+</tr>
+<tr>
+<td>product-hunt</td>
+</tr>
+<tr>
+<td>puzzle-piece</td>
+</tr>
+<tr>
+<td>qq</td>
+</tr>
+<tr>
+<td>qrcode</td>
+</tr>
+<tr>
+<td>question</td>
+</tr>
+<tr>
+<td>question-circle</td>
+</tr>
+<tr>
+<td>question-circle-o</td>
+</tr>
+<tr>
+<td>quora</td>
+</tr>
+<tr>
+<td>quote-left</td>
+</tr>
+<tr>
+<td>quote-right</td>
+</tr>
+<tr>
+<td>ra</td>
+</tr>
+<tr>
+<td>random</td>
+</tr>
+<tr>
+<td>ravelry</td>
+</tr>
+<tr>
+<td>rebel</td>
+</tr>
+<tr>
+<td>recycle</td>
+</tr>
+<tr>
+<td>reddit</td>
+</tr>
+<tr>
+<td>reddit-alien</td>
+</tr>
+<tr>
+<td>reddit-square</td>
+</tr>
+<tr>
+<td>refresh</td>
+</tr>
+<tr>
+<td>registered</td>
+</tr>
+<tr>
+<td>remove</td>
+</tr>
+<tr>
+<td>renren</td>
+</tr>
+<tr>
+<td>reorder</td>
+</tr>
+<tr>
+<td>repeat</td>
+</tr>
+<tr>
+<td>reply</td>
+</tr>
+<tr>
+<td>reply-all</td>
+</tr>
+<tr>
+<td>resistance</td>
+</tr>
+<tr>
+<td>retweet</td>
+</tr>
+<tr>
+<td>rmb</td>
+</tr>
+<tr>
+<td>road</td>
+</tr>
+<tr>
+<td>rocket</td>
+</tr>
+<tr>
+<td>rotate-left</td>
+</tr>
+<tr>
+<td>rotate-right</td>
+</tr>
+<tr>
+<td>rouble</td>
+</tr>
+<tr>
+<td>rss</td>
+</tr>
+<tr>
+<td>rss-square</td>
+</tr>
+<tr>
+<td>rub</td>
+</tr>
+<tr>
+<td>ruble</td>
+</tr>
+<tr>
+<td>rupee</td>
+</tr>
+<tr>
+<td>s15</td>
+</tr>
+<tr>
+<td>safari</td>
+</tr>
+<tr>
+<td>save</td>
+</tr>
+<tr>
+<td>scissors</td>
+</tr>
+<tr>
+<td>scribd</td>
+</tr>
+<tr>
+<td>search</td>
+</tr>
+<tr>
+<td>search-minus</td>
+</tr>
+<tr>
+<td>search-plus</td>
+</tr>
+<tr>
+<td>sellsy</td>
+</tr>
+<tr>
+<td>send</td>
+</tr>
+<tr>
+<td>send-o</td>
+</tr>
+<tr>
+<td>server</td>
+</tr>
+<tr>
+<td>share</td>
+</tr>
+<tr>
+<td>share-alt</td>
+</tr>
+<tr>
+<td>share-alt-square</td>
+</tr>
+<tr>
+<td>share-square</td>
+</tr>
+<tr>
+<td>share-square-o</td>
+</tr>
+<tr>
+<td>shekel</td>
+</tr>
+<tr>
+<td>sheqel</td>
+</tr>
+<tr>
+<td>shield</td>
+</tr>
+<tr>
+<td>ship</td>
+</tr>
+<tr>
+<td>shirtsinbulk</td>
+</tr>
+<tr>
+<td>shopping-bag</td>
+</tr>
+<tr>
+<td>shopping-basket</td>
+</tr>
+<tr>
+<td>shopping-cart</td>
+</tr>
+<tr>
+<td>shower</td>
+</tr>
+<tr>
+<td>signal</td>
+</tr>
+<tr>
+<td>sign-in</td>
+</tr>
+<tr>
+<td>signing</td>
+</tr>
+<tr>
+<td>sign-language</td>
+</tr>
+<tr>
+<td>sign-out</td>
+</tr>
+<tr>
+<td>simplybuilt</td>
+</tr>
+<tr>
+<td>sitemap</td>
+</tr>
+<tr>
+<td>skyatlas</td>
+</tr>
+<tr>
+<td>skype</td>
+</tr>
+<tr>
+<td>slack</td>
+</tr>
+<tr>
+<td>sliders</td>
+</tr>
+<tr>
+<td>slideshare</td>
+</tr>
+<tr>
+<td>smile-o</td>
+</tr>
+<tr>
+<td>snapchat</td>
+</tr>
+<tr>
+<td>snapchat-ghost</td>
+</tr>
+<tr>
+<td>snapchat-square</td>
+</tr>
+<tr>
+<td>snowflake-o</td>
+</tr>
+<tr>
+<td>soccer-ball-o</td>
+</tr>
+<tr>
+<td>sort</td>
+</tr>
+<tr>
+<td>sort-alpha-asc</td>
+</tr>
+<tr>
+<td>sort-alpha-desc</td>
+</tr>
+<tr>
+<td>sort-amount-asc</td>
+</tr>
+<tr>
+<td>sort-amount-desc</td>
+</tr>
+<tr>
+<td>sort-asc</td>
+</tr>
+<tr>
+<td>sort-desc</td>
+</tr>
+<tr>
+<td>sort-down</td>
+</tr>
+<tr>
+<td>sort-numeric-asc</td>
+</tr>
+<tr>
+<td>sort-numeric-desc</td>
+</tr>
+<tr>
+<td>sort-up</td>
+</tr>
+<tr>
+<td>soundcloud</td>
+</tr>
+<tr>
+<td>space-shuttle</td>
+</tr>
+<tr>
+<td>spinner</td>
+</tr>
+<tr>
+<td>spoon</td>
+</tr>
+<tr>
+<td>spotify</td>
+</tr>
+<tr>
+<td>square</td>
+</tr>
+<tr>
+<td>square-o</td>
+</tr>
+<tr>
+<td>stack-exchange</td>
+</tr>
+<tr>
+<td>stack-overflow</td>
+</tr>
+<tr>
+<td>star</td>
+</tr>
+<tr>
+<td>star-half</td>
+</tr>
+<tr>
+<td>star-half-empty</td>
+</tr>
+<tr>
+<td>star-half-full</td>
+</tr>
+<tr>
+<td>star-half-o</td>
+</tr>
+<tr>
+<td>star-o</td>
+</tr>
+<tr>
+<td>steam</td>
+</tr>
+<tr>
+<td>steam-square</td>
+</tr>
+<tr>
+<td>step-backward</td>
+</tr>
+<tr>
+<td>step-forward</td>
+</tr>
+<tr>
+<td>stethoscope</td>
+</tr>
+<tr>
+<td>sticky-note</td>
+</tr>
+<tr>
+<td>sticky-note-o</td>
+</tr>
+<tr>
+<td>stop</td>
+</tr>
+<tr>
+<td>stop-circle</td>
+</tr>
+<tr>
+<td>stop-circle-o</td>
+</tr>
+<tr>
+<td>street-view</td>
+</tr>
+<tr>
+<td>strikethrough</td>
+</tr>
+<tr>
+<td>stumbleupon</td>
+</tr>
+<tr>
+<td>stumbleupon-circle</td>
+</tr>
+<tr>
+<td>subscript</td>
+</tr>
+<tr>
+<td>subway</td>
+</tr>
+<tr>
+<td>suitcase</td>
+</tr>
+<tr>
+<td>sun-o</td>
+</tr>
+<tr>
+<td>superpowers</td>
+</tr>
+<tr>
+<td>superscript</td>
+</tr>
+<tr>
+<td>support</td>
+</tr>
+<tr>
+<td>table</td>
+</tr>
+<tr>
+<td>tablet</td>
+</tr>
+<tr>
+<td>tachometer</td>
+</tr>
+<tr>
+<td>tag</td>
+</tr>
+<tr>
+<td>tags</td>
+</tr>
+<tr>
+<td>tasks</td>
+</tr>
+<tr>
+<td>taxi</td>
+</tr>
+<tr>
+<td>telegram</td>
+</tr>
+<tr>
+<td>television</td>
+</tr>
+<tr>
+<td>tencent-weibo</td>
+</tr>
+<tr>
+<td>terminal</td>
+</tr>
+<tr>
+<td>text-height</td>
+</tr>
+<tr>
+<td>text-width</td>
+</tr>
+<tr>
+<td>th</td>
+</tr>
+<tr>
+<td>themeisle</td>
+</tr>
+<tr>
+<td>thermometer</td>
+</tr>
+<tr>
+<td>thermometer-0</td>
+</tr>
+<tr>
+<td>thermometer-1</td>
+</tr>
+<tr>
+<td>thermometer-2</td>
+</tr>
+<tr>
+<td>thermometer-3</td>
+</tr>
+<tr>
+<td>thermometer-4</td>
+</tr>
+<tr>
+<td>thermometer-empty</td>
+</tr>
+<tr>
+<td>thermometer-full</td>
+</tr>
+<tr>
+<td>thermometer-half</td>
+</tr>
+<tr>
+<td>thermometer-quarter</td>
+</tr>
+<tr>
+<td>thermometer-three-quarters</td>
+</tr>
+<tr>
+<td>th-large</td>
+</tr>
+<tr>
+<td>th-list</td>
+</tr>
+<tr>
+<td>thumbs-down</td>
+</tr>
+<tr>
+<td>thumbs-o-down</td>
+</tr>
+<tr>
+<td>thumbs-o-up</td>
+</tr>
+<tr>
+<td>thumbs-up</td>
+</tr>
+<tr>
+<td>thumb-tack</td>
+</tr>
+<tr>
+<td>ticket</td>
+</tr>
+<tr>
+<td>times</td>
+</tr>
+<tr>
+<td>times-circle</td>
+</tr>
+<tr>
+<td>times-circle-o</td>
+</tr>
+<tr>
+<td>times-rectangle</td>
+</tr>
+<tr>
+<td>times-rectangle-o</td>
+</tr>
+<tr>
+<td>tint</td>
+</tr>
+<tr>
+<td>toggle-down</td>
+</tr>
+<tr>
+<td>toggle-left</td>
+</tr>
+<tr>
+<td>toggle-off</td>
+</tr>
+<tr>
+<td>toggle-on</td>
+</tr>
+<tr>
+<td>toggle-right</td>
+</tr>
+<tr>
+<td>toggle-up</td>
+</tr>
+<tr>
+<td>trademark</td>
+</tr>
+<tr>
+<td>train</td>
+</tr>
+<tr>
+<td>transgender</td>
+</tr>
+<tr>
+<td>transgender-alt</td>
+</tr>
+<tr>
+<td>trash</td>
+</tr>
+<tr>
+<td>trash-o</td>
+</tr>
+<tr>
+<td>tree</td>
+</tr>
+<tr>
+<td>trello</td>
+</tr>
+<tr>
+<td>tripadvisor</td>
+</tr>
+<tr>
+<td>trophy</td>
+</tr>
+<tr>
+<td>truck</td>
+</tr>
+<tr>
+<td>try</td>
+</tr>
+<tr>
+<td>tty</td>
+</tr>
+<tr>
+<td>tumblr</td>
+</tr>
+<tr>
+<td>tumblr-square</td>
+</tr>
+<tr>
+<td>turkish-lira</td>
+</tr>
+<tr>
+<td>tv</td>
+</tr>
+<tr>
+<td>twitch</td>
+</tr>
+<tr>
+<td>twitter</td>
+</tr>
+<tr>
+<td>twitter-square</td>
+</tr>
+<tr>
+<td>umbrella</td>
+</tr>
+<tr>
+<td>underline</td>
+</tr>
+<tr>
+<td>undo</td>
+</tr>
+<tr>
+<td>universal-access</td>
+</tr>
+<tr>
+<td>university</td>
+</tr>
+<tr>
+<td>unlink</td>
+</tr>
+<tr>
+<td>unlock</td>
+</tr>
+<tr>
+<td>unlock-alt</td>
+</tr>
+<tr>
+<td>unsorted</td>
+</tr>
+<tr>
+<td>upload</td>
+</tr>
+<tr>
+<td>usb</td>
+</tr>
+<tr>
+<td>usd</td>
+</tr>
+<tr>
+<td>user</td>
+</tr>
+<tr>
+<td>user-circle</td>
+</tr>
+<tr>
+<td>user-circle-o</td>
+</tr>
+<tr>
+<td>user-md</td>
+</tr>
+<tr>
+<td>user-o</td>
+</tr>
+<tr>
+<td>user-plus</td>
+</tr>
+<tr>
+<td>users</td>
+</tr>
+<tr>
+<td>user-secret</td>
+</tr>
+<tr>
+<td>user-times</td>
+</tr>
+<tr>
+<td>vcard</td>
+</tr>
+<tr>
+<td>vcard-o</td>
+</tr>
+<tr>
+<td>venus</td>
+</tr>
+<tr>
+<td>venus-double</td>
+</tr>
+<tr>
+<td>venus-mars</td>
+</tr>
+<tr>
+<td>viacoin</td>
+</tr>
+<tr>
+<td>viadeo</td>
+</tr>
+<tr>
+<td>viadeo-square</td>
+</tr>
+<tr>
+<td>video-camera</td>
+</tr>
+<tr>
+<td>vimeo</td>
+</tr>
+<tr>
+<td>vimeo-square</td>
+</tr>
+<tr>
+<td>vine</td>
+</tr>
+<tr>
+<td>vk</td>
+</tr>
+<tr>
+<td>volume-control-phone</td>
+</tr>
+<tr>
+<td>volume-down</td>
+</tr>
+<tr>
+<td>volume-off</td>
+</tr>
+<tr>
+<td>volume-up</td>
+</tr>
+<tr>
+<td>warning</td>
+</tr>
+<tr>
+<td>wechat</td>
+</tr>
+<tr>
+<td>weibo</td>
+</tr>
+<tr>
+<td>weixin</td>
+</tr>
+<tr>
+<td>whatsapp</td>
+</tr>
+<tr>
+<td>wheelchair</td>
+</tr>
+<tr>
+<td>wheelchair-alt</td>
+</tr>
+<tr>
+<td>wifi</td>
+</tr>
+<tr>
+<td>wikipedia-w</td>
+</tr>
+<tr>
+<td>window-close</td>
+</tr>
+<tr>
+<td>window-close-o</td>
+</tr>
+<tr>
+<td>window-maximize</td>
+</tr>
+<tr>
+<td>window-minimize</td>
+</tr>
+<tr>
+<td>window-restore</td>
+</tr>
+<tr>
+<td>windows</td>
+</tr>
+<tr>
+<td>won</td>
+</tr>
+<tr>
+<td>wordpress</td>
+</tr>
+<tr>
+<td>wpbeginner</td>
+</tr>
+<tr>
+<td>wpexplorer</td>
+</tr>
+<tr>
+<td>wpforms</td>
+</tr>
+<tr>
+<td>wrench</td>
+</tr>
+<tr>
+<td>xing</td>
+</tr>
+<tr>
+<td>xing-square</td>
+</tr>
+<tr>
+<td>yahoo</td>
+</tr>
+<tr>
+<td>yc</td>
+</tr>
+<tr>
+<td>y-combinator</td>
+</tr>
+<tr>
+<td>y-combinator-square</td>
+</tr>
+<tr>
+<td>yc-square</td>
+</tr>
+<tr>
+<td>yelp</td>
+</tr>
+<tr>
+<td>yen</td>
+</tr>
+<tr>
+<td>yoast</td>
+</tr>
+<tr>
+<td>youtube</td>
+</tr>
+<tr>
+<td>youtube-play</td>
+</tr>
+<tr>
+<td>youtube-square</td>
+</tr></tbody></table>
+<h2><a id="user-content-license" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#license"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>License</h2>
+<p>Bootstrap 4 &amp; Font awesome - IntelliJ Plugin is open-sourced software licensed under the <a href="http://opensource.org/licenses/MIT" rel="nofollow">MIT license</a>.</p>
+<h2><a id="user-content-disclaimer" class="anchor" aria-hidden="true" href="https://github.com/thekalinga/bootstrap4-intellij#disclaimer"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Disclaimer:</h2>
+<p>Readme template for this plugin was initially borrowed from <a href="https://github.com/bodiam/intellij-bootstrap3">here</a> &amp; <a href="https://github.com/JasonMortonNZ/bs3-sublime-plugin">here</a></p>
+</article>
+      </div>
+  </div>
+
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+        
+<div class="footer container-lg px-3" role="contentinfo">
+  <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <ul class="list-style-none d-flex flex-wrap ">
+      <li class="mr-3">© 2018 <span title="0.30776s from unicorn-3203451491-vlbfq">GitHub</span>, Inc.</li>
+        <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
+        <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
+        <li class="mr-3"><a href="https://help.github.com/articles/github-security/" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li class="mr-3"><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a data-ga-click="Footer, go to help, text:help" href="https://help.github.com/">Help</a></li>
+    </ul>
+
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon mr-lg-4" href="https://github.com/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+</a>
+   <ul class="list-style-none d-flex flex-wrap ">
+        <li class="mr-3"><a data-ga-click="Footer, go to contact, text:contact" href="https://github.com/contact">Contact GitHub</a></li>
+        <li class="mr-3"><a href="https://github.com/pricing" data-ga-click="Footer, go to Pricing, text:Pricing">Pricing</a></li>
+      <li class="mr-3"><a href="https://developer.github.com/" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li class="mr-3"><a href="https://training.github.com/" data-ga-click="Footer, go to training, text:training">Training</a></li>
+        <li class="mr-3"><a href="https://blog.github.com/" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a data-ga-click="Footer, go to about, text:about" href="https://github.com/about">About</a></li>
+
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+</div>
+
+
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg>
+    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+    </button>
+    You can’t perform that action at this time.
+  </div>
+
+
+    
+    <script crossorigin="anonymous" integrity="sha512-n9IXriKuLiZTfIzWL0DsMVix3Cm2i6RXjj7H+fh2WF5RW/Eb2hOzXWPirYC5tkzHGSFVfZphDKu8UHnpaX1kLQ==" type="application/javascript" src="./guide_files/frameworks-01a87f433690ab628a8c56d0bf802980.js.다운로드"></script>
+    
+    <script crossorigin="anonymous" async="async" integrity="sha512-PcdlxHaYStJf9OMYw6OMLEuhP0pVzcRHO1epjVWNC/KHK0TB8PjeCiSIf1GPXHLZ92JvCM88n3ME0in7IsEGrg==" type="application/javascript" src="./guide_files/github-dc8707c56fff1577b498fc53f44eeea8.js.다운로드"></script>
+    
+    
+    
+  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg>
+    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="https://github.com/thekalinga/bootstrap4-intellij">Reload</a> to refresh your session.</span>
+    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="https://github.com/thekalinga/bootstrap4-intellij">Reload</a> to refresh your session.</span>
+  </div>
+  <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+    </button>
+  </div>
+</div>
+
+  <template id="site-details-dialog"></template>
+
+  <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
+  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
+  </div>
+</div>
+
+<div id="hovercard-aria-description" class="sr-only">
+  Press h to open a hovercard with more details.
+</div>
+
+
+  
+
+
+</body></html>
